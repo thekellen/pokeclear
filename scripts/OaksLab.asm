@@ -1,4 +1,5 @@
 OaksLab_Script:
+	call OaksLab_InitSkipOakIntro
 	CheckEvent EVENT_PALLET_AFTER_GETTING_POKEBALLS_2
 	call nz, OaksLabLoadTextPointers2Script
 	ld a, 1 << BIT_NO_AUTO_TEXT_BOX
@@ -8,6 +9,48 @@ OaksLab_Script:
 	ld hl, OaksLab_ScriptPointers
 	ld a, [wOaksLabCurScript]
 	jp CallFunctionInTable
+
+OaksLab_InitSkipOakIntro:
+	SetEvent EVENT_FOLLOWED_OAK_INTO_LAB
+	SetEvent EVENT_FOLLOWED_OAK_INTO_LAB_2
+	SetEvent EVENT_OAK_ASKED_TO_CHOOSE_MON
+	SetEvent EVENT_GOT_STARTER
+	SetEvent EVENT_BATTLED_RIVAL_IN_OAKS_LAB
+	SetEvent EVENT_GOT_POKEDEX
+	SetEvent EVENT_OAK_GOT_PARCEL
+	SetEvent EVENT_1ST_ROUTE22_RIVAL_BATTLE
+	ResetEvent EVENT_2ND_ROUTE22_RIVAL_BATTLE
+	SetEvent EVENT_ROUTE22_RIVAL_WANTS_BATTLE
+	ld hl, wStatusFlags4
+	set BIT_GOT_STARTER, [hl]
+	ld a, HS_OAKS_LAB_RIVAL
+	ld [wMissableObjectIndex], a
+	predef HideObject
+	ld a, HS_OAKS_LAB_OAK_1
+	ld [wMissableObjectIndex], a
+	predef ShowObject
+	ld a, HS_OAKS_LAB_OAK_2
+	ld [wMissableObjectIndex], a
+	predef HideObject
+	ld a, HS_STARTER_BALL_1
+	ld [wMissableObjectIndex], a
+	predef HideObject
+	ld a, HS_STARTER_BALL_2
+	ld [wMissableObjectIndex], a
+	predef HideObject
+	ld a, HS_STARTER_BALL_3
+	ld [wMissableObjectIndex], a
+	predef HideObject
+	ld a, HS_POKEDEX_1
+	ld [wMissableObjectIndex], a
+	predef HideObject
+	ld a, HS_POKEDEX_2
+	ld [wMissableObjectIndex], a
+	predef HideObject
+	ld a, HS_ROUTE_22_RIVAL_1
+	ld [wMissableObjectIndex], a
+	predef ShowObject
+	ret
 
 OaksLab_ScriptPointers:
 	def_script_pointers

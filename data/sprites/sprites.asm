@@ -11,11 +11,11 @@ SpriteSheetPointerTable:
 	overworld_sprite BlueSprite, 12             ; SPRITE_BLUE
 	overworld_sprite OakSprite, 12              ; SPRITE_OAK
 	overworld_sprite YoungsterSprite, 12        ; SPRITE_YOUNGSTER
-	overworld_sprite MonsterSprite, 12          ; SPRITE_MONSTER
+	overworld_sprite LittleBoySprite, 12        ; SPRITE_MONSTER
 	overworld_sprite CooltrainerFSprite, 12     ; SPRITE_COOLTRAINER_F
 	overworld_sprite CooltrainerMSprite, 12     ; SPRITE_COOLTRAINER_M
 	overworld_sprite LittleGirlSprite, 12       ; SPRITE_LITTLE_GIRL
-	overworld_sprite BirdSprite, 12             ; SPRITE_BIRD
+	overworld_sprite GameboyKidSprite, 12       ; SPRITE_BIRD
 	overworld_sprite MiddleAgedManSprite, 12    ; SPRITE_MIDDLE_AGED_MAN
 	overworld_sprite GamblerSprite, 12          ; SPRITE_GAMBLER
 	overworld_sprite SuperNerdSprite, 12        ; SPRITE_SUPER_NERD
@@ -62,18 +62,18 @@ SpriteSheetPointerTable:
 	overworld_sprite LittleBoySprite, 12        ; SPRITE_LITTLE_BOY
 	overworld_sprite GameboyKidSprite, 12       ; SPRITE_UNUSED_GAMEBOY_KID
 	overworld_sprite GameboyKidSprite, 12       ; SPRITE_GAMEBOY_KID
-	overworld_sprite FairySprite, 12            ; SPRITE_FAIRY
+	overworld_sprite LittleGirlSprite, 12       ; SPRITE_FAIRY
 	overworld_sprite AgathaSprite, 12           ; SPRITE_AGATHA
 	overworld_sprite BrunoSprite, 12            ; SPRITE_BRUNO
 	overworld_sprite LoreleiSprite, 12          ; SPRITE_LORELEI
-	overworld_sprite SeelSprite, 12             ; SPRITE_SEEL
+	overworld_sprite LittleGirlSprite, 12       ; SPRITE_SEEL
 	overworld_sprite PokeBallSprite, 4          ; SPRITE_POKE_BALL
 	overworld_sprite FossilSprite, 4            ; SPRITE_FOSSIL
 	overworld_sprite BoulderSprite, 4           ; SPRITE_BOULDER
 	overworld_sprite PaperSprite, 4             ; SPRITE_PAPER
 	overworld_sprite PokedexSprite, 4           ; SPRITE_POKEDEX
 	overworld_sprite ClipboardSprite, 4         ; SPRITE_CLIPBOARD
-	overworld_sprite SnorlaxSprite, 4           ; SPRITE_SNORLAX
+	overworld_sprite GrampsSprite, 12           ; SPRITE_SNORLAX
 	overworld_sprite OldAmberSprite, 4          ; SPRITE_UNUSED_OLD_AMBER
 	overworld_sprite OldAmberSprite, 4          ; SPRITE_OLD_AMBER
 	overworld_sprite GamblerAsleepSprite, 4     ; SPRITE_UNUSED_GAMBLER_ASLEEP_1

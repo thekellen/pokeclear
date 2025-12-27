@@ -269,8 +269,8 @@ ENDC
 	farjp DoClearSaveDialogue
 
 TitleScreenPickNewMon:
-	ld a, HIGH(vBGMap0)
-	call TitleScreenCopyTileMapToVRAM
+	; Disabled - no Pokemon on title screen
+	ret
 
 .loop
 ; Keep looping until a mon different from the current one is picked.
@@ -297,6 +297,8 @@ TitleScreenPickNewMon:
 	ret
 
 TitleScreenScrollInMon:
+	; Disabled - no Pokemon on title screen
+	ret
 	ld d, 0 ; scroll in
 	farcall TitleScroll
 	xor a
@@ -407,7 +409,7 @@ IF DEF(_RED)
 	db $60,$61,$7F,$65,$66,$67,$68,$69,"@" ; "Red Version"
 ENDC
 IF DEF(_BLUE)
-	db $61,$62,$63,$64,$65,$66,$67,$68,"@" ; "Blue Version"
+	db $7F,$7F,$7F,$7F,$65,$66,$67,$68,$69,"@" ; POKECLEAR MOD: "    Version" (spaces instead of "Blue")
 ENDC
 
 DebugNewGamePlayerName:

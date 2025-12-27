@@ -1,9 +1,18 @@
 ViridianMart_Script:
+	call ViridianMart_InitSkipOakIntro
 	call ViridianMartCheckParcelDeliveredScript
 	call EnableAutoTextBoxDrawing
 	ld hl, ViridianMart_ScriptPointers
 	ld a, [wViridianMartCurScript]
 	jp CallFunctionInTable
+
+ViridianMart_InitSkipOakIntro:
+	; Skip the Oak's Parcel event entirely.
+	SetEvent EVENT_GOT_OAKS_PARCEL
+	SetEvent EVENT_OAK_GOT_PARCEL
+	ld a, SCRIPT_VIRIDIANMART_NOOP
+	ld [wViridianMartCurScript], a
+	ret
 
 ViridianMartCheckParcelDeliveredScript:
 	CheckEvent EVENT_OAK_GOT_PARCEL

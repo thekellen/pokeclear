@@ -1,4 +1,5 @@
 PalletTown_Script:
+	call PalletTown_InitSkipOakIntro
 	CheckEvent EVENT_GOT_POKEBALLS_FROM_OAK
 	jr z, .next
 	SetEvent EVENT_PALLET_AFTER_GETTING_POKEBALLS
@@ -7,6 +8,49 @@ PalletTown_Script:
 	ld hl, PalletTown_ScriptPointers
 	ld a, [wPalletTownCurScript]
 	jp CallFunctionInTable
+
+PalletTown_InitSkipOakIntro:
+	; Make the game state match "starter picked and rival battle done".
+	SetEvent EVENT_FOLLOWED_OAK_INTO_LAB
+	SetEvent EVENT_FOLLOWED_OAK_INTO_LAB_2
+	SetEvent EVENT_OAK_ASKED_TO_CHOOSE_MON
+	SetEvent EVENT_GOT_STARTER
+	SetEvent EVENT_BATTLED_RIVAL_IN_OAKS_LAB
+	SetEvent EVENT_GOT_POKEDEX
+	SetEvent EVENT_OAK_GOT_PARCEL
+	SetEvent EVENT_1ST_ROUTE22_RIVAL_BATTLE
+	ResetEvent EVENT_2ND_ROUTE22_RIVAL_BATTLE
+	SetEvent EVENT_ROUTE22_RIVAL_WANTS_BATTLE
+	ld hl, wStatusFlags4
+	set BIT_GOT_STARTER, [hl]
+	ld a, HS_OAKS_LAB_RIVAL
+	ld [wMissableObjectIndex], a
+	predef HideObject
+	ld a, HS_OAKS_LAB_OAK_1
+	ld [wMissableObjectIndex], a
+	predef ShowObject
+	ld a, HS_OAKS_LAB_OAK_2
+	ld [wMissableObjectIndex], a
+	predef HideObject
+	ld a, HS_STARTER_BALL_1
+	ld [wMissableObjectIndex], a
+	predef HideObject
+	ld a, HS_STARTER_BALL_2
+	ld [wMissableObjectIndex], a
+	predef HideObject
+	ld a, HS_STARTER_BALL_3
+	ld [wMissableObjectIndex], a
+	predef HideObject
+	ld a, HS_POKEDEX_1
+	ld [wMissableObjectIndex], a
+	predef HideObject
+	ld a, HS_POKEDEX_2
+	ld [wMissableObjectIndex], a
+	predef HideObject
+	ld a, HS_ROUTE_22_RIVAL_1
+	ld [wMissableObjectIndex], a
+	predef ShowObject
+	ret
 
 PalletTown_ScriptPointers:
 	def_script_pointers

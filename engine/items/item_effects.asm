@@ -3,7 +3,31 @@ UseItem_::
 	ld [wActionResultOrTookBattleTurn], a ; initialise to success value
 	ld a, [wCurItem]
 	cp HM01
-	jp nc, ItemUseTMHM
+	jr nc, .eatItem ; if TM/HM, eat it
+	; Check if it's a key item
+	call IsKeyItem
+	ld a, [wIsKeyItem]
+	and a
+	jr nz, .useNormally ; if key item, use normally
+.eatItem
+	; Non-key item or TM/HM - player eats it
+	ld a, [wCurItem]
+	ld [wNamedObjectIndex], a
+	call GetItemName
+	ld hl, .AteItemText
+	call PrintText
+	ld hl, .GulpText
+	call PrintText
+	; Remove the item from inventory
+	ld a, [wCurItem]
+	ld [wNamedObjectIndex], a
+	ld a, 1
+	ld [wItemQuantity], a
+	ld hl, wNumBagItems
+	call RemoveItemFromInventory
+	ret
+.useNormally
+	ld a, [wCurItem]
 	ld hl, ItemUsePtrTable
 	dec a
 	add a
@@ -14,6 +38,17 @@ UseItem_::
 	ld h, [hl]
 	ld l, a
 	jp hl
+
+.AteItemText:
+	text "<PLAYER> ate the"
+	line "@"
+	text_ram wNameBuffer
+	text "…"
+	prompt
+
+.GulpText:
+	text "Gulp!"
+	prompt
 
 ItemUsePtrTable:
 ; entries correspond to item ids
@@ -684,8 +719,11 @@ ItemUseSurfboard:
 	ld a, 2
 	ld [wWalkBikeSurfState], a ; change player state to surfing
 	call PlayDefaultMusic ; play surfing music
-	ld hl, SurfingGotOnText
-	jp PrintText
+	call LoadPlayerSpriteGraphics ; load surfing sprite
+	ld a, 1
+	ld [wActionResultOrTookBattleTurn], a ; mark item as successfully used
+	; Skip text display to avoid issues
+	ret
 .tryToStopSurfing
 	xor a
 	ldh [hSpriteIndex], a

@@ -6,6 +6,9 @@
 DEF ANIMATION_END EQU 80
 
 PlayIntro:
+	; POKECLEAR MOD: Skip intro Pokémon animation
+	ret
+
 	xor a
 	ldh [hJoyHeld], a
 	inc a

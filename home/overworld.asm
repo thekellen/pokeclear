@@ -94,7 +94,11 @@ OverworldLoopLessDelay::
 	call IsSpriteOrSignInFrontOfPlayer
 	ldh a, [hTextID]
 	and a
-	jp z, OverworldLoop
+	jr nz, .displayDialogue ; if there's a sprite/sign, display it
+	; No sprite/sign found, check for HM tile interactions (Cut, Surf, Strength)
+	call CheckHMTileInteraction
+	; Whether HM triggered or not, return to overworld (HM functions handle their own cleanup)
+	jp OverworldLoop
 .displayDialogue
 	predef GetTileAndCoordsInFrontOfPlayer
 	call UpdateSprites
@@ -2382,8 +2386,18 @@ IgnoreInputForHalfSecond:
 	ret
 
 ResetUsingStrengthOutOfBattleBit:
+	; Check if player has Rainbow Badge
+	ld a, [wObtainedBadges]
+	bit BIT_RAINBOWBADGE, a
+	jr nz, .keepStrengthActive ; if has badge, keep strength active
+	; No badge, reset strength
 	ld hl, wStatusFlags1
 	res BIT_STRENGTH_ACTIVE, [hl]
+	ret
+.keepStrengthActive
+	; Has badge, set strength active
+	ld hl, wStatusFlags1
+	set BIT_STRENGTH_ACTIVE, [hl]
 	ret
 
 ForceBikeOrSurf::
@@ -2445,4 +2459,10 @@ LoadDestinationWarpPosition::
 	pop af
 	ldh [hLoadedROMBank], a
 	ld [rROMB], a
+	ret
+
+CheckHMTileInteraction::
+; Check if player pressed A on a tile that can be interacted with via HM moves
+; Wrapper that calls into another bank
+	farcall CheckHMTileInteraction_
 	ret

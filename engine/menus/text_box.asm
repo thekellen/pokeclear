@@ -382,10 +382,11 @@ INCLUDE "data/yes_no_menu_strings.asm"
 DisplayFieldMoveMonMenu:
 	xor a
 	ld hl, wFieldMoves
+	ld b, NUM_FIELD_MOVES
+.clearFieldMoves
 	ld [hli], a ; wFieldMoves
-	ld [hli], a ; wFieldMoves + 1
-	ld [hli], a ; wFieldMoves + 2
-	ld [hli], a ; wFieldMoves + 3
+	dec b
+	jr nz, .clearFieldMoves
 	ld [hli], a ; wNumFieldMoves
 	ld [hl], 12 ; wFieldMovesLeftmostXCoord
 	call GetMonFieldMoves
@@ -556,6 +557,77 @@ GetMonFieldMoves:
 	jr .loop
 .done
 	pop hl
+	call AddHMFieldMoves
 	ret
+
+AddHMFieldMoves:
+	ld hl, HMFieldMoveList
+.loop
+	ld a, [hli]
+	cp $ff
+	ret z
+	ld b, a
+	push hl
+	call AddFieldMoveIfMissing
+	pop hl
+	jr .loop
+
+AddFieldMoveIfMissing:
+	; b = move id
+	ld a, [wNumFieldMoves]
+	cp NUM_FIELD_MOVES
+	ret nc
+	ld hl, FieldMoveDisplayData
+.findMove
+	ld a, [hli]
+	cp $ff
+	ret z
+	cp b
+	jr z, .found
+	inc hl
+	inc hl
+	jr .findMove
+.found
+	ld a, [hli] ; field move name index
+	ld c, a
+	ld a, [hl] ; field move leftmost X coordinate
+	ld d, a
+	ld hl, wFieldMoves
+	ld e, NUM_FIELD_MOVES
+.checkExisting
+	ld a, [hli]
+	and a
+	jr z, .store
+	cp c
+	ret z
+	dec e
+	jr nz, .checkExisting
+	ret
+.store
+	ld a, [wNumFieldMoves]
+	cp NUM_FIELD_MOVES
+	ret nc
+	ld e, a
+	ld hl, wFieldMoves
+	ld b, 0
+	ld c, e
+	add hl, bc
+	ld a, c
+	ld [hl], a
+	ld a, [wNumFieldMoves]
+	inc a
+	ld [wNumFieldMoves], a
+	ld a, [wFieldMovesLeftmostXCoord]
+	cp d
+	jr c, .skipUpdatingLeftmostXCoord
+	ld a, d
+	ld [wFieldMovesLeftmostXCoord], a
+.skipUpdatingLeftmostXCoord
+	ld a, b
+	ld [wLastFieldMoveID], a
+	ret
+
+HMFieldMoveList:
+	db CUT, FLY, SURF, STRENGTH, FLASH, -1
 
 INCLUDE "data/moves/field_moves.asm"

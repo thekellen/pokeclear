@@ -57,10 +57,8 @@ _ItemUseBallText06::
 	text_end
 
 _SurfingGotOnText::
-	text "<PLAYER> got on"
-	line "@"
-	text_ram wNameBuffer
-	text "!"
+	text "<PLAYER> starts"
+	line "to swim!"
 	prompt
 
 _SurfingNoPlaceToGetOffText::

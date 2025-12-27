@@ -144,6 +144,9 @@ LoadFrontSpriteByMonIndex::
 
 PlayCry::
 ; Play monster a's cry.
+	; POKECLEAR MOD: Silence all Pokémon cries
+	ret
+
 	call GetCryData
 	call PlaySound
 	jp WaitForSoundToFinish

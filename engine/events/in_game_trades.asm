@@ -62,13 +62,8 @@ DoInGameTradeDialogue:
 	ld a, TRADETEXT_NO_TRADE
 	ld [wInGameTradeTextPointerTableIndex], a
 	call YesNoChoice
-	ld a, [wCurrentMenuItem]
-	and a
-	jr nz, .printText
-	call InGameTrade_DoTrade
-	jr c, .printText
-	ld hl, TradedForText
-	call PrintText
+	; Always treat as "No" - skip the trade
+	jr .printText
 .printText
 	ld hl, wInGameTradeTextPointerTableIndex
 	ld a, [hld] ; wInGameTradeTextPointerTableIndex

@@ -87,8 +87,8 @@ FightingDojo_TextPointers:
 	dw_const FightingDojoBlackbelt2Text,                            TEXT_FIGHTINGDOJO_BLACKBELT2
 	dw_const FightingDojoBlackbelt3Text,                            TEXT_FIGHTINGDOJO_BLACKBELT3
 	dw_const FightingDojoBlackbelt4Text,                            TEXT_FIGHTINGDOJO_BLACKBELT4
-	dw_const FightingDojoHitmonleePokeBallText,                     TEXT_FIGHTINGDOJO_HITMONLEE_POKE_BALL
-	dw_const FightingDojoHitmonchanPokeBallText,                    TEXT_FIGHTINGDOJO_HITMONCHAN_POKE_BALL
+	dw_const PickUpItemText,                                        TEXT_FIGHTINGDOJO_HITMONLEE_POKE_BALL
+	dw_const PickUpItemText,                                        TEXT_FIGHTINGDOJO_HITMONCHAN_POKE_BALL
 	dw_const FightingDojoKarateMasterText.IWillGiveYouAPokemonText, TEXT_FIGHTINGDOJO_KARATE_MASTER_I_WILL_GIVE_YOU_A_POKEMON
 
 FightingDojoTrainerHeaders:
@@ -221,76 +221,4 @@ FightingDojoBlackbelt4EndBattleText:
 
 FightingDojoBlackbelt4AfterBattleText:
 	text_far _FightingDojoBlackbelt4AfterBattleText
-	text_end
-
-FightingDojoHitmonleePokeBallText:
-	text_asm
-	CheckEitherEventSet EVENT_GOT_HITMONLEE, EVENT_GOT_HITMONCHAN
-	jr z, .GetMon
-	ld hl, FightingDojoBetterNotGetGreedyText
-	call PrintText
-	jr .done
-.GetMon
-	ld a, HITMONLEE
-	call DisplayPokedex
-	ld hl, .Text
-	call PrintText
-	call YesNoChoice
-	ld a, [wCurrentMenuItem]
-	and a
-	jr nz, .done
-	ld a, [wCurPartySpecies]
-	ld b, a
-	ld c, 30
-	call GivePokemon
-	jr nc, .done
-
-	; once Poké Ball is taken, hide sprite
-	ld a, HS_FIGHTING_DOJO_GIFT_1
-	ld [wMissableObjectIndex], a
-	predef HideObject
-	SetEvents EVENT_GOT_HITMONLEE, EVENT_DEFEATED_FIGHTING_DOJO
-.done
-	jp TextScriptEnd
-
-.Text:
-	text_far _FightingDojoHitmonleePokeBallText
-	text_end
-
-FightingDojoHitmonchanPokeBallText:
-	text_asm
-	CheckEitherEventSet EVENT_GOT_HITMONLEE, EVENT_GOT_HITMONCHAN
-	jr z, .GetMon
-	ld hl, FightingDojoBetterNotGetGreedyText
-	call PrintText
-	jr .done
-.GetMon
-	ld a, HITMONCHAN
-	call DisplayPokedex
-	ld hl, .Text
-	call PrintText
-	call YesNoChoice
-	ld a, [wCurrentMenuItem]
-	and a
-	jr nz, .done
-	ld a, [wCurPartySpecies]
-	ld b, a
-	ld c, 30
-	call GivePokemon
-	jr nc, .done
-	SetEvents EVENT_GOT_HITMONCHAN, EVENT_DEFEATED_FIGHTING_DOJO
-
-	; once Poké Ball is taken, hide sprite
-	ld a, HS_FIGHTING_DOJO_GIFT_2
-	ld [wMissableObjectIndex], a
-	predef HideObject
-.done
-	jp TextScriptEnd
-
-.Text:
-	text_far _FightingDojoHitmonchanPokeBallText
-	text_end
-
-FightingDojoBetterNotGetGreedyText:
-	text_far _FightingDojoBetterNotGetGreedyText
 	text_end

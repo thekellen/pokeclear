@@ -1,18 +1,12 @@
 PrintStrengthText:
+	; Skip text, just activate Strength
 	ld hl, wStatusFlags1
 	set BIT_STRENGTH_ACTIVE, [hl]
-	ld hl, UsedStrengthText
-	call PrintText
-	ld hl, CanMoveBouldersText
-	jp PrintText
+	ret
 
 UsedStrengthText:
 	text_far _UsedStrengthText
-	text_asm
-	ld a, [wCurPartySpecies]
-	call PlayCry
-	call Delay3
-	jp TextScriptEnd
+	text_end
 
 CanMoveBouldersText:
 	text_far _CanMoveBouldersText

@@ -6865,6 +6865,19 @@ InitWildBattle:
 
 ; common code that executes after init battle code specific to trainer or wild battles
 _InitBattleCommon:
+	; POKECLEAR MOD: Skip battle screen entirely, go straight to victory
+	xor a
+	ld [wBattleResult], a ; set result to victory (0)
+	callfar EndOfBattle
+	pop af
+	ld [wLetterPrintingDelayFlags], a
+	pop af
+	ld [wMapPalOffset], a
+	ld a, [wSavedTileAnimations]
+	ldh [hTileAnimations], a
+	scf
+	ret
+
 	ld b, SET_PAL_BATTLE_BLACK
 	call RunPaletteCommand
 	call SlidePlayerAndEnemySilhouettesOnScreen
