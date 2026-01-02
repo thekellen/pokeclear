@@ -70,7 +70,7 @@ _Route16Biker5EndBattleText::
 	prompt
 
 _Route16Biker5AfterBattleText::
-	text "I like my #MON"
+	text "I like my hands"
 	line "ferocious! They"
 	cont "tear up enemies!"
 	done
@@ -87,16 +87,16 @@ _Route16Biker6EndBattleText::
 _Route16Biker6AfterBattleText::
 	text "I like harassing"
 	line "people with my"
-	cont "vicious #MON!"
+	cont "vicious hands!"
 	done
 
 _Route16Text7::
-	text "A sleeping #MON"
+	text "A sleeping man"
 	line "blocks the way!"
 	done
 
 _Route16SnorlaxWokeUpText::
-	text "SNORLAX woke up!"
+	text "Grumpy man woke up!"
 
 	para "It attacked in a"
 	line "grumpy rage!"
@@ -104,7 +104,7 @@ _Route16SnorlaxWokeUpText::
 
 _Route16SnorlaxReturnedToMountainsText::
 	text "With a big yawn,"
-	line "SNORLAX returned"
+	line "the old man returned"
 	cont "to the mountains!"
 	done
 

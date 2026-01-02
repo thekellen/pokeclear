@@ -1,5 +1,5 @@
 _Route9CooltrainerF1BattleText::
-	text "You have #MON"
+	text "You have candy"
 	line "with you!"
 	cont "You're mine!"
 	done
@@ -18,7 +18,7 @@ _Route9CooltrainerF1AfterBattleText::
 _Route9CooltrainerM1BattleText::
 	text "Who's that walking"
 	line "with those good"
-	cont "looking #MON?"
+	cont "looking candy?"
 	done
 
 _Route9CooltrainerM1EndBattleText::
@@ -73,7 +73,7 @@ _Route9Hiker1EndBattleText::
 	line "coming, eh!"
 
 	para "Oh wait. I'm out"
-	line "of #MON!"
+	line "of candy!"
 	prompt
 
 _Route9Hiker1AfterBattleText::
@@ -101,7 +101,7 @@ _Route9Hiker2AfterBattleText::
 _Route9Youngster1BattleText::
 	text "I got up early"
 	line "every day to"
-	cont "raise my #MON"
+	cont "raise my candy"
 	cont "from cocoons!"
 	done
 
@@ -136,7 +136,7 @@ _Route9Hiker3AfterBattleText::
 
 _Route9Youngster2BattleText::
 	text "Go, my super bug"
-	line "#MON!"
+	line "candy!"
 	done
 
 _Route9Youngster2EndBattleText::
@@ -146,7 +146,7 @@ _Route9Youngster2EndBattleText::
 
 _Route9Youngster2AfterBattleText::
 	text "If you don't like"
-	line "bug #MON, you"
+	line "bug candy, you"
 	cont "bug me!"
 	done
 

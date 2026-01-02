@@ -20,12 +20,12 @@ _Route21Fisher2BattleText::
 
 _Route21Fisher2EndBattleText::
 	text "Darn"
-	line "MAGIKARP!"
+	line "TRIDENT!"
 	prompt
 
 _Route21Fisher2AfterBattleText::
 	text "I seem to only"
-	line "catch MAGIKARP!"
+	line "catch TRIDENT!"
 	done
 
 _Route21Swimmer1BattleText::
@@ -59,8 +59,8 @@ _Route21Swimmer2AfterBattleText::
 	done
 
 _Route21Swimmer3BattleText::
-	text "I caught all my"
-	line "#MON at sea!"
+	text "I won all my"
+	line "candy at sea!"
 	done
 
 _Route21Swimmer3EndBattleText::
@@ -69,8 +69,8 @@ _Route21Swimmer3EndBattleText::
 	prompt
 
 _Route21Swimmer3AfterBattleText::
-	text "Where'd you catch"
-	line "your #MON?"
+	text "Where'd you gain"
+	line "your skills?"
 	done
 
 _Route21Swimmer4BattleText::

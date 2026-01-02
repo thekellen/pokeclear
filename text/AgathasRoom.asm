@@ -13,13 +13,13 @@ _AgathaBeforeBattleText::
 
 	para "Now he just wants"
 	line "to fiddle with"
-	cont "his #DEX! He's"
-	cont "wrong! #MON"
-	cont "are for fighting!"
+	cont "his WINSTREAK! He's"
+	cont "wrong! candy"
+	cont "are for playing!"
 
 	para "<PLAYER>! I'll show"
 	line "you how a real"
-	cont "trainer fights!"
+	cont "player competes!"
 	done
 
 _AgathaEndBattleText::

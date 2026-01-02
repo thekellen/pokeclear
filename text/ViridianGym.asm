@@ -15,7 +15,7 @@ _ViridianGymGiovanniPreBattleText::
 	para "Once more, you"
 	line "shall face"
 	cont "GIOVANNI, the"
-	cont "greatest trainer!"
+	cont "greatest player!"
 	done
 
 _ViridianGymGiovanniReceivedEarthBadgeText::
@@ -35,8 +35,8 @@ _ViridianGymGiovanniPostBattleAdviceText::
 	cont "finished forever!"
 
 	para "I will dedicate my"
-	line "life to the study"
-	cont "of #MON!"
+	line "life to mastering"
+	cont "JANKEN!"
 
 	para "Let us meet again"
 	line "some day!"
@@ -45,38 +45,33 @@ _ViridianGymGiovanniPostBattleAdviceText::
 
 _ViridianGymGiovanniEarthBadgeInfoText::
 	text "The EARTHBADGE"
-	line "makes #MON of"
-	cont "any level obey!"
+	line "grants ultimate"
+	cont "mastery of JANKEN"
+	cont "strategy!"
 
 	para "It is evidence of"
-	line "your mastery as a"
-	cont "#MON trainer!"
+	line "your skill as a"
+	cont "true master!"
 
 	para "With it, you can"
-	line "enter the #MON"
+	line "enter the JANKEN"
 	cont "LEAGUE!"
 
 	para "It is my gift for"
-	line "your #MON"
+	line "your JANKEN"
 	cont "LEAGUE challenge!"
 	done
 
 _ViridianGymGiovanniReceivedTM27Text::
 	text "<PLAYER> received"
-	line "TM27!@"
+	line "M&M27!@"
 	text_end
 
 _ViridianGymGiovanniTM27ExplanationText::
 	text_start
 
-	para "TM27 is FISSURE!"
-	line "It will take out"
-	cont "#MON with just"
-	cont "one hit!"
-
-	para "I made it when I"
-	line "ran the GYM here,"
-	cont "too long ago..."
+	para "M&M27 contains"
+	line "RED 40."
 	done
 
 _ViridianGymGiovanniTM27NoRoomText::
@@ -117,7 +112,7 @@ _ViridianGymHiker1AfterBattleText::
 	done
 
 _ViridianGymRocker1BattleText::
-	text "#MON and I, we"
+	text "JANKEN and I, we"
 	line "make wonderful"
 	cont "music together!"
 	done
@@ -144,7 +139,7 @@ _ViridianGymHiker2EndBattleText::
 	prompt
 
 _ViridianGymHiker2AfterBattleText::
-	text "If my #MON"
+	text "If my plays"
 	line "were as good at"
 	cont "Karate as I..."
 	done
@@ -175,13 +170,13 @@ _ViridianGymHiker3EndBattleText::
 	prompt
 
 _ViridianGymHiker3AfterBattleText::
-	text "#MON LEAGUE?"
+	text "JANKEN LEAGUE?"
 	line "You? Don't get"
 	cont "cocky!"
 	done
 
 _ViridianGymRocker2BattleText::
-	text "Your #MON will"
+	text "Your hands will"
 	line "cower at the"
 	cont "crack of my whip!"
 	done
@@ -210,7 +205,7 @@ _ViridianGymCooltrainerM3EndBattleText::
 
 _ViridianGymCooltrainerM3AfterBattleText::
 	text "You can go onto"
-	line "#MON LEAGUE"
+	line "JANKEN LEAGUE"
 	cont "only by defeating"
 	cont "our GYM LEADER!"
 	done
@@ -228,9 +223,9 @@ _ViridianGymGuidePreBattleText::
 	cont "the GYM LEADERs!"
 
 	para "I heard that the"
-	line "trainers here"
-	cont "like ground-type"
-	cont "#MON!"
+	line "players here"
+	cont "like rock-solid"
+	cont "strategies!"
 	done
 
 _ViridianGymGuidePostBattleText::

@@ -21,7 +21,7 @@ _Museum2FScientistText::
 	done
 
 _Museum2FBrunetteGirlText::
-	text "I want a PIKACHU!"
+	text "I want a BABYRUTH!"
 	line "It's so cute!"
 
 	para "I asked my Daddy"
@@ -29,7 +29,7 @@ _Museum2FBrunetteGirlText::
 	done
 
 _Museum2FHikerText::
-	text "Yeah, a PIKACHU"
+	text "Yeah, a BABYRUTH"
 	line "soon, I promise!"
 	done
 

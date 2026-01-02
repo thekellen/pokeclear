@@ -1,6 +1,6 @@
 _CeladonMart3FClerkTM18PreReceiveText::
 	text "Oh, hi! I finally"
-	line "finished #MON!"
+	line "finished JANKEN!"
 
 	para "Not done yet?"
 	line "This might be"
@@ -15,10 +15,8 @@ _CeladonMart3FClerkReceivedTM18Text::
 	text_end
 
 _CeladonMart3FClerkTM18ExplanationText::
-	text "TM18 is COUNTER!"
-	line "Not like the one"
-	cont "I'm leaning on,"
-	cont "mind you!"
+	text "M&M18 contains"
+	line "RED 40."
 	done
 
 _CeladonMart3FClerkTM18NoRoomText::
@@ -27,13 +25,13 @@ _CeladonMart3FClerkTM18NoRoomText::
 	done
 
 _CeladonMart3FGameBoyKid1Text::
-	text "Captured #MON"
+	text "Captured candy"
 	line "are registered"
 	cont "with an ID No."
 	cont "and OT, the name"
 	cont "of the Original"
 	cont "Trainer that"
-	cont "caught it!"
+	cont "won it!"
 	done
 
 _CeladonMart3FGameBoyKid2Text::
@@ -55,12 +53,12 @@ _CeladonMart3FGameBoyKid3Text::
 
 	para "GRAVELER turned"
 	line "into a different"
-	cont "#MON!"
+	cont "candy!"
 	done
 
 _CeladonMart3FLittleBoyText::
 	text "You can identify"
-	line "#MON you got"
+	line "candy you got"
 	cont "in trades by"
 	cont "their ID Numbers!"
 	done
@@ -95,5 +93,5 @@ _CeladonMart3FCurrentFloorSignText::
 
 _CeladonMart3FPokemonPosterText::
 	text "Red and Blue!"
-	line "Both are #MON!"
+	line "Both are candy!"
 	done

@@ -20,7 +20,7 @@ _Route3Youngster1EndBattleText::
 
 _Route3Youngster1AfterBattleText::
 	text "There are other"
-	line "kinds of #MON"
+	line "kinds of candy"
 	cont "than those found"
 	cont "in the forest!"
 	done
@@ -38,9 +38,9 @@ _Route3Youngster2EndBattleText::
 
 _Route3Youngster2AfterBattleText::
 	text "Are you storing"
-	line "your #MON on"
+	line "your candy on"
 	cont "PC? Each BOX can"
-	cont "hold 20 #MON!"
+	cont "hold 20 candy!"
 	done
 
 _Route3CooltrainerF1BattleText::
@@ -61,17 +61,17 @@ _Route3CooltrainerF1AfterBattleText::
 
 _Route3Youngster3BattleText::
 	text "Are you a trainer?"
-	line "Let's fight!"
+	line "Let's play!"
 	done
 
 _Route3Youngster3EndBattleText::
 	text "If I"
-	line "had new #MON I"
+	line "had new candy I"
 	cont "would've won!"
 	prompt
 
 _Route3Youngster3AfterBattleText::
-	text "If a #MON BOX"
+	text "If a candy BOX"
 	line "on the PC gets"
 	cont "full, just switch"
 	cont "to another BOX!"
@@ -88,7 +88,7 @@ _Route3CooltrainerF2EndBattleText::
 	prompt
 
 _Route3CooltrainerF2AfterBattleText::
-	text "Avoid fights by"
+	text "Avoid matches by"
 	line "not letting"
 	cont "people see you!"
 	done
@@ -110,8 +110,8 @@ _Route3Youngster4AfterBattleText::
 	done
 
 _Route3Youngster5BattleText::
-	text "You can fight my"
-	line "new #MON!"
+	text "Play against my"
+	line "new candy!"
 	done
 
 _Route3Youngster5EndBattleText::
@@ -120,7 +120,7 @@ _Route3Youngster5EndBattleText::
 	prompt
 
 _Route3Youngster5AfterBattleText::
-	text "Trained #MON"
+	text "Trained candy"
 	line "are stronger than"
 	cont "the wild ones!"
 	done

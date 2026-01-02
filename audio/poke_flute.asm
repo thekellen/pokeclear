@@ -1,5 +1,5 @@
 Music_PokeFluteInBattle::
-	; begin playing the "caught mon" sound effect
+	; begin playing the "won mon" sound effect
 	ld a, SFX_CAUGHT_MON
 	call PlaySoundWaitForCurrent
 	; then immediately overwrite the channel pointers

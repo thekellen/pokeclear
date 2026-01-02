@@ -10,10 +10,10 @@ _SaffronGymSabrinaText::
 	line "to bend spoons"
 	cont "with my mind."
 
-	para "I dislike fight-"
-	line "ing, but if you"
-	cont "wish, I will show"
-	cont "you my powers!"
+	para "I dislike playing"
+	line "JANKEN, but if"
+	cont "you wish, I will"
+	cont "show my powers!"
 	done
 
 _SaffronGymSabrinaReceivedMarshBadgeText::
@@ -31,25 +31,25 @@ _SaffronGymSabrinaReceivedMarshBadgeText::
 	text_end
 
 _SaffronGymSabrinaPostBattleAdviceText::
-	text "Everyone has"
-	line "psychic power!"
-	cont "People just don't"
-	cont "realize it!"
+	text "Everyone can read"
+	line "opponents in"
+	cont "JANKEN! People"
+	cont "don't realize it!"
 	done
 
 _SaffronGymSabrinaMarshBadgeInfoText::
 	text "The MARSHBADGE"
-	line "makes #MON up"
-	cont "to L70 obey you!"
+	line "unlocks master"
+	cont "level JANKEN"
+	cont "strategies!"
 
-	para "Stronger #MON"
-	line "will become wild,"
-	cont "ignoring your"
-	cont "orders in battle!"
+	para "Higher level play"
+	line "requires serious"
+	cont "dedication and"
+	cont "focus to master!"
 
-	para "Just don't raise"
-	line "your #MON too"
-	cont "much!"
+	para "Study the mental"
+	line "game carefully!"
 
 	para "Wait, please take"
 	line "this TM with you!"
@@ -57,16 +57,14 @@ _SaffronGymSabrinaMarshBadgeInfoText::
 
 _SaffronGymSabrinaReceivedTM46Text::
 	text "<PLAYER> received"
-	line "TM46!@"
+	line "M&M46!@"
 	text_end
 
 _TM46ExplanationText::
 	text_start
 
-	para "TM46 is PSYWAVE!"
-	line "It uses powerful"
-	cont "psychic waves to"
-	cont "inflict damage!"
+	para "M&M46 contains"
+	line "RED 40."
 	done
 
 _SaffronGymSabrinaTM46NoRoomText::
@@ -78,17 +76,17 @@ _SaffronGymGuideChampInMakingText::
 	text "Yo! Champ in"
 	line "making!"
 
-	para "SABRINA's #MON"
-	line "use psychic power"
+	para "SABRINA's plays"
+	line "use psychic reads"
 	cont "instead of force!"
 
-	para "Fighting #MON"
+	para "Brute force plays"
 	line "are weak against"
-	cont "psychic #MON!"
+	cont "psychic reads!"
 
-	para "They get creamed"
-	line "before they can"
-	cont "even aim a punch!"
+	para "She'll predict"
+	line "your throw before"
+	cont "you even make it!"
 	done
 
 _SaffronGymGuideBeatSabrinaText::
@@ -112,7 +110,7 @@ _SaffronGymChanneler1EndBattleText::
 	prompt
 
 _SaffronGymChanneler1AfterBattleText::
-	text "In a battle of"
+	text "In a match of"
 	line "equals, the one"
 	cont "with the stronger"
 	cont "will wins!"
@@ -133,17 +131,17 @@ _SaffronGymYoungster1EndBattleText::
 	prompt
 
 _SaffronGymYoungster1AfterBattleText::
-	text "Psychic #MON"
-	line "fear only ghosts"
-	cont "and bugs!"
+	text "Mind readers can"
+	line "be fooled by"
+	cont "random plays!"
 	done
 
 _SaffronGymChanneler2BattleText::
-	text "#MON take on"
-	line "the appearance of"
-	cont "their trainers."
+	text "JANKEN style"
+	line "reflects the"
+	cont "player's spirit."
 
-	para "Your #MON must"
+	para "Your spirit must"
 	line "be tough, then!"
 	done
 
@@ -153,9 +151,9 @@ _SaffronGymChanneler2EndBattleText::
 	prompt
 
 _SaffronGymChanneler2AfterBattleText::
-	text "I must teach"
-	line "better techniques"
-	cont "to my #MON!"
+	text "I must learn"
+	line "better strategies"
+	cont "for my plays!"
 	done
 
 _SaffronGymYoungster2BattleText::
@@ -177,8 +175,8 @@ _SaffronGymYoungster2AfterBattleText::
 
 _SaffronGymChanneler3BattleText::
 	text "You and I, our"
-	line "#MON shall"
-	cont "fight!"
+	line "hands shall"
+	cont "compete!"
 	done
 
 _SaffronGymChanneler3EndBattleText::
@@ -208,18 +206,18 @@ _SaffronGymYoungster3EndBattleText::
 
 _SaffronGymYoungster3AfterBattleText::
 	text "There used to be"
-	line "2 #MON GYMs in"
+	line "2 JANKEN GYMs in"
 	cont "SAFFRON."
 
 	para "The FIGHTING DOJO"
 	line "next door lost"
 	cont "its GYM status"
 	cont "when we went and"
-	cont "creamed them!"
+	cont "beat them!"
 	done
 
 _SaffronGymYoungster4BattleText::
-	text "SAFFRON #MON"
+	text "SAFFRON JANKEN"
 	line "GYM is famous for"
 	cont "its psychics!"
 

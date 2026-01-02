@@ -1,5 +1,5 @@
 _ViridianForestNorthGateSuperNerdText::
-	text "Many #MON live"
+	text "Many candy live"
 	line "only in forests "
 	cont "and caves."
 
@@ -15,5 +15,5 @@ _ViridianForestNorthGateGrampsText::
 
 	para "They can be cut"
 	line "down by a special"
-	cont "#MON move."
+	cont "candy move."
 	done

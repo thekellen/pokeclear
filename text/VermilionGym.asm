@@ -3,18 +3,18 @@ _VermilionGymLTSurgePreBattleText::
 	line "you think you're"
 	cont "doing here?"
 
-	para "You won't live"
-	line "long in combat!"
+	para "You won't last"
+	line "long in JANKEN!"
 	cont "That's for sure!"
 
 	para "I tell you kid,"
-	line "electric #MON"
+	line "quick throws"
 	cont "saved me during"
 	cont "the war!"
 
-	para "They zapped my"
-	line "enemies into"
-	cont "paralysis!"
+	para "Lightning plays"
+	line "stunned my foes"
+	cont "every time!"
 
 	para "The same as I'll"
 	line "do to you!"

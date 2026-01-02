@@ -1,32 +1,32 @@
 _SSAnne2FRoomsGentleman3Text::
 	text "In all my travels"
 	line "I've never seen"
-	cont "any #MON sleep"
+	cont "any candy sleep"
 	cont "like this one!"
 
 	para "It was something"
-	line "like this!"
+	line "like this!  "
 	prompt
 
 _SSAnne2FRoomsGentleman4Text::
 	text "Ah yes, I have"
-	line "seen some #MON"
-	cont "ferry people"
+	line "seen some candy"
+	cont "ferry people "
 	cont "across the water!"
 	done
 
 _SSAnne2FRoomsGrampsText::
-	text "#MON can CUT"
+	text "candy can CUT"
 	line "down small bushes."
 	done
 
 _SSAnne2FRoomsGentleman5Text::
 	text "Have you gone to"
 	line "the SAFARI ZONE"
-	cont "in FUCHSIA CITY?"
+	cont "in FUCHSIA CITY? "
 
 	para "It had many rare"
-	line "kinds of #MON!!"
+	line "kinds of candy!!"
 	done
 
 _SSAnne2FRoomsLittleBoyText::
@@ -54,8 +54,8 @@ _SSAnne2FRoomsGentleman1BattleText::
 
 _SSAnne2FRoomsGentleman1EndBattleText::
 	text "Good"
-	line "fight! Ah, I feel"
-	cont "young again!"
+	line "match! Ah, I feel"
+	cont "young again! "
 	prompt
 
 _SSAnne2FRoomsGentleman1AfterBattleText::
@@ -84,7 +84,7 @@ _SSAnne2FRoomsFisherAfterBattleText::
 _SSAnne2FRoomsGentleman2BattleText::
 	text "Which do you like,"
 	line "a strong or a"
-	cont "rare #MON?"
+	cont "rare CANDY?"
 	done
 
 _SSAnne2FRoomsGentleman2EndBattleText::
@@ -94,7 +94,7 @@ _SSAnne2FRoomsGentleman2EndBattleText::
 
 _SSAnne2FRoomsGentleman2AfterBattleText::
 	text "I prefer strong"
-	line "and rare #MON."
+	line "and rare CANDY."
 	done
 
 _SSAnne2FRoomsCooltrainerFBattleText::
@@ -109,5 +109,5 @@ _SSAnne2FRoomsCooltrainerFEndBattleText::
 
 _SSAnne2FRoomsCooltrainerFAfterBattleText::
 	text "Oh, I adore your"
-	line "strong #MON!"
+	line "strong candy!"
 	done

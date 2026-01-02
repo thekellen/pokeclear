@@ -1,17 +1,17 @@
 _Route12SnorlaxText::
-	text "A sleeping #MON"
+	text "A sleeping man"
 	line "blocks the way!"
 	done
 
 _Route12SnorlaxWokeUpText::
-	text "SNORLAX woke up!"
+	text "Grumpy man woke up!"
 
 	para "It attacked in a"
 	line "grumpy rage!"
 	done
 
 _Route12SnorlaxCalmedDownText::
-	text "SNORLAX calmed"
+	text "Grumpy man calmed"
 	line "down! With a big"
 	cont "yawn, it returned"
 	cont "to the mountains!"
@@ -44,14 +44,14 @@ _Route12Fisher2EndBattleText::
 	prompt
 
 _Route12Fisher2AfterBattleText::
-	text "With a better ROD,"
-	line "I could catch"
-	cont "better #MON!"
+	text "With a better nose,"
+	line "I could find"
+	cont "better candy!"
 	done
 
 _Route12CooltrainerMBattleText::
 	text "Have you found a"
-	line "MOON STONE?"
+	line "JAWBREAKER?"
 	done
 
 _Route12CooltrainerMEndBattleText::
@@ -60,12 +60,12 @@ _Route12CooltrainerMEndBattleText::
 
 _Route12CooltrainerMAfterBattleText::
 	text "I could have made"
-	line "my #MON evolve"
-	cont "with MOON STONE!"
+	line "my candy sweeter"
+	cont "with extra sugar!"
 	done
 
 _Route12SuperNerdBattleText::
-	text "Electricity is my"
+	text "Paper is my"
 	line "specialty!"
 	done
 
@@ -74,15 +74,15 @@ _Route12SuperNerdEndBattleText::
 	prompt
 
 _Route12SuperNerdAfterBattleText::
-	text "Water conducts"
-	line "electricity, so"
-	cont "you should zap"
-	cont "sea #MON!"
+	text "Rock beats out"
+	line "scissors, so"
+	cont "you should Guu"
+	cont "any Choki!"
 	done
 
 _Route12Fisher3BattleText::
 	text "The FISHING FOOL"
-	line "vs. #MON KID!"
+	line "vs. CANDY KID!"
 	done
 
 _Route12Fisher3EndBattleText::
@@ -92,7 +92,7 @@ _Route12Fisher3EndBattleText::
 
 _Route12Fisher3AfterBattleText::
 	text "You beat me at"
-	line "#MON, but I'm"
+	line "JANKEN, but I'm"
 	cont "good at fishing!"
 	done
 
@@ -124,9 +124,9 @@ _Route12Fisher5EndBattleText::
 	prompt
 
 _Route12Fisher5AfterBattleText::
-	text "I catch MAGIKARP"
+	text "I catch PAYDAY"
 	line "all the time, but"
-	cont "they're so weak!"
+	cont "they're so salty!"
 	done
 
 _Route12SignText::

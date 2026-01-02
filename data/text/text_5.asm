@@ -37,7 +37,7 @@ _FlashLightsAreaText::
 
 _WarpToLastPokemonCenterText::
 	text "Warp to the last"
-	line "#MON CENTER."
+	line "REST CENTER."
 	done
 
 _CannotUseTeleportNowText::
@@ -81,11 +81,11 @@ _GotMonText::
 
 _SentToBoxText::
 	text "There's no more"
-	line "room for #MON!"
+	line "room for HAND!"
 	cont "@"
 	text_ram wBoxMonNicks
 	text " was"
-	cont "sent to #MON"
+	cont "sent to HAND"
 	cont "BOX @"
 	text_ram wStringBuffer
 	text " on PC!"
@@ -93,12 +93,12 @@ _SentToBoxText::
 
 _BoxIsFullText::
 	text "There's no more"
-	line "room for #MON!"
+	line "room for HAND!"
 
-	para "The #MON BOX"
+	para "The HAND BOX"
 	line "is full and can't"
 	cont "accept any more!"
 
 	para "Change the BOX at"
-	line "a #MON CENTER!"
+	line "a REST CENTER!"
 	done

@@ -1,6 +1,6 @@
 _CeladonMart2FMiddleAgedManText::
 	text "SUPER REPEL keeps"
-	line "weak #MON at"
+	line "weak CANDY at"
 	cont "bay..."
 
 	para "Hmm, it's a more"

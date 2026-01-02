@@ -9,7 +9,7 @@ _CeladonMart4FYoungsterText::
 	line "useful."
 
 	para "You can run from"
-	line "wild #MON by"
+	line "wild CANDY by"
 	cont "distracting them"
 	cont "with a # DOLL!"
 	done
@@ -20,7 +20,7 @@ _CeladonMart4FCurrentFloorSignText::
 
 	para "4F: WISEMAN GIFTS"
 
-	para "Evolution Special!"
+	para "Transform Sale!"
 	line "Element STONEs on"
 	cont "sale now!"
 	done

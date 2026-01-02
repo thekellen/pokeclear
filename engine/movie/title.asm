@@ -115,7 +115,7 @@ DisplayTitleScreen:
 	jr .next
 
 .tileScreenCopyrightTiles
-	db $41,$42,$43,$42,$44,$42,$45,$46,$47,$48,$49,$4A,$4B,$4C,$4D,$4E ; ©'95.'96.'98 GAME FREAK inc.
+	db $41,$42,$43,$44,$45,$7F,$46,$47,$48,$49,$4A,$4B,$4C,$4D,$4E ; ɔ 2025 GAME FREAK inc.
 .tileScreenCopyrightTilesEnd
 
 .next
@@ -210,7 +210,6 @@ ENDC
 	ld d, a
 	and a
 	jr nz, .scrollTitleScreenGameVersionLoop
-
 	ld a, HIGH(vBGMap1)
 	call TitleScreenCopyTileMapToVRAM
 	call LoadScreenTilesFromBuffer2
@@ -225,15 +224,9 @@ ENDC
 
 ; Keep scrolling in new mons indefinitely until the user performs input.
 .awaitUserInterruptionLoop
-	ld c, 200
+	ld c, 255
 	call CheckForUserInterruption
 	jr c, .finishedWaiting
-	call TitleScreenScrollInMon
-	ld c, 1
-	call CheckForUserInterruption
-	jr c, .finishedWaiting
-	farcall TitleScreenAnimateBallIfStarterOut
-	call TitleScreenPickNewMon
 	jr .awaitUserInterruptionLoop
 
 .finishedWaiting
@@ -244,7 +237,7 @@ ENDC
 	call ClearSprites
 	xor a
 	ldh [hWY], a
-	inc a
+	ld a, 1
 	ldh [hAutoBGTransferEnabled], a
 	call ClearScreen
 	ld a, HIGH(vBGMap0)
@@ -293,14 +286,12 @@ TitleScreenPickNewMon:
 	ld a, $90
 	ldh [hWY], a
 	ld d, 1 ; scroll out
-	farcall TitleScroll
 	ret
 
 TitleScreenScrollInMon:
 	; Disabled - no Pokemon on title screen
 	ret
-	ld d, 0 ; scroll in
-	farcall TitleScroll
+	ld d, 0 ; scroll in	
 	xor a
 	ldh [hWY], a
 	ret
@@ -310,7 +301,6 @@ ScrollTitleScreenGameVersion:
 	ldh a, [rLY]
 	cp l
 	jr nz, .wait
-
 	ld a, h
 	ldh [rSCX], a
 
@@ -330,23 +320,42 @@ DrawPlayerCharacter:
 	xor a
 	ld [wPlayerCharacterOAMTile], a
 	ld hl, wShadowOAM
+IF DEF(_BLUE)
+	lb de, $60, $30 ; shifted left for Blue version, starting at rightmost column
+ELSE
 	lb de, $60, $5a
+ENDC
 	ld b, 7
 .loop
 	push de
 	ld c, 5
+IF DEF(_BLUE)
+	; For Blue version, start from the right and move left
+	ld a, e
+	add 4 * 8 ; move to rightmost column position
+	ld e, a
+ENDC
 .innerLoop
 	ld a, d
 	ld [hli], a ; Y
 	ld a, e
 	ld [hli], a ; X
+IF DEF(_BLUE)
+	sub 8 ; move left for next tile (reversed)
+ELSE
 	add 8
+ENDC
 	ld e, a
 	ld a, [wPlayerCharacterOAMTile]
 	ld [hli], a ; tile
 	inc a
 	ld [wPlayerCharacterOAMTile], a
+IF DEF(_BLUE)
+	ld a, OAM_XFLIP ; flip horizontally for Blue version
+	ld [hli], a
+ELSE
 	inc hl
+ENDC
 	dec c
 	jr nz, .innerLoop
 	pop de
@@ -406,10 +415,10 @@ PrintGameVersionOnTitleScreen:
 ; these point to special tiles specifically loaded for that purpose and are not usual text
 VersionOnTitleScreenText:
 IF DEF(_RED)
-	db $61,$62,$63,$64,$65,$66,$67,$68,"@" ; "Red Version"
+	db $61,$62,$63,$64,$65,$66,$67,$68,"@" ; "Right Version"
 ENDC
 IF DEF(_BLUE)
-	db $61,$62,$63,$64,$65,$66,$67,$68,"@" ; "Clear Version"
+	db $61,$62,$63,$64,$65,$66,$67,$68,"@" ; "Left  Version"
 ENDC
 
 DebugNewGamePlayerName:

@@ -1,13 +1,13 @@
 _DexCompletionText::
-	text "#DEX comp-"
-	line "letion is:"
+	text "WINSTREAK"
+	line "progress:"
 
 	para "@"
 	text_decimal hDexRatingNumMonsSeen, 1, 3
-	text " #MON seen"
+	text " matches played"
 	line "@"
 	text_decimal hDexRatingNumMonsOwned, 1, 3
-	text " #MON owned"
+	text " wins recorded"
 
 	para "PROF.OAK's"
 	line "Rating:"
@@ -16,8 +16,8 @@ _DexCompletionText::
 _DexRatingText_Own0To9::
 	text "You still have"
 	line "lots to do."
-	cont "Look for #MON"
-	cont "in grassy areas!"
+	cont "Play more JANKEN"
+	cont "and win matches!"
 	done
 
 _DexRatingText_Own10To19::
@@ -29,9 +29,9 @@ _DexRatingText_Own10To19::
 
 _DexRatingText_Own20To29::
 	text "You still need"
-	line "more #MON!"
-	cont "Try to catch"
-	cont "other species!"
+	line "more wins!"
+	cont "Keep playing to"
+	cont "build your streak!"
 	done
 
 _DexRatingText_Own30To39::
@@ -48,22 +48,22 @@ _DexRatingText_Own40To49::
 	done
 
 _DexRatingText_Own50To59::
-	text "You finally got at"
-	line "least 50 species!"
+	text "You finally got"
+	line "50 wins!"
 	cont "Be sure to get"
 	cont "EXP.ALL from my"
 	cont "AIDE!"
 	done
 
 _DexRatingText_Own60To69::
-	text "Ho! This is geting"
+	text "Ho! This is getting"
 	line "even better!"
 	done
 
 _DexRatingText_Own70To79::
 	text "Very good!"
-	line "Go fish for some"
-	cont "marine #MON!"
+	line "Your win streak"
+	cont "is impressive!"
 	done
 
 _DexRatingText_Own80To89::
@@ -79,22 +79,22 @@ _DexRatingText_Own90To99::
 	done
 
 _DexRatingText_Own100To109::
-	text "You finally got at"
-	line "least 100 species!"
+	text "You finally got"
+	line "100 wins!"
 	cont "I can't believe"
 	cont "how good you are!"
 	done
 
 _DexRatingText_Own110To119::
-	text "You even have the"
-	line "evolved forms of"
-	cont "#MON! Super!"
+	text "Your skills have"
+	line "really leveled up!"
+	cont "Super streak!"
 	done
 
 _DexRatingText_Own120To129::
-	text "Excellent! Trade"
+	text "Excellent! Play"
 	line "with friends to"
-	cont "get some more!"
+	cont "test your skills!"
 	done
 
 _DexRatingText_Own130To139::
@@ -111,7 +111,7 @@ _DexRatingText_Own140To149::
 	done
 
 _DexRatingText_Own150To151::
-	text "Your #DEX is"
+	text "Your WINSTREAK is"
 	line "entirely complete!"
 	cont "Congratulations!"
 	done

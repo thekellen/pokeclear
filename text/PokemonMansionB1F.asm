@@ -30,7 +30,7 @@ _PokemonMansionB1FScientistAfterBattleText::
 
 _PokemonMansionB1FDiaryText::
 	text "Diary; Sept. 1"
-	line "MEWTWO is far too"
+	line "CHOCOPIE is far too"
 	cont "powerful."
 
 	para "We have failed to"

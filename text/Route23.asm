@@ -12,7 +12,7 @@ _Route23YouDontHaveTheBadgeYetText::
 
 	para "You have to have"
 	line "it to get to"
-	cont "#MON LEAGUE!@"
+	cont "JANKEN LEAGUE!@"
 	text_end
 
 _Route23OhThatIsTheBadgeText::
@@ -37,5 +37,5 @@ _Route23GoRightAheadText::
 
 _Route23VictoryRoadGateSignText::
 	text "VICTORY ROAD GATE"
-	line "- #MON LEAGUE"
+	line "- JANKEN LEAGUE"
 	done

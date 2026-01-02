@@ -1,5 +1,5 @@
 _SSAnne1FRoomsWigglytuffText::
-	text "WIGGLYTUFF: Puup"
+	text "Puup"
 	line "pupuu!@"
 	text_end
 
@@ -7,7 +7,7 @@ _SSAnne1FRoomsGentleman1BattleText::
 	text "I travel alone"
 	line "on my journeys!"
 
-	para "My #MON are my"
+	para "My candy are my"
 	line "only friends!"
 	done
 
@@ -37,8 +37,8 @@ _SSAnne1FRoomsGentleman2AfterBattleText::
 	done
 
 _SSAnne1FRoomsYoungsterBattleText::
-	text "I love #MON!"
-	line "Do you?"
+	text "I love candy!"
+	line "Do you?  "
 	done
 
 _SSAnne1FRoomsYoungsterEndBattleText::
@@ -51,12 +51,12 @@ _SSAnne1FRoomsYoungsterAfterBattleText::
 	line "friend, OK?"
 
 	para "Then we can trade"
-	line "#MON!"
+	line "candy!"
 	done
 
 _SSAnne1FRoomsCooltrainerFBattleText::
 	text "I collected these"
-	line "#MON from all"
+	line "candy from all"
 	cont "around the world!"
 	done
 
@@ -68,11 +68,11 @@ _SSAnne1FRoomsCooltrainerFEndBattleText::
 
 _SSAnne1FRoomsCooltrainerFAfterBattleText::
 	text "You hurt my poor"
-	line "worldly #MON!"
+	line "worldly candy!"
 
 	para "I demand that you"
-	line "heal them at a"
-	cont "#MON CENTER!"
+	line "heal them at a "
+	cont "REST CENTER!  "
 	done
 
 _SSAnne1FRoomsGirl1Text::

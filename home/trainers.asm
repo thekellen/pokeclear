@@ -231,6 +231,13 @@ TrainerWalkUpToPlayer_Bank0::
 
 ; sets opponent type and mon set/lvl based on the engaging trainer data
 InitBattleEnemyParameters::
+	; POKECLEAR: Increment battles played counter for trainer battles
+	ld hl, wPokedexSeen + 3 ; point to low byte (byte 3)
+	inc [hl]
+	jr nz, .noBattleCarry
+	dec hl
+	inc [hl] ; increment high byte (byte 2) if low byte wrapped
+.noBattleCarry
 	ld a, [wEngagedTrainerClass]
 	ld [wCurOpponent], a
 	ld [wEnemyMonOrTrainerClass], a

@@ -1,5 +1,7 @@
 MtMoonPokecenter_Script:
 	call Serial_TryEstablishingExternallyClockedConnection
+	ld a, PEWTER_CITY
+	ld [wLastBlackoutMap], a
 	jp EnableAutoTextBoxDrawing
 
 MtMoonPokecenter_TextPointers:

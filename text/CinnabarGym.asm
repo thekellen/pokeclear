@@ -5,8 +5,8 @@ _CinnabarGymBlainePreBattleText::
 	line "am the LEADER of"
 	cont "CINNABAR GYM!"
 
-	para "My fiery #MON"
-	line "will incinerate"
+	para "My fiery plays"
+	line "will burn through"
 	cont "all challengers!"
 
 	para "Hah! You better"
@@ -24,10 +24,10 @@ _CinnabarGymBlaineReceivedVolcanoBadgeText::
 _CinnabarGymBlainePostBattleAdviceText::
 	text "FIRE BLAST is the"
 	line "ultimate fire"
-	cont "technique!"
+	cont "strategy!"
 
 	para "Don't waste it on"
-	line "water #MON!"
+	line "water plays!"
 	done
 
 _CinnabarGymBlaineVolcanoBadgeInfoText::
@@ -35,8 +35,8 @@ _CinnabarGymBlaineVolcanoBadgeInfoText::
 
 	para "The VOLCANOBADGE"
 	line "heightens the"
-	cont "SPECIAL abilities"
-	cont "of your #MON!"
+	cont "SPECIAL skills"
+	cont "of your plays!"
 
 	para "Here, you can"
 	line "have this too!"
@@ -52,15 +52,8 @@ _CinnabarGymBlaineReceivedTM38Text::
 _CinnabarGymBlaineTM38ExplanationText::
 	text_start
 
-	para "TM38 contains"
-	line "FIRE BLAST!"
-
-	para "Teach it to fire-"
-	line "type #MON!"
-
-	para "CHARMELEON or"
-	line "PONYTA would be"
-	cont "good bets!"
+	para "M&M38 contains"
+	line "RED 40."
 	done
 
 _CinnabarGymBlaineTM38NoRoomText::
@@ -70,8 +63,8 @@ _CinnabarGymBlaineTM38NoRoomText::
 
 _CinnabarGymSuperNerd1BattleText::
 	text "Do you know how"
-	line "hot #MON fire"
-	cont "breath can get?"
+	line "hot fire plays"
+	cont "can get?"
 	done
 
 _CinnabarGymSuperNerd1EndBattleText::
@@ -91,7 +84,7 @@ _CinnabarGymSuperNerd1AfterBattleText::
 _CinnabarGymSuperNerd2BattleText::
 	text "I was a thief, but"
 	line "I became straight"
-	cont "as a trainer!"
+	cont "as a player!"
 	done
 
 _CinnabarGymSuperNerd2EndBattleText::
@@ -102,13 +95,13 @@ _CinnabarGymSuperNerd2EndBattleText::
 _CinnabarGymSuperNerd2AfterBattleText::
 	text "I can't help"
 	line "stealing other"
-	cont "people's #MON!"
+	cont "people's candy!"
 	done
 
 _CinnabarGymSuperNerd3BattleText::
 	text "You can't win!"
 	line "I have studied"
-	cont "#MON totally!"
+	cont "JANKEN totally!"
 	done
 
 _CinnabarGymSuperNerd3EndBattleText::
@@ -124,7 +117,7 @@ _CinnabarGymSuperNerd3AfterBattleText::
 
 _CinnabarGymSuperNerd4BattleText::
 	text "I just like using"
-	line "fire #MON!"
+	line "fire plays!"
 	done
 
 _CinnabarGymSuperNerd4EndBattleText::
@@ -134,13 +127,13 @@ _CinnabarGymSuperNerd4EndBattleText::
 
 _CinnabarGymSuperNerd4AfterBattleText::
 	text "I wish there was"
-	line "a thief #MON!"
+	line "a thief play!"
 	cont "I'd use that!"
 	done
 
 _CinnabarGymSuperNerd5BattleText::
 	text "I know why BLAINE"
-	line "became a trainer!"
+	line "became a player!"
 	done
 
 _CinnabarGymSuperNerd5EndBattleText::
@@ -151,7 +144,7 @@ _CinnabarGymSuperNerd5AfterBattleText::
 	text "BLAINE was lost"
 	line "in the mountains"
 	cont "when a fiery bird"
-	cont "#MON appeared."
+	cont "appeared to him."
 
 	para "Its light enabled"
 	line "BLAINE to find"
@@ -170,9 +163,9 @@ _CinnabarGymSuperNerd6EndBattleText::
 	prompt
 
 _CinnabarGymSuperNerd6AfterBattleText::
-	text "Us fire #MON"
-	line "fans like PONYTA"
-	cont "and NINETALES!"
+	text "Us fire play"
+	line "fans like FRUITGEMS"
+	cont "and JELLYBELLY!"
 	done
 
 _CinnabarGymSuperNerd7BattleText::
@@ -188,7 +181,7 @@ _CinnabarGymSuperNerd7EndBattleText::
 _CinnabarGymSuperNerd7AfterBattleText::
 	text "Water beats fire!"
 	line "But, fire melts"
-	cont "ice #MON!"
+	cont "ice plays!"
 	done
 
 _CinnabarGymGymGuideChampInMakingText::
@@ -197,10 +190,10 @@ _CinnabarGymGymGuideChampInMakingText::
 
 	para "The hot-headed"
 	line "BLAINE is a fire"
-	cont "#MON pro!"
+	cont "play pro!"
 
-	para "Douse his spirits"
-	line "with water!"
+	para "Douse his spirit"
+	line "with water plays!"
 
 	para "You better take"
 	line "some BURN HEALs!"

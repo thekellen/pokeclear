@@ -33,7 +33,7 @@ _Museum1FScientist1TheresALabSomewhereText::
 	text "There's a lab"
 	line "somewhere trying"
 	cont "to resurrect"
-	cont "ancient #MON"
+	cont "ancient candy"
 	cont "from AMBER."
 	done
 
@@ -61,12 +61,12 @@ _Museum1FGamblerText::
 _Museum1FScientist2TakeThisToAPokemonLabText::
 	text "Ssh! I think that"
 	line "this chunk of"
-	cont "AMBER contains"
-	cont "#MON DNA!"
+	cont "NERDSROPE contains"
+	cont "Red 40!"
 
 	para "It would be great"
-	line "if #MON could"
-	cont "be resurrected"
+	line "if NERDS could"
+	cont "be separated"
 	cont "from it!"
 
 	para "But, my colleagues"
@@ -76,18 +76,18 @@ _Museum1FScientist2TakeThisToAPokemonLabText::
 	line "to ask!"
 
 	para "Take this to a"
-	line "#MON LAB and"
+	line "candy LAB and"
 	cont "get it examined!"
 	prompt
 
 _Museum1FScientist2ReceivedOldAmberText::
 	text "<PLAYER> received"
-	line "OLD AMBER!@"
+	line "NERDSROPE!@"
 	text_end
 
 _Museum1FScientist2GetTheOldAmberCheckText::
-	text "Ssh! Get the OLD"
-	line "AMBER checked!"
+	text "Ssh! Get the NERDS"
+	line "ROPE checked!"
 	done
 
 _Museum1FScientist2YouDontHaveSpaceText::
@@ -99,10 +99,10 @@ _Museum1FScientist3Text::
 	text "We are proud of 2"
 	line "fossils of very"
 	cont "rare, prehistoric"
-	cont "#MON!"
+	cont "candy!"
 	done
 
 _Museum1FOldAmberText::
-	text "The AMBER is"
-	line "clear and gold!"
+	text "The NERDS are"
+	line "sweet and sour!"
 	done

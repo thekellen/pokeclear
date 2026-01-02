@@ -28,7 +28,7 @@ _FightingDojoKarateMasterIWillGiveYouAPokemonText::
 
 	para "In return, I will"
 	line "give you a prized"
-	cont "fighting #MON!"
+	cont "chocolate candy!"
 
 	para "Choose whichever"
 	line "one you like!"
@@ -115,13 +115,13 @@ _FightingDojoBlackbelt4AfterBattleText::
 _FightingDojoHitmonleePokeBallText::
 	text "You want the"
 	line "hard kicking"
-	cont "HITMONLEE?"
+	cont "CHICKOSTIK?"
 	done
 
 _FightingDojoHitmonchanPokeBallText::
 	text "You want the"
 	line "piston punching"
-	cont "HITMONCHAN?"
+	cont "MARYJANE?"
 	done
 
 _FightingDojoBetterNotGetGreedyText::

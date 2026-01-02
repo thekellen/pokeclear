@@ -37,6 +37,9 @@ ResetStatusAndHalveMoneyOnBlackout::
 	ld [wPlayerMoney + 2], a
 
 .lostmoney
+	; POKECLEAR: Set blackout warp to wLastMap (where we came from)
+	ld a, [wLastMap]
+	ld [wLastBlackoutMap], a
 	ld hl, wStatusFlags6
 	set BIT_FLY_OR_DUNGEON_WARP, [hl]
 	res BIT_FLY_WARP, [hl]

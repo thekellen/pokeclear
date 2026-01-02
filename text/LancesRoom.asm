@@ -8,16 +8,16 @@ _LancesRoomLanceBeforeBattleText::
 	cont "dragon trainer!"
 
 	para "You know that"
-	line "dragons are"
-	cont "mythical #MON!"
+	line "dragon candy"
+	cont "is mythical!"
 
-	para "They're hard to"
-	line "catch and raise,"
-	cont "but their powers"
-	cont "are superior!"
+	para "It's hard to"
+	line "find and collect,"
+	cont "but its flavor"
+	cont "is superior!"
 
-	para "They're virtually"
-	line "indestructible!"
+	para "It's virtually"
+	line "unbeatable!"
 
 	para "Well, are you"
 	line "ready to lose?"
@@ -32,17 +32,16 @@ _LancesRoomLanceEndBattleText::
 
 	para "I hate to admit"
 	line "it, but you are a"
-	cont "#MON master!"
+	cont "JANKEN master!"
 	prompt
 
 _LancesRoomLanceAfterBattleText::
 	text "I still can't"
-	line "believe my"
-	cont "dragons lost to"
+	line "believe I lost to"
 	cont "you, <PLAYER>!"
 
 	para "You are now the"
-	line "#MON LEAGUE"
+	line "JANKEN LEAGUE"
 	cont "champion!"
 
 	para "...Or, you would"
@@ -59,6 +58,6 @@ _LancesRoomLanceAfterBattleText::
 	cont "FOUR before you!"
 
 	para "He is the real"
-	line "#MON LEAGUE"
+	line "JANKEN LEAGUE"
 	cont "champion!@"
 	text_end

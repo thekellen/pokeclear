@@ -7,6 +7,13 @@ DEF ANIMATION_END EQU 80
 
 PlayIntro:
 	; POKECLEAR MOD: Skip intro Pokémon animation
+	; Set up SGB palettes for Oak's speech (only affects SGB, no-op on DMG/GBC)
+	ld b, SET_PAL_NIDORINO_INTRO
+	call RunPaletteCommand
+	; Initialize OBP1 since GBPalNormal doesn't set it
+	; Use standard palette (3,2,1,0) to match battles
+	ld a, %11100100  ; OBP1 palette (same as BGP)
+	ldh [rOBP1], a
 	ret
 
 	xor a

@@ -5,10 +5,10 @@ _CinnabarLabFossilRoomScientist1Text::
 	line "doctor!"
 
 	para "I study here rare"
-	line "#MON fossils!"
+	line "antique candy!"
 
-	para "You! Have you a"
-	line "fossil for me?"
+	para "You! Have you an"
+	line "antique for me?"
 	prompt
 
 _CinnabarLabFossilRoomScientist1NoFossilsText::
@@ -26,8 +26,8 @@ _CinnabarLabFossilRoomScientist1GoForAWalkText::
 _CinnabarLabFossilRoomScientist1FossilIsBackToLifeText::
 	text "Where were you?"
 
-	para "Your fossil is"
-	line "back to life!"
+	para "Your antique is"
+	line "restored!"
 
 	para "It was @"
 	text_ram wStringBuffer
@@ -41,16 +41,16 @@ _CinnabarLabFossilRoomScientist1SeesFossilText::
 	text_ram wNameBuffer
 	text "!"
 
-	para "It is fossil of"
+	para "It is antique of"
 	line "@"
 	text_ram wStringBuffer
 	text ", a"
-	cont "#MON that is"
-	cont "already extinct!"
+	cont "candy that is very"
+	cont "rare to find!"
 
-	para "My Resurrection"
+	para "My Restoration"
 	line "Machine will make"
-	cont "that #MON live"
+	cont "that candy fresh"
 	cont "again!"
 	done
 

@@ -1,9 +1,9 @@
 _CinnabarLabFishingGuruText::
-	text "We study #MON"
+	text "We study JANKEN"
 	line "extensively here."
 
 	para "People often bring"
-	line "us rare #MON"
+	line "us rare candy"
 	cont "for examination."
 	done
 
@@ -14,16 +14,16 @@ _CinnabarLabPhotoText::
 	done
 
 _CinnabarLabMeetingRoomSignText::
-	text "#MON LAB"
+	text "JANKEN LAB"
 	line "Meeting Room"
 	done
 
 _CinnabarLabRAndDSignText::
-	text "#MON LAB"
+	text "JANKEN LAB"
 	line "R-and-D Room"
 	done
 
 _CinnabarLabTestingRoomSignText::
-	text "#MON LAB"
+	text "JANKEN LAB"
 	line "Testing Room"
 	done

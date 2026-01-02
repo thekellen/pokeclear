@@ -1,18 +1,18 @@
 _CinnabarPokecenterCooltrainerFText::
-	text "You can cancel"
-	line "evolution."
+	text "You can preserve"
+	line "your candy..."
 
-	para "When a #MON is"
-	line "evolving, you can"
-	cont "stop it and leave"
-	cont "it the way it is."
+	para "When it starts"
+	line "to melt, you"
+	cont "can cool it and"
+	cont "keep it fresh."
 	done
 
 _CinnabarPokecenterGentlemanText::
 	text "Do you have any"
 	line "friends?"
 
-	para "#MON you get"
+	para "candy you get"
 	line "in trades grow"
 	cont "very quickly."
 

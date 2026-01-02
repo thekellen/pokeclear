@@ -5,7 +5,7 @@ _SilphCo3FSilphWorkerMWhatShouldIDoText::
 
 _SilphCo3FSilphWorkerMYouSavedUsText::
 	text "<PLAYER>! You and"
-	line "your #MON"
+	line "your skills"
 	cont "saved us!"
 	done
 
@@ -42,5 +42,5 @@ _SilphCo3FScientistAfterBattleText::
 	para "TEAM ROCKET said"
 	line "that if I helped"
 	cont "them, they'd let"
-	cont "me study #MON!"
+	cont "me study candy!"
 	done

@@ -1,5 +1,5 @@
 _CeladonCityLittleGirlText::
-	text "I got my KOFFING"
+	text "I got my CHICKLET"
 	line "in CINNABAR!"
 
 	para "It's nice, but it"
@@ -50,11 +50,11 @@ _CeladonCityGramps3TM41ExplanationText::
 	text "TM41 teaches"
 	line "SOFTBOILED!"
 
-	para "Only one #MON"
+	para "Only one candy"
 	line "can use it!"
 
-	para "That #MON is"
-	line "CHANSEY!"
+	para "That candy is"
+	line "ZEROBAR!"
 	done
 
 _CeladonCityGramps3TM41NoRoomText::
@@ -64,15 +64,15 @@ _CeladonCityGramps3TM41NoRoomText::
 
 _CeladonCityFisherText::
 	text "This is my trusted"
-	line "pal, POLIWRATH!"
+	line "pal, PUSHPOP!"
 
-	para "It evolved from"
-	line "POLIWHIRL when I"
-	cont "used WATER STONE!"
+	para "It's a rare"
+	line "variant of the"
+	cont "RINGPOP candy!"
 	done
 
 _CeladonCityPoliwrathText::
-	text "POLIWRATH: Ribi"
+	text "Ribi"
 	line "ribit!@"
 	text_end
 
@@ -87,7 +87,7 @@ _CeladonCityRocket2Text::
 	done
 
 _CeladonCityTrainerTips1Text::
-	text "TRAINER TIPS"
+	text "PLAYER TIPS"
 
 	para "X ACCURACY boosts"
 	line "the accuracy of"
@@ -110,7 +110,7 @@ _CeladonCitySignText::
 
 _CeladonCityGymSignText::
 	text "CELADON CITY"
-	line "#MON GYM"
+	line "JANKEN GYM"
 	cont "LEADER: ERIKA"
 
 	para "The Nature Loving"
@@ -128,10 +128,10 @@ _CeladonCityDeptStoreSignText::
 	done
 
 _CeladonCityTrainerTips2Text::
-	text "TRAINER TIPS"
+	text "PLAYER TIPS"
 
 	para "GUARD SPEC."
-	line "protects #MON"
+	line "protects candy"
 	cont "against SPECIAL"
 	cont "attacks such as"
 	cont "fire and water!"

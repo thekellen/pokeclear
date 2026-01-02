@@ -317,6 +317,10 @@ Serial_SendZeroByte::
 	ret
 
 Serial_TryEstablishingExternallyClockedConnection::
+	ld hl, wStatusFlags4
+	bit BIT_USED_POKECENTER, [hl]
+	set BIT_UNKNOWN_4_1, [hl]
+	set BIT_USED_POKECENTER, [hl]
 	ld a, ESTABLISH_CONNECTION_WITH_EXTERNAL_CLOCK
 	ldh [rSB], a
 	xor a

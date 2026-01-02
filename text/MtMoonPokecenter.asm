@@ -1,9 +1,9 @@
 _MtMoonPokecenterYoungsterText::
-	text "I've 6 # BALLs"
+	text "I've 6 CANDYs"
 	line "set in my belt."
 
-	para "At most, you can"
-	line "carry 6 #MON."
+	para "How much CANDY"
+	line "do you have?"
 	done
 
 _MtMoonPokecenterGentlemanText::
@@ -22,7 +22,7 @@ _MtMoonPokecenterMagikarpSalesmanIGotADealText::
 	cont "just for you!"
 
 	para "I'll let you have"
-	line "a swell MAGIKARP"
+	line "a swell LICORICE"
 	cont "for just ¥500!"
 	cont "What do you say?"
 	done

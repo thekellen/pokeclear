@@ -21,7 +21,7 @@ _OlderFileWillBeErasedText::
 
 _WhenYouChangeBoxText::
 	text "When you change a"
-	line "#MON BOX, data"
+	line "HAND BOX, data"
 	cont "will be saved."
 
 	para "Is that okay?"

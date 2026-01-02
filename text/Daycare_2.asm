@@ -9,23 +9,23 @@ _DaycareGentlemanComeAgainText::
 
 _DaycareGentlemanNoRoomForMonText::
 	text "You have no room"
-	line "for this #MON!"
+	line "for this candy!"
 	done
 
 _DaycareGentlemanOnlyHaveOneMonText::
 	text "You only have one"
-	line "#MON with you."
+	line "candy with you."
 	done
 
 _DaycareGentlemanCantAcceptMonWithHMText::
 	text "I can't accept a"
-	line "#MON that"
-	cont "knows an HM move."
+	line "candy that"
+	cont "contains peanuts."
 	done
 
 _DaycareGentlemanHeresYourMonText::
 	text "Thank you! Here's"
-	line "your #MON!"
+	line "your candy!"
 	prompt
 
 _DaycareGentlemanNotEnoughMoneyText::

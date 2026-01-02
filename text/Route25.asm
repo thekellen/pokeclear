@@ -10,7 +10,7 @@ _Route25Youngster1EndBattleText::
 	prompt
 
 _Route25Youngster1AfterBattleText::
-	text "All #MON have"
+	text "All candy have"
 	line "weaknesses. It's"
 	cont "best to raise"
 	cont "different kinds."
@@ -67,7 +67,7 @@ _Route25CooltrainerF1AfterBattleText::
 
 _Route25Youngster3BattleText::
 	text "I knew I had to"
-	line "fight you!"
+	line "play you!"
 	done
 
 _Route25Youngster3EndBattleText::
@@ -76,15 +76,15 @@ _Route25Youngster3EndBattleText::
 	prompt
 
 _Route25Youngster3AfterBattleText::
-	text "If your #MON"
-	line "gets confused or"
-	cont "falls asleep,"
+	text "If your move"
+	line "gets tied or"
+	cont "loses out,"
 	cont "switch it!"
 	done
 
 _Route25CooltrainerF2BattleText::
 	text "My friend has a"
-	line "cute #MON."
+	line "cute candy."
 	cont "I'm so jealous!"
 	done
 
@@ -96,7 +96,7 @@ _Route25CooltrainerF2EndBattleText::
 _Route25CooltrainerF2AfterBattleText::
 	text "You came from MT."
 	line "MOON? May I have"
-	cont "a CLEFAIRY?"
+	cont "a SWEETART?"
 	done
 
 _Route25Hiker1BattleText::
@@ -112,13 +112,13 @@ _Route25Hiker1EndBattleText::
 
 _Route25Hiker1AfterBattleText::
 	text "Drat!"
-	line "A ZUBAT bit me"
+	line "A DARKCHOC bit me"
 	cont "back in there."
 	done
 
 _Route25Hiker2BattleText::
 	text "I'm off to see a"
-	line "#MON collector"
+	line "candy collector"
 	cont "at the cape!"
 	done
 
@@ -130,7 +130,7 @@ _Route25Hiker2EndBattleText::
 _Route25Hiker2AfterBattleText::
 	text "The collector has"
 	line "many rare kinds"
-	cont "of #MON."
+	cont "of candy."
 	done
 
 _Route25Hiker3BattleText::

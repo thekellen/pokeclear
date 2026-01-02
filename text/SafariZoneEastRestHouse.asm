@@ -5,8 +5,8 @@ _SafariZoneEastRestHouseScientistText::
 	done
 
 _SafariZoneEastRestHouseRockerText::
-	text "I caught a"
-	line "CHANSEY!"
+	text "I won a"
+	line "ZEROBAR!"
 
 	para "That makes this"
 	line "all worthwhile!"

@@ -54,12 +54,12 @@ _MtMoon1FSuperNerdBattleText::
 
 _MtMoon1FSuperNerdEndBattleText::
 	text "My"
-	line "#MON won't do!"
+	line "candy won't do!"
 	prompt
 
 _MtMoon1FSuperNerdAfterBattleText::
 	text "I have to find"
-	line "stronger #MON."
+	line "stronger candy."
 	done
 
 _MtMoon1FCooltrainerF2BattleText::
@@ -107,13 +107,13 @@ _MtMoon1FYoungster3EndBattleText::
 	prompt
 
 _MtMoon1FYoungster3AfterBattleText::
-	text "ZUBAT is tough!"
+	text "DARKCHOC is tough!"
 	line "But, it can be"
 	cont "useful if you"
 	cont "catch one."
 	done
 
 _MtMoon1FBewareZubatSign::
-	text "Beware! ZUBAT is"
+	text "Beware! DARKCHOC is"
 	line "a blood sucker!"
 	done

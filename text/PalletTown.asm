@@ -5,11 +5,11 @@ _PalletTownOakHeyWaitDontGoOutText::
 
 _PalletTownOakItsUnsafeText::
 	text "OAK: It's unsafe!"
-	line "Wild #MON live"
+	line "JANKEN players wait"
 	cont "in tall grass!"
 
 	para "You need your own"
-	line "#MON for your"
+	line "hands for your"
 	cont "protection."
 	cont "I know!"
 
@@ -18,12 +18,12 @@ _PalletTownOakItsUnsafeText::
 	done
 
 _PalletTownGirlText::
-	text "I'm raising"
-	line "#MON too!"
+	text "I'm eating"
+	line "candy too!"
 
-	para "When they get"
-	line "strong, they can"
-	cont "protect me!"
+	para "When its all"
+	line "gone, I can"
+	cont "get more!"
 	done
 
 _PalletTownFisherText::
@@ -31,13 +31,13 @@ _PalletTownFisherText::
 	line "incredible!"
 
 	para "You can now store"
-	line "and recall items"
-	cont "and #MON as"
-	cont "data via PC!"
+	line "and recall candy"
+	cont "as data"
+	cont "via PC!"
 	done
 
 _PalletTownOaksLabSignText::
-	text "OAK #MON"
+	text "OAK JANKEN"
 	line "RESEARCH LAB"
 	done
 

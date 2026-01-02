@@ -18,6 +18,9 @@ PrepareOakSpeech:
 	ld bc, wSpriteDataEnd - wSpriteDataStart
 	xor a
 	call FillMemory
+	; POKECLEAR: Initialize blackout map to Pallet Town
+	ld a, PALLET_TOWN
+	ld [wLastBlackoutMap], a
 	pop af
 	ld [wStatusFlags6], a
 	pop af
@@ -48,6 +51,9 @@ OakSpeech:
 	call PlayMusic
 	call ClearScreen
 	call LoadTextBoxTilePatterns
+	; POKECLEAR: Set SGB palettes for Oak speech (no-op on DMG/GBC)
+	ld b, SET_PAL_NIDORINO_INTRO
+	call RunPaletteCommand
 	call PrepareOakSpeech
 	predef InitPlayerData2
 	ld hl, wNumBoxItems

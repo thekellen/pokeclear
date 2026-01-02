@@ -13,7 +13,7 @@ _FuchsiaGymKogaBeforeBattleText::
 	para "You shall feel"
 	line "the despair of"
 	cont "poison and sleep"
-	cont "techniques!"
+	cont "strategies!"
 	done
 
 _FuchsiaGymKogaReceivedSoulBadgeText::

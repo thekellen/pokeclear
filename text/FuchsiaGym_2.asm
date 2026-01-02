@@ -1,8 +1,8 @@
 _FuchsiaGymKogaPostBattleAdviceText::
-	text "When afflicted by"
-	line "TOXIC, #MON"
-	cont "suffer more and"
-	cont "more as battle"
+	text "When using TOXIC"
+	line "strategy, foes"
+	cont "weaken more and"
+	cont "more as the match"
 	cont "progresses!"
 
 	para "It will surely"
@@ -12,13 +12,13 @@ _FuchsiaGymKogaPostBattleAdviceText::
 _FuchsiaGymKogaSoulBadgeInfoText::
 	text "Now that you have"
 	line "the SOULBADGE,"
-	cont "the DEFENSE of"
-	cont "your #MON"
-	cont "increases!"
+	cont "your defensive"
+	cont "JANKEN reads"
+	cont "improve!"
 
 	para "It also lets you"
 	line "SURF outside of"
-	cont "battle!"
+	cont "matches!"
 
 	para "Ah! Take this"
 	line "too!"
@@ -33,12 +33,8 @@ _FuchsiaGymKogaReceivedTM06Text::
 
 _FuchsiaGymKogaTM06ExplanationText::
 	text_start
-	para "TM06 contains"
-	line "TOXIC!"
-
-	para "It is a secret"
-	line "technique over"
-	cont "400 years old!"
+	para "M&M06 contains"
+	line "RED 40."
 	done
 
 _FuchsiaGymKogaTM06NoRoomText::
@@ -49,7 +45,7 @@ _FuchsiaGymKogaTM06NoRoomText::
 _FuchsiaGymRocker1BattleText::
 	text "Strength isn't"
 	line "the key for"
-	cont "#MON!"
+	cont "JANKEN!"
 
 	para "It's strategy!"
 
@@ -100,9 +96,9 @@ _FuchsiaGymRocker3EndBattleText::
 
 _FuchsiaGymRocker3AfterBattleText::
 	text "I like poison and"
-	line "sleep techniques,"
+	line "sleep strategies,"
 	cont "as they linger"
-	cont "after battle!"
+	cont "after the match!"
 	done
 
 _FuchsiaGymRocker4BattleText::
@@ -133,8 +129,8 @@ _FuchsiaGymRocker5BattleText::
 	cont "with master KOGA!"
 
 	para "Ninja have a long"
-	line "history of using"
-	cont "animals!"
+	line "history of mind"
+	cont "games and reads!"
 	done
 
 _FuchsiaGymRocker5EndBattleText::
@@ -189,6 +185,6 @@ _FuchsiaGymGymGuideChampInMakingText::
 
 _FuchsiaGymGymGuideBeatKogaText::
 	text "It's amazing how"
-	line "ninja can terrify"
-	cont "even now!"
+	line "ninja strategies"
+	cont "still work today!"
 	done

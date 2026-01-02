@@ -1,6 +1,6 @@
 _CopycatsHouse2FCopycatDoYouLikePokemonText::
 	text "<PLAYER>: Hi! Do"
-	line "you like #MON?"
+	line "you like candy?"
 
 	para "<PLAYER>: Uh no, I"
 	line "just asked you."
@@ -36,16 +36,13 @@ _CopycatsHouse2FCopycatReceivedTM31Text::
 _CopycatsHouse2FCopycatTM31Explanation1Text::
 	text_start
 
-	para "TM31 contains my"
-	line "favorite, MIMIC!"
-
-	para "Use it on a good"
-	line "#MON!@"
+	para "M&M31 contains"
+	line "RED 40.@"
 	text_end
 
 _CopycatsHouse2FCopycatTM31Explanation2Text::
 	text "<PLAYER>: Hi!"
-	line "Thanks for TM31!"
+	line "Thanks for M&M31!"
 
 	para "<PLAYER>: Pardon?"
 
@@ -63,7 +60,7 @@ _CopycatsHouse2FCopycatTM31NoRoomText::
 	text_end
 
 _CopycatsHouse2FDoduoText::
-	text "DODUO: Giiih!"
+	text "Giiih!"
 
 	para "MIRROR MIRROR ON"
 	line "THE WALL, WHO IS"
@@ -73,7 +70,7 @@ _CopycatsHouse2FDoduoText::
 
 _CopycatsHouse2FRareDollText::
 	text "This is a rare"
-	line "#MON! Huh?"
+	line "candy! Huh?"
 	cont "It's only a doll!"
 	done
 
@@ -91,8 +88,8 @@ _CopycatsHouse2FPCMySecretsText::
 	para "Skill: Mimicry!"
 	line "Hobby: Collecting"
 	cont "dolls!"
-	cont "Favorite #MON:"
-	cont "CLEFAIRY!"
+	cont "Favorite candy:"
+	cont "SWEETART!"
 	done
 
 _CopycatsHouse2FPCCantSeeText::

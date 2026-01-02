@@ -41,7 +41,7 @@ _VictoryRoad3FCooltrainerM2EndBattleText::
 _VictoryRoad3FCooltrainerM2AfterBattleText::
 	text "All trainers here"
 	line "are headed to the"
-	cont "#MON LEAGUE!"
+	cont "JANKEN LEAGUE!"
 	cont "Be careful!"
 	done
 
@@ -57,7 +57,7 @@ _VictoryRoad3FCooltrainerF2EndBattleText::
 	prompt
 
 _VictoryRoad3FCooltrainerF2AfterBattleText::
-	text "By fighting tough"
-	line "battles, you get"
+	text "By playing tough"
+	line "matches, you get"
 	cont "stronger!"
 	done

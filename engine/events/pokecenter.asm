@@ -2,7 +2,13 @@ DisplayPokemonCenterDialogue_::
 	call SaveScreenTilesToBuffer1 ; save screen
 	ld hl, PokemonCenterWelcomeText
 	call PrintText
+	ld a, $14
+	ld [wSprite01StateData1ImageIndex], a ; make the nurse bow
+	ld c, a
+	call DelayFrames
 	call LoadScreenTilesFromBuffer1 ; restore screen
+	ld hl, PokemonCenterFarewellText
+	call PrintText
 	jp UpdateSprites
 
 PokemonCenterWelcomeText:

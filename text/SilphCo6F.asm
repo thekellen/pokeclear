@@ -34,7 +34,7 @@ _SilphCo6FSilphWorkerF2TeamRocketConquerWorldText::
 	text "TEAM ROCKET is"
 	line "trying to conquer"
 	cont "the world with"
-	cont "#MON!"
+	cont "candy!"
 	done
 
 _SilphCo6FSilphWorkerF2TeamRocketRanText::
@@ -45,7 +45,7 @@ _SilphCo6FSilphWorkerF2TeamRocketRanText::
 _SilphCo6FSilphWorkerM3TargetedSilphText::
 	text "They must have"
 	line "targeted SILPH"
-	cont "for our #MON"
+	cont "for our candy"
 	cont "products."
 	done
 

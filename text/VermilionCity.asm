@@ -2,7 +2,7 @@ _VermilionCityBeautyText::
 	text "We're careful"
 	line "about pollution!"
 
-	para "We've heard GRIMER"
+	para "We've heard PAYDAY"
 	line "multiplies in"
 	cont "toxic sludge!"
 	done
@@ -62,12 +62,12 @@ _VermilionCityGambler2Text::
 	line "building on this"
 	cont "plot of land."
 
-	para "My #MON is"
+	para "My candy is"
 	line "tamping the land."
 	done
 
 _VermilionCityMachopText::
-	text "MACHOP: Guoh!"
+	text "Guoh!"
 	line "Gogogoh!@"
 	text_end
 
@@ -98,7 +98,7 @@ _VermilionCityNoticeSignText::
 
 	para "ROUTE 12 may be"
 	line "blocked off by a"
-	cont "sleeping #MON."
+	cont "sleeping JANKEN."
 
 	para "Detour through"
 	line "ROCK TUNNEL to"
@@ -108,14 +108,14 @@ _VermilionCityNoticeSignText::
 	done
 
 _VermilionCityPokemonFanClubSignText::
-	text "#MON FAN CLUB"
-	line "All #MON fans"
+	text "JANKEN FAN CLUB"
+	line "All JANKEN fans"
 	cont "welcome!"
 	done
 
 _VermilionCityGymSignText::
 	text "VERMILION CITY"
-	line "#MON GYM"
+	line "JANKEN GYM"
 	cont "LEADER: LT.SURGE"
 
 	para "The Lightning "

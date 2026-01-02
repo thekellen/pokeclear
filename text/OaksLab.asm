@@ -15,36 +15,36 @@ _OaksLabRivalGoAheadAndChooseText::
 
 _OaksLabRivalMyPokemonLooksStrongerText::
 	text "<RIVAL>: My"
-	line "#MON looks a"
+	line "candy looks a"
 	cont "lot stronger."
 	done
 
 _OaksLabThoseArePokeBallsText::
 	text "Those are #"
 	line "BALLs. They"
-	cont "contain #MON!"
+	cont "contain candy!"
 	done
 
 _OaksLabYouWantCharmanderText::
 	text "So! You want the"
-	line "fire #MON,"
-	cont "CHARMANDER?"
+	line "fire candy,"
+	cont "COLABOTTLE?"
 	done
 
 _OaksLabYouWantSquirtleText::
 	text "So! You want the"
-	line "water #MON,"
-	cont "SQUIRTLE?"
+	line "water candy,"
+	cont "FIZZYSWEET?"
 	done
 
 _OaksLabYouWantBulbasaurText::
 	text "So! You want the"
-	line "plant #MON,"
-	cont "BULBASAUR?"
+	line "plant candy,"
+	cont "GUSHERS?"
 	done
 
 _OaksLabMonEnergeticText::
-	text "This #MON is"
+	text "This candy is"
 	line "really energetic!"
 	prompt
 
@@ -57,41 +57,41 @@ _OaksLabReceivedMonText::
 
 _OaksLabLastMonText::
 	text "That's PROF.OAK's"
-	line "last #MON!"
+	line "last candy!"
 	done
 
 _OaksLabOak1WhichPokemonDoYouWantText::
 	text "OAK: Now, <PLAYER>,"
-	line "which #MON do"
+	line "which candy do"
 	cont "you want?"
 	done
 
 _OaksLabOak1YourPokemonCanFightText::
 	text "OAK: If a wild"
-	line "#MON appears,"
-	cont "your #MON can"
-	cont "fight against it!"
+	line "candy appears,"
+	cont "you can play"
+	cont "JANKEN with it!"
 	done
 
 _OaksLabOak1RaiseYourYoungPokemonText::
 	text "OAK: <PLAYER>,"
-	line "raise your young"
-	cont "#MON by making"
-	cont "it fight!"
+	line "train your skill"
+	cont "by playing more"
+	cont "JANKEN matches!"
 	done
 
 _OaksLabOak1DeliverParcelText::
 	text "OAK: Oh, <PLAYER>!"
 
 	para "How is my old"
-	line "#MON?"
+	line "candy?"
 
 	para "Well, it seems to"
 	line "like you a lot."
 
 	para "You must be"
-	line "talented as a"
-	cont "#MON trainer!"
+	line "talented at"
+	cont "JANKEN!"
 
 	para "What? You have"
 	line "something for me?"
@@ -103,46 +103,46 @@ _OaksLabOak1DeliverParcelText::
 _OaksLabOak1ParcelThanksText::
 	text_start
 	para "Ah! This is the"
-	line "custom # BALL"
+	line "custom CANDY"
 	cont "I ordered!"
 	cont "Thank you!"
 	done
 
 _OaksLabOak1PokemonAroundTheWorldText::
-	text "#MON around the"
-	line "world wait for"
+	text "Candy around the"
+	line "world waits for"
 	cont "you, <PLAYER>!"
 	done
 
 _OaksLabOak1ReceivedPokeballsText::
 	text "OAK: You can't get"
 	line "detailed data on"
-	cont "#MON by just"
+	cont "candy by just"
 	cont "seeing them."
 
-	para "You must catch"
+	para "You must collect"
 	line "them! Use these"
 	cont "to capture wild"
-	cont "#MON."
+	cont "candy."
 
 	para "<PLAYER> got 5"
-	line "# BALLs!@"
+	line "CANDYs!@"
 	text_end
 
 _OaksLabGivePokeballsExplanationText::
 	text_start
 	para "When a wild"
-	line "#MON appears,"
+	line "candy appears,"
 	cont "it's fair game."
 
 	para "Just throw a #"
 	line "BALL at it and try"
-	line "to catch it!"
+	line "to collect it!"
 
 	para "This won't always"
 	line "work, though."
 
-	para "A healthy #MON"
+	para "A strong candy"
 	line "could escape. You"
 	cont "have to be lucky!"
 	done
@@ -152,14 +152,14 @@ _OaksLabOak1ComeSeeMeSometimesText::
 	line "sometimes."
 
 	para "I want to know how"
-	line "your #DEX is"
+	line "your WINSTREAK is"
 	cont "coming along."
 	done
 
 _OaksLabOak1HowIsYourPokedexComingText::
 	text "OAK: Good to see "
 	line "you! How is your "
-	cont "#DEX coming? "
+	cont "WINSTREAK coming? "
 	cont "Here, let me take"
 	cont "a look!"
 	prompt
@@ -177,9 +177,9 @@ _OaksLabOak2Text::
 _OaksLabGirlText::
 	text "PROF.OAK is the"
 	line "authority on"
-	cont "#MON!"
+	cont "JANKEN!"
 
-	para "Many #MON"
+	para "Many JANKEN"
 	line "trainers hold him"
 	cont "in high regard!"
 	done
@@ -201,16 +201,16 @@ _OaksLabOakChooseMonText::
 	para "Here, <PLAYER>!"
 
 	para "There are 3"
-	line "#MON here!"
+	line "candy here!"
 
 	para "Haha!"
 
 	para "They are inside"
-	line "the # BALLs."
+	line "the CANDYs."
 
 	para "When I was young,"
 	line "I was a serious"
-	cont "#MON trainer!"
+	cont "JANKEN player!"
 
 	para "In my old age, I"
 	line "have only 3 left,"
@@ -251,7 +251,7 @@ _OaksLabRivalIllTakeYouOnText::
 	text "<RIVAL>: Wait"
 	line "<PLAYER>!"
 	cont "Let's check out"
-	cont "our #MON!"
+	cont "our candy!"
 
 	para "Come on, I'll take"
 	line "you on!"
@@ -261,7 +261,7 @@ _OaksLabRivalIPickedTheWrongPokemonText::
 	text "WHAT?"
 	line "Unbelievable!"
 	cont "I picked the"
-	cont "wrong #MON!"
+	cont "wrong candy!"
 	prompt
 
 _OaksLabRivalAmIGreatOrWhatText::
@@ -271,9 +271,9 @@ _OaksLabRivalAmIGreatOrWhatText::
 
 _OaksLabRivalSmellYouLaterText::
 	text "<RIVAL>: Okay!"
-	line "I'll make my"
-	cont "#MON fight to"
-	cont "toughen it up!"
+	line "I'll play more"
+	cont "JANKEN to get"
+	cont "tougher!"
 
 	para "<PLAYER>! Gramps!"
 	line "Smell you later!"
@@ -297,15 +297,15 @@ _OaksLabOakIHaveARequestText::
 _OaksLabOakMyInventionPokedexText::
 	text "On the desk there"
 	line "is my invention,"
-	cont "#DEX!"
+	cont "WINSTREAK!"
 
 	para "It automatically"
-	line "records data on"
-	cont "#MON you've"
-	cont "seen or caught!"
+	line "tracks wins and"
+	cont "records candy"
+	cont "you've collected!"
 
 	para "It's a hi-tech"
-	line "encyclopedia!"
+	line "match tracker!"
 	done
 
 _OaksLabOakGotPokedexText::
@@ -314,13 +314,13 @@ _OaksLabOakGotPokedexText::
 	cont "these with you!"
 
 	para "<PLAYER> got"
-	line "#DEX from OAK!@"
+	line "WINSTREAK from OAK!@"
 	text_end
 
 _OaksLabOakThatWasMyDreamText::
 	text "To make a complete"
 	line "guide on all the"
-	cont "#MON in the"
+	cont "candy in the"
 	cont "world..."
 
 	para "That was my dream!"
@@ -337,7 +337,7 @@ _OaksLabOakThatWasMyDreamText::
 
 	para "This is a great"
 	line "undertaking in"
-	cont "#MON history!"
+	cont "candy history!"
 	done
 
 _OaksLabRivalLeaveItAllToMeText::
@@ -359,6 +359,6 @@ _OaksLabRivalLeaveItAllToMeText::
 	done
 
 _OaksLabScientistText::
-	text "I study #MON as"
+	text "I study candy as"
 	line "PROF.OAK's AIDE."
 	done

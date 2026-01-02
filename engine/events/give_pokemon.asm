@@ -56,12 +56,13 @@ SetPokedexOwnedFlag:
 	push af
 	ld [wPokedexNum], a
 	predef IndexToPokedex
-	ld a, [wPokedexNum]
-	dec a
-	ld c, a
-	ld hl, wPokedexOwned
-	ld b, FLAG_SET
-	predef FlagActionPredef
+	; POKECLEAR: Removed Pokemon owned flag logic - no longer needed
+	;ld a, [wPokedexNum]
+	;dec a
+	;ld c, a
+	;ld hl, wPokedexOwned
+	;ld b, FLAG_SET
+	;predef FlagActionPredef
 	pop af
 	ld [wNamedObjectIndex], a
 	call GetMonName

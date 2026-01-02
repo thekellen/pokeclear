@@ -3,7 +3,7 @@ _Route22RivalBeforeBattleText1::
 	line "<PLAYER>!"
 
 	para "You're going to"
-	line "#MON LEAGUE?"
+	line "JANKEN LEAGUE?"
 
 	para "Forget it! You"
 	line "probably don't"
@@ -13,12 +13,12 @@ _Route22RivalBeforeBattleText1::
 	line "let you through!"
 
 	para "By the way, did"
-	line "your #MON"
+	line "your skills"
 	cont "get any stronger?"
 	done
 
 _Route22RivalAfterBattleText1::
-	text "I heard #MON"
+	text "I heard JANKEN"
 	line "LEAGUE has many"
 	cont "tough trainers!"
 
@@ -40,7 +40,7 @@ _Route22Rival1DefeatedText::
 _Route22Rival1VictoryText::
 	text "<RIVAL>: What?"
 	line "Why do I have 2"
-	cont "#MON?"
+	cont "candy?"
 
 	para "You should catch"
 	cont "some more too!"
@@ -53,7 +53,7 @@ _Route22RivalBeforeBattleText2::
 	cont "you here!"
 
 	para "So you're going to"
-	line "#MON LEAGUE?"
+	line "JANKEN LEAGUE?"
 
 	para "You collected all"
 	line "the BADGEs too?"
@@ -62,7 +62,7 @@ _Route22RivalBeforeBattleText2::
 	para "Then I'll whip you"
 	line "<PLAYER> as a"
 	cont "warm up for"
-	cont "#MON LEAGUE!"
+	cont "JANKEN LEAGUE!"
 
 	para "Come on!"
 	done
@@ -70,7 +70,7 @@ _Route22RivalBeforeBattleText2::
 _Route22RivalAfterBattleText2::
 	text "That loosened me"
 	line "up! I'm ready for"
-	cont "#MON LEAGUE!"
+	cont "JANKEN LEAGUE!"
 
 	para "<PLAYER>, you need"
 	line "more practice!"
@@ -99,6 +99,6 @@ _Route22Rival2VictoryText::
 	prompt
 
 _Route22PokemonLeagueSignText::
-	text "#MON LEAGUE"
+	text "JANKEN LEAGUE"
 	line "Front Gate"
 	done

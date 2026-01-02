@@ -1,7 +1,7 @@
 _Route18CooltrainerM1BattleText::
 	text "I always check"
 	line "every grassy area"
-	cont "for new #MON."
+	cont "for new candy."
 	done
 
 _Route18CooltrainerM1EndBattleText::
@@ -26,7 +26,7 @@ _Route18CooltrainerM2EndBattleText::
 
 _Route18CooltrainerM2AfterBattleText::
 	text "I also collect sea"
-	line "#MON on"
+	line "candy on"
 	cont "weekends!"
 	done
 
@@ -41,7 +41,7 @@ _Route18CooltrainerM3EndBattleText::
 
 _Route18CooltrainerM3AfterBattleText::
 	text "This is my fave"
-	line "#MON hunting"
+	line "candy hunting"
 	cont "area!"
 	done
 

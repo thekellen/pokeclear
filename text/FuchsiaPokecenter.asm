@@ -1,7 +1,7 @@
 _FuchsiaPokecenterRockerText::
 	text "You can't win"
 	line "with just one"
-	cont "strong #MON."
+	cont "strong hand."
 
 	para "It's tough, but"
 	line "you have to raise"
@@ -13,7 +13,7 @@ _FuchsiaPokecenterCooltrainerFText::
 	line "trail west of"
 	cont "VIRIDIAN CITY."
 
-	para "It goes to #MON"
+	para "It goes to JANKEN"
 	line "LEAGUE HQ."
 	cont "The HQ governs"
 	cont "all trainers."

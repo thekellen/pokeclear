@@ -1,21 +1,21 @@
 _LoreleisRoomLoreleiBeforeBattleText::
 	text "Welcome to"
-	line "#MON LEAGUE!"
+	line "JANKEN LEAGUE!"
 
 	para "I am LORELEI of"
 	line "the ELITE FOUR!"
 
 	para "No one can best"
 	line "me when it comes"
-	cont "to icy #MON!"
+	cont "to icy plays!"
 
-	para "Freezing moves"
+	para "Freezing tactics"
 	line "are powerful!"
 
-	para "Your #MON will"
+	para "Your hands will"
 	line "be at my mercy"
-	cont "when they are"
-	cont "frozen solid!"
+	cont "when you're frozen"
+	cont "with indecision!"
 
 	para "Hahaha!"
 	line "Are you ready?"
@@ -32,8 +32,8 @@ _LoreleisRoomLoreleiAfterBattleText::
 	cont "Go on ahead!"
 
 	para "You only got a"
-	line "taste of #MON"
-	cont "LEAGUE power!"
+	line "taste of JANKEN"
+	cont "LEAGUE skill!"
 	done
 
 _LoreleisRoomLoreleiDontRunAwayText::

@@ -51,23 +51,23 @@ _WardensHouseWardenReceivedHM04Text::
 	text_end
 
 _WardensHouseWardenHM04ExplanationText::
-	text "WARDEN: HM04"
-	line "teaches STRENGTH!"
+	text "WARDEN: M&M04"
+	line "contains Red 40!"
 
-	para "It lets #MON"
-	line "move boulders"
-	cont "when you're out-"
-	cont "side of battle."
+	para "It gives you"
+	line "headaches and"
+	cont "ruins your focus"
+	cont "and memory."
 
 	para "Oh yes, did you"
 	line "find SECRET HOUSE"
 	cont "in SAFARI ZONE?"
 
 	para "If you do, you"
-	line "win an HM!"
+	line "win a M&M!"
 
 	para "I hear it's the"
-	line "rare SURF HM."
+	line "rare blue M&M."
 	done
 
 _WardensHouseWardenHM04NoRoomText::
@@ -76,11 +76,11 @@ _WardensHouseWardenHM04NoRoomText::
 	done
 
 _WardensHouseDisplayPhotosAndFossilsText::
-	text "#MON photos"
+	text "Candy photos"
 	line "and fossils."
 	done
 
 _WardensHouseDisplayMerchandiseText::
-	text "Old #MON"
+	text "Old candy"
 	line "merchandise."
 	done

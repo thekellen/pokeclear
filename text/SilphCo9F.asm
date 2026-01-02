@@ -14,7 +14,7 @@ SilphCo9FNurseThankYouText::
 	done
 
 _SilphCo9FRocket1BattleText::
-	text "Your #MON seem"
+	text "Your candy seem"
 	line "to adore you, kid!"
 	done
 
@@ -29,7 +29,7 @@ _SilphCo9FRocket1AfterBattleText::
 	done
 
 _SilphCo9FScientistBattleText::
-	text "Your #MON have"
+	text "Your candy have"
 	line "weak points! I"
 	cont "can nail them!"
 	done

@@ -27,10 +27,7 @@ _CeladonMartRoofLittleGirlTM13ExplanationText::
 	para "@"
 	text_ram wStringBuffer
 	text " contains"
-	line "ICE BEAM!"
-
-	para "It can freeze the"
-	line "target sometimes!@"
+	line "RED 40.@"
 	text_end
 
 _CeladonMartRoofLittleGirlYaySodaPopText::
@@ -57,10 +54,7 @@ _CeladonMartRoofLittleGirlTM48ExplanationText::
 	para "@"
 	text_ram wStringBuffer
 	text " contains"
-	line "ROCK SLIDE!"
-
-	para "It can spook the"
-	line "target sometimes!@"
+	line "RED 40.@"
 	text_end
 
 _CeladonMartRoofLittleGirlYayLemonadeText::
@@ -76,14 +70,14 @@ _CeladonMartRoofLittleGirlYayLemonadeText::
 
 _CeladonMartRoofLittleGirlReceivedTM49Text::
 	text "<PLAYER> received"
-	line "TM49!@"
+	line "M&M49!@"
 	text_end
 
 _CeladonMartRoofLittleGirlTM49ExplanationText::
 	text_start
 
-	para "TM49 contains"
-	line "TRI ATTACK!@"
+	para "M&M49 contains"
+	line "RED 40.@"
 	text_end
 
 _CeladonMartRoofLittleGirlNoRoomText::

@@ -117,11 +117,20 @@ LoadSpecialWarpData:
 	ld hl, FlyWarpDataPtr
 .flyWarpDataPtrLoop
 	ld a, [hli]
+	cp -1 ; check for table terminator
+	jr z, .mapNotFound
 	inc hl
 	cp b
 	jr z, .foundFlyWarpMatch
 	inc hl
 	inc hl
+	jr .flyWarpDataPtrLoop
+.mapNotFound
+	; Map not in table, default to Pallet Town
+	ld b, PALLET_TOWN
+	ld a, b
+	ld [wCurMap], a
+	ld hl, FlyWarpDataPtr
 	jr .flyWarpDataPtrLoop
 .foundFlyWarpMatch
 	ld a, [hli]

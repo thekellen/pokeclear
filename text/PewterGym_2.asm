@@ -4,8 +4,8 @@ _PewterGymBrockPostBattleAdviceText::
 	cont "in the world!"
 
 	para "You appear to be"
-	line "very gifted as a"
-	cont "#MON trainer!"
+	line "very gifted at"
+	cont "playing JANKEN!"
 
 	para "Go to the GYM in"
 	line "CERULEAN and test"
@@ -19,31 +19,27 @@ _PewterGymBrockWaitTakeThisText::
 
 _PewterGymReceivedTM34Text::
 	text "<PLAYER> received"
-	line "TM34!@"
+	line "M&M34!@"
 	text_end
 
 _TM34ExplanationText::
 	text_start
 
-	para "A TM contains a"
-	line "technique that"
-	cont "can be taught to"
-	cont "#MON!"
+	para "An M&M contains"
+	line "chocolate that"
+	cont "is covered in a"
+	cont "candy shell!"
 
-	para "A TM is good only"
-	line "once! So when you"
-	cont "use one to teach"
-	cont "a new technique,"
-	cont "pick the #MON"
-	cont "carefully!"
+	para "An M&M is good"
+	line "only once! So"
+	cont "when you take one"
+	cont "from your items"
+	cont "and eat it, pick"
+	cont "the time with"
+	cont "care!"
 
-	para "TM34 contains"
-	line "BIDE!"
-
-	para "Your #MON will"
-	line "absorb damage in"
-	cont "battle then pay"
-	cont "it back double!"
+	para "M&M34 contains"
+	line "RED 40."
 	done
 
 _PewterGymTM34NoRoomText::
@@ -67,11 +63,11 @@ _PewterGymBrockBoulderBadgeInfoText::
 	text_start
 
 	para "That's an official"
-	line "#MON LEAGUE"
+	line "JANKEN LEAGUE"
 	cont "BADGE!"
 
 	para "Its bearer's"
-	line "#MON become"
+	line "throws become"
 	cont "more powerful!"
 
 	para "The technique"
@@ -106,7 +102,7 @@ _PewterGymGuidePreAdviceText::
 	text "Hiya! I can tell"
 	line "you have what it"
 	cont "takes to become a"
-	cont "#MON champ!"
+	cont "JANKEN champ!"
 
 	para "I'm no trainer,"
 	line "but I can tell"
@@ -122,13 +118,13 @@ _PewterGymGuideBeginAdviceText::
 	prompt
 
 _PewterGymGuideAdviceText::
-	text "The 1st #MON"
+	text "The 1st candy"
 	line "out in a match is"
 	cont "at the top of the"
-	cont "#MON LIST!"
+	cont "CANDY LIST!"
 
 	para "By changing the"
-	line "order of #MON,"
+	line "order of candy,"
 	cont "matches could be"
 	cont "made easier!"
 	done
@@ -141,6 +137,6 @@ _PewterGymGuideFreeServiceText::
 
 _PewterGymGuidePostBattleText::
 	text "Just as I thought!"
-	line "You're #MON"
+	line "You're JANKEN"
 	cont "champ material!"
 	done

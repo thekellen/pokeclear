@@ -1,8 +1,8 @@
 _FuchsiaCityYoungster1Text::
 	text "Did you try the"
 	line "SAFARI GAME? Some"
-	cont "#MON can only"
-	cont "be caught there."
+	cont "candy can only"
+	cont "be won there."
 	done
 
 _FuchsiaCityGamblerText::
@@ -12,7 +12,7 @@ _FuchsiaCityGamblerText::
 
 	para "Out back is the"
 	line "SAFARI GAME for"
-	cont "catching #MON."
+	cont "hunting candy."
 	done
 
 _FuchsiaCityErikText::
@@ -24,7 +24,7 @@ _FuchsiaCityErikText::
 _FuchsiaCityYoungster2Text::
 	text "That item ball in"
 	line "there is really a"
-	cont "#MON."
+	cont "candy."
 	done
 
 _FuchsiaCityPokemonText::
@@ -39,7 +39,7 @@ _FuchsiaCitySignText::
 
 _FuchsiaCitySafariGameSignText::
 	text "SAFARI GAME"
-	line "#MON-U-CATCH!"
+	line "CANDY-U-HUNT!"
 	done
 
 _FuchsiaCityWardensHomeSignText::
@@ -48,13 +48,13 @@ _FuchsiaCityWardensHomeSignText::
 	done
 
 _FuchsiaCitySafariZoneSignText::
-	text "#MON PARADISE"
+	text "CANDY PARADISE"
 	line "SAFARI ZONE"
 	done
 
 _FuchsiaCityGymSignText::
 	text "FUCHSIA CITY"
-	line "#MON GYM"
+	line "JANKEN GYM"
 	cont "LEADER: KOGA"
 
 	para "The Poisonous"
@@ -62,56 +62,56 @@ _FuchsiaCityGymSignText::
 	done
 
 _FuchsiaCityChanseySignText::
-	text "Name: CHANSEY"
+	text "Name: ZEROBAR"
 
-	para "Catching one is"
+	para "Finding one is"
 	line "all up to chance."
 	prompt
 
 _FuchsiaCityVoltorbSignText::
-	text "Name: VOLTORB"
+	text "Name: STARBURST"
 
-	para "The very image of"
-	line "a # BALL."
+	para "A fruity chewy"
+	line "candy square."
 	prompt
 
 _FuchsiaCityKangaskhanSignText::
-	text "Name: KANGASKHAN"
+	text "Name: SNICKERS"
 
-	para "A maternal #MON"
-	line "that raises its"
-	cont "young in a pouch"
-	cont "on its belly."
+	para "A classic candy"
+	line "with peanuts and"
+	cont "nougat wrapped"
+	cont "in chocolate."
 	prompt
 
 _FuchsiaCitySlowpokeSignText::
-	text "Name: SLOWPOKE"
+	text "Name: MRGOODBAR"
 
-	para "Friendly and very"
-	line "slow moving."
+	para "Simple chocolate"
+	line "and peanut blend."
 	prompt
 
 _FuchsiaCityLaprasSignText::
-	text "Name: LAPRAS"
+	text "Name: ALMONDJOY"
 
 	para "A.K.A. the king"
-	line "of the seas."
+	line "of coconut candy."
 	prompt
 
 _FuchsiaCityFossilSignOmanyteText::
-	text "Name: OMANYTE"
+	text "Name: REESEPIECE"
 
-	para "A #MON that"
-	line "was resurrected"
-	cont "from a fossil."
+	para "A candy with"
+	line "peanut butter"
+	cont "and chocolate."
 	prompt
 
 _FuchsiaCityFossilSignKabutoText::
-	text "Name: KABUTO"
+	text "Name: RIESEN"
 
-	para "A #MON that"
-	line "was resurrected"
-	cont "from a fossil."
+	para "A rich chocolate"
+	line "caramel chewy"
+	cont "candy."
 	prompt
 
 _FuchsiaCityFossilSignUndeterminedText::

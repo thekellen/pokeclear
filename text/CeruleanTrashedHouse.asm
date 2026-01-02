@@ -5,10 +5,10 @@ _CeruleanTrashedHouseFishingGuruTheyStoleATMText::
 	para "Look what they"
 	line "did here!"
 
-	para "They stole a TM"
-	line "for teaching"
-	cont "#MON how to"
-	cont "DIG holes!"
+	para "They stole a M&M"
+	line "from our cookie."
+	cont "Now it has"
+	cont "big holes!"
 
 	para "That cost me a"
 	line "bundle, it did!"
@@ -18,9 +18,9 @@ _CeruleanTrashedHouseFishingGuruWhatsLostIsLostText::
 	text "I figure what's"
 	line "lost is lost!"
 
-	para "I decided to teach"
-	line "DIGLETT how to"
-	cont "DIG without a TM!"
+	para "I decided to eat"
+	line "cookies now just"
+	cont "without M&Ms!"
 	done
 
 _CeruleanTrashedHouseGirlText::

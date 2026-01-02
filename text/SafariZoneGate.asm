@@ -6,7 +6,7 @@ _SafariZoneGateSafariZoneWorker1Text::
 _SafariZoneGateSafariZoneWorker1WouldYouLikeToJoinText::
 	text "For just ¥500,"
 	line "you can catch all"
-	cont "the #MON you"
+	cont "the candy you"
 	cont "want in the park!"
 
 	para "Would you like to"
@@ -18,7 +18,7 @@ _SafariZoneGateSafariZoneWorker1ThatllBe500PleaseText::
 	line "please!"
 
 	para "We only use a"
-	line "special # BALL"
+	line "special CANDY"
 	cont "here."
 
 	para "<PLAYER> received"
@@ -75,7 +75,7 @@ _SafariZoneGateSafariZoneWorker2SafariZoneExplanationText::
 
 	para "Each zone has"
 	line "different kinds"
-	cont "of #MON. Use"
+	cont "of candy. Use"
 	cont "SAFARI BALLs to"
 	cont "catch them!"
 
@@ -86,9 +86,9 @@ _SafariZoneGateSafariZoneWorker2SafariZoneExplanationText::
 
 	para "Before you go,"
 	line "open an unused"
-	cont "#MON BOX so"
+	cont "candy box so"
 	cont "there's room for"
-	cont "new #MON!"
+	cont "new candy!"
 	done
 
 _SafariZoneGateSafariZoneWorker2YoureARegularHereText::

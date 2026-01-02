@@ -1,10 +1,10 @@
 _CeruleanMartCooltrainerMText::
 	text "Use REPEL to keep"
-	line "bugs and weak"
-	cont "#MON away."
+	line "bugs away from"
+	cont "your candy."
 
-	para "Put your strongest"
-	line "#MON at the"
+	para "Put your tastiest"
+	line "candy at the"
 	cont "top of the list"
 	cont "for best results!"
 	done
@@ -14,6 +14,6 @@ _CeruleanMartCooltrainerFText::
 	line "RARE CANDY?"
 
 	para "It's supposed to"
-	line "make #MON go"
-	cont "up one level!"
+	line "make all candy"
+	cont "taste sweeter"
 	done

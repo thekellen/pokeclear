@@ -97,7 +97,14 @@ SlidePlayerAndEnemySilhouettesOnScreen:
 	ld b, SET_PAL_BATTLE
 	call RunPaletteCommand
 	call HideSprites
-	jpfar PrintBeginningBattleText
+	; POKECLEAR/RPS: Clear fade-out control before displaying text
+	xor a
+	ld [wAudioFadeOutControl], a
+	callfar PrintBeginningBattleText
+	; POKECLEAR/RPS: Clear fade-out control again after text
+	xor a
+	ld [wAudioFadeOutControl], a
+	ret
 
 ; when a battle is starting, silhouettes of the player's pic and the enemy's pic are slid onto the screen
 ; the lower of the player's pic (his body) is part of the background, but his head is a sprite
@@ -130,31 +137,37 @@ SetScrollXForSlidingPlayerBodyLeft:
 	ret
 
 StartBattle:
+	; POKECLEAR/RPS: Skip all Pokemon loading, go straight to battle menu
 	xor a
 	ld [wPartyGainExpFlags], a
 	ld [wPartyFoughtCurrentEnemyFlags], a
 	ld [wActionResultOrTookBattleTurn], a
-	inc a
-	ld [wFirstMonsNotOutYet], a
-	ld hl, wEnemyMon1HP
-	ld bc, PARTYMON_STRUCT_LENGTH - 1
-	ld d, $3
-.findFirstAliveEnemyMonLoop
-	inc d
-	ld a, [hli]
-	or [hl]
-	jr nz, .foundFirstAliveEnemyMon
-	add hl, bc
-	jr .findFirstAliveEnemyMonLoop
-.foundFirstAliveEnemyMon
-	ld a, d
-	ld [wSerialExchangeNybbleReceiveData], a
-	ld a, [wIsInBattle]
-	dec a ; is it a trainer battle?
-	call nz, EnemySendOutFirstMon ; if it is a trainer battle, send out enemy mon
-	ld c, 40
-	call DelayFrames
+	ld [wFirstMonsNotOutYet], a ; set to 0 (mons already "out")
 	call SaveScreenTilesToBuffer1
+	jp MainInBattleLoop ; skip to battle menu
+
+; Original Pokemon loading code (disabled):
+;	inc a
+;	ld [wFirstMonsNotOutYet], a
+;	ld hl, wEnemyMon1HP
+;	ld bc, PARTYMON_STRUCT_LENGTH - 1
+;	ld d, $3
+;.findFirstAliveEnemyMonLoop
+;	inc d
+;	ld a, [hli]
+;	or [hl]
+;	jr nz, .foundFirstAliveEnemyMon
+;	add hl, bc
+;	jr .findFirstAliveEnemyMonLoop
+;.foundFirstAliveEnemyMon
+;	ld a, d
+;	ld [wSerialExchangeNybbleReceiveData], a
+;	ld a, [wIsInBattle]
+;	dec a ; is it a trainer battle?
+;	call nz, EnemySendOutFirstMon ; if it is a trainer battle, send out enemy mon
+;	ld c, 40
+;	call DelayFrames
+;	call SaveScreenTilesToBuffer1
 .checkAnyPartyAlive
 	call AnyPartyAlive
 	ld a, d
@@ -278,32 +291,19 @@ EnemyRanText:
 	text_end
 
 MainInBattleLoop:
-	call ReadPlayerMonCurHPAndStatus
-	ld hl, wBattleMonHP
-	ld a, [hli]
-	or [hl] ; is battle mon HP 0?
-	jp z, HandlePlayerMonFainted  ; if battle mon HP is 0, jump
-	ld hl, wEnemyMonHP
-	ld a, [hli]
-	or [hl] ; is enemy mon HP 0?
-	jp z, HandleEnemyMonFainted ; if enemy mon HP is 0, jump
+	; POKECLEAR/RPS: Skip all Pokemon HP/status checks, go straight to menu
+	; POKECLEAR/RPS: Prevent audio fade-out during battle
+	xor a
+	ld [wAudioFadeOutControl], a
 	call SaveScreenTilesToBuffer1
 	xor a
 	ld [wFirstMonsNotOutYet], a
-	ld a, [wPlayerBattleStatus2]
-	and (1 << NEEDS_TO_RECHARGE) | (1 << USING_RAGE) ; check if the player is using Rage or needs to recharge
-	jr nz, .selectEnemyMove
-; the player is not using Rage and doesn't need to recharge
-	ld hl, wEnemyBattleStatus1
-	res FLINCHED, [hl] ; reset flinch bit
-	ld hl, wPlayerBattleStatus1
-	res FLINCHED, [hl] ; reset flinch bit
-	ld a, [hl]
-	and (1 << THRASHING_ABOUT) | (1 << CHARGING_UP) ; check if the player is thrashing about or charging for an attack
-	jr nz, .selectEnemyMove ; if so, jump
-; the player is neither thrashing about nor charging for an attack
-	call DisplayBattleMenu ; show battle menu
+	call DisplayBattleMenu ; show battle menu (now displays ROCK PAPER SCISSORS)
 	ret c ; return if player ran from battle
+	; POKECLEAR/RPS: Check if RPS choice was made (ActionResultOrTookBattleTurn = $ff)
+	ld a, [wActionResultOrTookBattleTurn]
+	cp $ff
+	ret z ; return if RPS game ended (exit battle)
 	ld a, [wEscapedFromBattle]
 	and a
 	ret nz ; return if pokedoll was used to escape from battle
@@ -936,9 +936,10 @@ TrainerBattleVictory:
 	ld a, [wLinkState]
 	cp LINK_STATE_BATTLING
 	ret z
-	call ScrollTrainerPicAfterBattle
-	ld c, 40
-	call DelayFrames
+	; POKECLEAR/RPS: Skip trainer sprite scroll animation
+	;call ScrollTrainerPicAfterBattle
+	;ld c, 40
+	;call DelayFrames
 	call PrintEndBattleText
 ; win money
 	ld hl, MoneyForWinningText
@@ -1136,10 +1137,10 @@ HandlePlayerBlackOut:
 	ld a, [wCurOpponent]
 	cp OPP_RIVAL1
 	jr nz, .notRival1Battle
-	hlcoord 0, 0  ; rival 1 battle
-	lb bc, 8, 21
-	call ClearScreenArea
-	call ScrollTrainerPicAfterBattle
+	;hlcoord 0, 0  ; rival 1 battle
+	;lb bc, 8, 21
+	;call ClearScreenArea ; POKECLEAR: Disabled along with ScrollTrainerPicAfterBattle animation
+	;call ScrollTrainerPicAfterBattle ; POKECLEAR: Disable slide-in animation
 	ld c, 40
 	call DelayFrames
 	ld hl, Rival1WinText
@@ -1999,17 +2000,18 @@ CenterMonName:
 	ret
 
 DisplayBattleMenu::
+	; POKECLEAR/RPS: Skip HUD/HP bar drawing for RPS battles
 	call LoadScreenTilesFromBuffer1 ; restore saved screen
 	ld a, [wBattleType]
 	and a
 	jr nz, .nonstandardbattle
-	call DrawHUDsAndHPBars
+	;call DrawHUDsAndHPBars ; skip - no Pokemon data in RPS game
 	call PrintEmptyString
 	call SaveScreenTilesToBuffer1
 .nonstandardbattle
 	ld a, [wBattleType]
 	cp BATTLE_TYPE_SAFARI
-	ld a, BATTLE_MENU_TEMPLATE
+	ld a, SAFARI_BATTLE_MENU_TEMPLATE
 	jr nz, .menuselected
 	ld a, SAFARI_BATTLE_MENU_TEMPLATE
 .menuselected
@@ -2061,22 +2063,18 @@ DisplayBattleMenu::
 	ld [wLastMenuItem], a
 	jr .rightColumn
 .leftColumn ; put cursor in left column of menu
-	ld a, [wBattleType]
-	cp BATTLE_TYPE_SAFARI
+	; POKECLEAR/RPS: Always use Safari menu layout (wider menu)
 	ld a, ' '
-	jr z, .safariLeftColumn
-; put cursor in left column for normal battle menu (i.e. when it's not a Safari battle)
-	ldcoord_a 15, 14 ; clear upper cursor position in right column
-	ldcoord_a 15, 16 ; clear lower cursor position in right column
-	ld b, $9 ; top menu item X
-	jr .leftColumn_WaitForInput
-.safariLeftColumn
 	ldcoord_a 13, 14
 	ldcoord_a 13, 16
+	ld a, [wBattleType]
+	cp BATTLE_TYPE_SAFARI
+	jr nz, .skipSafariBallDisplay
 	hlcoord 7, 14
 	ld de, wNumSafariBalls
 	lb bc, 1, 2
 	call PrintNumber
+.skipSafariBallDisplay
 	ld b, $1 ; top menu item X
 .leftColumn_WaitForInput
 	ld hl, wTopMenuItemY
@@ -2091,25 +2089,27 @@ DisplayBattleMenu::
 	ld [hl], PAD_RIGHT | PAD_A ; wMenuWatchedKeys
 	call HandleMenuInput
 	bit B_PAD_RIGHT, a
-	jr nz, .rightColumn
+	jr nz, .checkIfCanMoveRight
 	jr .AButtonPressed ; the A button was pressed
+.checkIfCanMoveRight
+	; POKECLEAR/RPS: Only allow moving right from GUU (index 0), not from CHOKI (index 1)
+	ld a, [wCurrentMenuItem]
+	and a ; check if index is 0 (GUU)
+	jr z, .rightColumn ; can move right from GUU
+	jp .leftColumn ; can't move right from CHOKI, reinitialize left column
 .rightColumn ; put cursor in right column of menu
-	ld a, [wBattleType]
-	cp BATTLE_TYPE_SAFARI
+	; POKECLEAR/RPS: Always use Safari menu layout (wider menu)
 	ld a, ' '
-	jr z, .safariRightColumn
-; put cursor in right column for normal battle menu (i.e. when it's not a Safari battle)
-	ldcoord_a 9, 14 ; clear upper cursor position in left column
-	ldcoord_a 9, 16 ; clear lower cursor position in left column
-	ld b, $f ; top menu item X
-	jr .rightColumn_WaitForInput
-.safariRightColumn
 	ldcoord_a 1, 14 ; clear upper cursor position in left column
 	ldcoord_a 1, 16 ; clear lower cursor position in left column
+	ld a, [wBattleType]
+	cp BATTLE_TYPE_SAFARI
+	jr nz, .skipSafariBallDisplay2
 	hlcoord 7, 14
 	ld de, wNumSafariBalls
 	lb bc, 1, 2
 	call PrintNumber
+.skipSafariBallDisplay2
 	ld b, $d ; top menu item X
 .rightColumn_WaitForInput
 	ld hl, wTopMenuItemY
@@ -2119,13 +2119,14 @@ DisplayBattleMenu::
 	ld [hli], a ; wTopMenuItemX
 	inc hl
 	inc hl
-	ld a, $1
+	; POKECLEAR/RPS: Only 1 item in right column (PAA), not 2
+	xor a ; 0 = only 1 item (index 0)
 	ld [hli], a ; wMaxMenuItem
 	ld a, PAD_LEFT | PAD_A
 	ld [hli], a ; wMenuWatchedKeys
 	call HandleMenuInput
 	bit B_PAD_LEFT, a
-	jr nz, .leftColumn ; if left was pressed, jump
+	jp nz, .leftColumn ; if left was pressed, jump
 	ld a, [wCurrentMenuItem]
 	add $2 ; if we're in the right column, the actual id is +2
 	ld [wCurrentMenuItem], a
@@ -2137,29 +2138,93 @@ DisplayBattleMenu::
 	ld [wBattleAndStartSavedMenuItem], a
 	jr z, .handleMenuSelection
 ; not Safari battle
-; swap the IDs of the item menu and party menu (this is probably because they swapped the positions
-; of these menu items in first generation English versions)
-	cp $1 ; was the item menu selected?
-	jr nz, .notItemMenu
-; item menu was selected
-	inc a ; increment a to 2
+; POKECLEAR/RPS: Skip the item/party menu swap since we're using Safari layout for all battles
+; (Original code swapped IDs 1 and 2 for English version compatibility)
 	jr .handleMenuSelection
-.notItemMenu
-	cp $2 ; was the party menu selected?
-	jr nz, .handleMenuSelection
-; party menu selected
-	dec a ; decrement a to 1
 .handleMenuSelection
-	and a
-	jr nz, .upperLeftMenuItemWasNotSelected
-; the upper left menu item was selected
-	ld a, [wBattleType]
-	cp BATTLE_TYPE_SAFARI
-	jr z, .throwSafariBallWasSelected
-; the "FIGHT" menu was selected
+	; POKECLEAR/RPS: Handle RPS menu selection
+	; a = 0 (GUU/Rock), 1 (CHOKI/Scissors), 2 (PAA/Paper)
+	ld [wRPSPlayerChoice], a
+
+	; Generate random enemy choice (0-2)
+	call Random
+	and $3 ; mod 4 to get 0-3
+	cp 3
+	jr z, .handleMenuSelection ; if 3, re-roll
+	ld [wRPSEnemyChoice], a
+
+	; Determine round winner
+	call DetermineRPSWinner
+
+	; Display result text
+	call DisplayRPSResult
+
+	; Check if game is over (best 2 out of 3)
+	ld a, [wRPSPlayerRoundWins]
+	cp 2
+	jr z, .playerWonGame
+	ld a, [wRPSEnemyRoundWins]
+	cp 2
+	jr z, .enemyWonGame
+
+	; Game continues, clear action flag and return to menu
 	xor a
-	ld [wNumRunAttempts], a
-	jp LoadScreenTilesFromBuffer1 ; restore saved screen and return
+	ld [wActionResultOrTookBattleTurn], a
+	jp DisplayBattleMenu
+
+.playerWonGame
+	; POKECLEAR: Increment win streak on victory (stored in first 2 bytes of wPokedexOwned)
+	; Big-endian: byte 0 = high, byte 1 = low
+	ld hl, wPokedexOwned + 1 ; point to low byte
+	inc [hl]
+	jr nz, .noWinCarry
+	dec hl
+	inc [hl] ; increment high byte if low byte wrapped
+.noWinCarry:
+
+	xor a
+	ld [wBattleResult], a ; victory (0 = won)
+	; POKECLEAR/RPS: Trigger normal trainer victory sequence
+	call TrainerBattleVictory
+	; Clear screen tile buffers to prevent spiral artifacts
+	call ClearSprites
+	; Set flag to exit battle
+	ld a, $ff
+	ld [wActionResultOrTookBattleTurn], a
+	ret
+
+.enemyWonGame
+	; POKECLEAR: Reset win streak on loss (stored in first 2 bytes of wPokedexOwned)
+	xor a
+	ld [wPokedexOwned], a
+	ld [wPokedexOwned + 1], a
+
+	ld a, 1
+	ld [wBattleResult], a ; lost (1 = lost)
+	; POKECLEAR/RPS: Show blackout text
+	call HandlePlayerBlackOut
+	; Fake having all Pokemon fainted so overworld triggers blackout
+	; Set all party Pokemon HP to 0
+	ld a, [wPartyCount]
+	and a
+	jr z, .skipClearHP ; if no Pokemon in party, skip
+	ld e, a
+	xor a
+	ld hl, wPartyMon1HP
+	ld bc, PARTYMON_STRUCT_LENGTH - 1
+.clearHPLoop
+	ld [hli], a ; HP byte 1, HL now points to HP byte 2
+	ld [hl], a  ; HP byte 2
+	add hl, bc  ; move to next Pokemon's HP
+	dec e
+	jr nz, .clearHPLoop
+.skipClearHP
+	; Clear screen tile buffers to prevent spiral artifacts
+	call ClearSprites
+	; Set flag to exit battle - overworld will handle blackout
+	ld a, $ff
+	ld [wActionResultOrTookBattleTurn], a
+	ret
 .throwSafariBallWasSelected
 	ld a, SAFARI_BALL
 	ld [wCurItem], a
@@ -2949,7 +3014,7 @@ SelectEnemyMove:
 	and (1 << USING_TRAPPING_MOVE) | (1 << STORING_ENERGY) ; using a trapping move like wrap or bide
 	ret nz
 	ld a, [wPlayerBattleStatus1]
-	bit USING_TRAPPING_MOVE, a ; caught in player's trapping move (e.g. wrap)
+	bit USING_TRAPPING_MOVE, a ; won in player's trapping move (e.g. wrap)
 	jr z, .canSelectMove
 .unableToSelectMove
 	ld a, $ff
@@ -6261,12 +6326,13 @@ LoadEnemyMonData:
 	ld a, [wEnemyMonSpecies2]
 	ld [wPokedexNum], a
 	predef IndexToPokedex
-	ld a, [wPokedexNum]
-	dec a
-	ld c, a
-	ld b, FLAG_SET
-	ld hl, wPokedexSeen
-	predef FlagActionPredef ; mark this mon as seen in the pokedex
+	; POKECLEAR: Removed Pokemon "seen" flag logic - no longer needed
+	;ld a, [wPokedexNum]
+	;dec a
+	;ld c, a
+	;ld b, FLAG_SET
+	;ld hl, wPokedexSeen
+	;predef FlagActionPredef ; mark this mon as seen in the pokedex
 	ld hl, wEnemyMonLevel
 	ld de, wEnemyMonUnmodifiedLevel
 	ld bc, 1 + NUM_STATS * 2
@@ -6796,6 +6862,8 @@ DetermineWildOpponent:
 	callfar TryDoWildEncounter
 	ret nz
 InitBattleCommon:
+	; POKECLEAR: Counter increment removed - now done in InitBattleEnemyParameters
+	; to avoid double-counting (all battles are trainer battles)
 	ld a, [wMapPalOffset]
 	push af
 	ld hl, wLetterPrintingDelayFlags
@@ -6865,19 +6933,9 @@ InitWildBattle:
 
 ; common code that executes after init battle code specific to trainer or wild battles
 _InitBattleCommon:
-	; POKECLEAR MOD: Skip battle screen entirely, go straight to victory
+	; POKECLEAR/RPS: Ensure fade-out stays disabled during battle
 	xor a
-	ld [wBattleResult], a ; set result to victory (0)
-	callfar EndOfBattle
-	pop af
-	ld [wLetterPrintingDelayFlags], a
-	pop af
-	ld [wMapPalOffset], a
-	ld a, [wSavedTileAnimations]
-	ldh [hTileAnimations], a
-	scf
-	ret
-
+	ld [wAudioFadeOutControl], a
 	ld b, SET_PAL_BATTLE_BLACK
 	call RunPaletteCommand
 	call SlidePlayerAndEnemySilhouettesOnScreen
@@ -7056,3 +7114,379 @@ LoadMonBackPic:
 	ldh a, [hLoadedROMBank]
 	ld b, a
 	jp CopyVideoData
+
+; POKECLEAR/RPS: Rock-Paper-Scissors game functions
+DetermineRPSWinner:
+	; Compare player choice vs enemy choice
+	; 0 = GUU/Rock, 1 = CHOKI/Scissors, 2 = PAA/Paper
+	ld a, [wRPSPlayerChoice]
+	ld b, a
+	ld a, [wRPSEnemyChoice]
+	cp b
+	jr z, .tie ; same choice = tie
+
+	; Check all win conditions for player
+	ld a, b ; player choice
+	cp 0 ; Rock?
+	jr nz, .playerNotRock
+	; Player chose Rock
+	ld a, [wRPSEnemyChoice]
+	and a ; enemy chose Rock?
+	jr z, .tie ; Rock vs Rock = tie
+	cp 1 ; enemy chose Scissors?
+	jr z, .playerWins ; Rock beats Scissors
+	jr .playerLoses ; enemy chose Paper, Paper beats Rock
+
+.playerNotRock
+	ld a, b
+	cp 1 ; Scissors?
+	jr nz, .playerNotScissors
+	; Player chose Scissors
+	ld a, [wRPSEnemyChoice]
+	cp 1 ; enemy chose Scissors?
+	jr z, .tie ; Scissors vs Scissors = tie
+	cp 2 ; enemy chose Paper?
+	jr z, .playerWins ; Scissors beats Paper
+	jr .playerLoses ; enemy chose Rock, Rock beats Scissors
+
+.playerNotScissors ; must be Paper
+	; Player chose Paper
+	ld a, [wRPSEnemyChoice]
+	cp 2 ; enemy chose Paper?
+	jr z, .tie ; Paper vs Paper = tie
+	and a ; enemy chose Rock?
+	jr z, .playerWins ; Paper beats Rock
+	jr .playerLoses ; enemy chose Scissors, Scissors beats Paper
+
+.playerWins
+	ld a, [wRPSPlayerRoundWins]
+	inc a
+	ld [wRPSPlayerRoundWins], a
+	xor a ; 0 = player won round
+	ld [wRPSCurrentRound], a
+	ret
+
+.playerLoses
+	ld a, [wRPSEnemyRoundWins]
+	inc a
+	ld [wRPSEnemyRoundWins], a
+	ld a, 1 ; 1 = enemy won round
+	ld [wRPSCurrentRound], a
+	ret
+
+.tie
+	ld a, 2 ; 2 = tie
+	ld [wRPSCurrentRound], a
+	ret
+
+DisplayRPSResult:
+	; Display what each player chose
+	ld hl, .playerChoseText
+	call PrintText
+
+	; Play appropriate move animation based on choices
+	call PlayRPSMoveAnimation
+
+	; Display round result
+	ld a, [wRPSCurrentRound]
+	and a ; 0 = player won
+	jr z, .showPlayerWon
+	cp 1
+	jr z, .showEnemyWon
+	; tie
+	ld hl, .tieText
+	call PrintText
+	ret
+
+.showPlayerWon
+	; Check player name length
+	ld hl, wPlayerName
+	call GetNameLength
+	cp 8 ; Is name 8+ characters?
+	jr nc, .playerWonLongName
+
+	; Short name (≤7 chars) - use 2-line format
+	ld a, [wRPSPlayerChoice]
+	and a ; Rock?
+	jr z, .playerWonWithRock
+	cp 1 ; Scissors?
+	jr z, .playerWonWithScissors
+	; Paper
+	ld hl, .playerWonPaperText
+	jp PrintText
+.playerWonWithRock
+	ld hl, .playerWonRoundText
+	jp PrintText
+.playerWonWithScissors
+	ld hl, .playerWonScissorsText
+	jp PrintText
+
+.playerWonLongName
+	; Long name (≥8 chars) - use 3-line format
+	ld a, [wRPSPlayerChoice]
+	and a ; Rock?
+	jr z, .playerWonWithRock3Line
+	cp 1 ; Scissors?
+	jr z, .playerWonWithScissors3Line
+	; Paper
+	ld hl, .playerWonPaperText3Line
+	jp PrintText
+.playerWonWithRock3Line
+	ld hl, .playerWonRoundText3Line
+	jp PrintText
+.playerWonWithScissors3Line
+	ld hl, .playerWonScissorsText3Line
+	jp PrintText
+
+.showEnemyWon
+	; Check enemy/trainer name length
+	ld hl, wTrainerName
+	call GetNameLength
+	cp 8 ; Is name 8+ characters?
+	jr nc, .enemyWonLongName
+
+	; Short name (≤7 chars) - use 2-line format
+	ld a, [wRPSEnemyChoice]
+	and a ; Rock?
+	jr z, .enemyWonWithRock
+	cp 1 ; Scissors?
+	jr z, .enemyWonWithScissors
+	; Paper
+	ld hl, .enemyWonPaperText
+	jp PrintText
+.enemyWonWithRock
+	ld hl, .enemyWonRoundText
+	jp PrintText
+.enemyWonWithScissors
+	ld hl, .enemyWonScissorsText
+	jp PrintText
+
+.enemyWonLongName
+	; Long name (≥8 chars) - use 3-line format
+	ld a, [wRPSEnemyChoice]
+	and a ; Rock?
+	jr z, .enemyWonWithRock3Line
+	cp 1 ; Scissors?
+	jr z, .enemyWonWithScissors3Line
+	; Paper
+	ld hl, .enemyWonPaperText3Line
+	jp PrintText
+.enemyWonWithRock3Line
+	ld hl, .enemyWonRoundText3Line
+	jp PrintText
+.enemyWonWithScissors3Line
+	ld hl, .enemyWonScissorsText3Line
+	jp PrintText
+
+.flashEnemySprite
+	; Flash to white when player wins
+	ld c, 3 ; flash 3 times
+.flashEnemyLoop
+	push bc
+	; Flash to white
+	ld a, %00000000 ; all white
+	ldh [rBGP], a
+	ld c, 4
+	call DelayFrames
+	; Flash back to normal
+	ld a, %11100100 ; normal palette
+	ldh [rBGP], a
+	ld c, 4
+	call DelayFrames
+	pop bc
+	dec c
+	jr nz, .flashEnemyLoop
+	ret
+
+.flashPlayerSprite
+	; Flash to inverted when player loses
+	ld c, 3 ; flash 3 times
+.flashPlayerLoop
+	push bc
+	; Flash to inverted/dark
+	ld a, %00011011 ; inverted
+	ldh [rBGP], a
+	ld c, 4
+	call DelayFrames
+	; Flash back to normal
+	ld a, %11100100 ; normal palette
+	ldh [rBGP], a
+	ld c, 4
+	call DelayFrames
+	pop bc
+	dec c
+	jr nz, .flashPlayerLoop
+	ret
+
+.playerChoseText
+	text_far _RPSPlayerChoseText
+	text_end
+
+.playerWonRoundText
+	text_far _RPSPlayerWonRoundText
+	text_end
+
+.playerWonScissorsText
+	text_far _RPSPlayerWonScissorsText
+	text_end
+
+.playerWonPaperText
+	text_far _RPSPlayerWonPaperText
+	text_end
+
+.enemyWonRoundText
+	text_far _RPSEnemyWonRoundText
+	text_end
+
+.enemyWonScissorsText
+	text_far _RPSEnemyWonScissorsText
+	text_end
+
+.enemyWonPaperText
+	text_far _RPSEnemyWonPaperText
+	text_end
+
+.playerWonRoundText3Line
+	text_far _RPSPlayerWonRoundText3Line
+	text_end
+
+.playerWonScissorsText3Line
+	text_far _RPSPlayerWonScissorsText3Line
+	text_end
+
+.playerWonPaperText3Line
+	text_far _RPSPlayerWonPaperText3Line
+	text_end
+
+.enemyWonRoundText3Line
+	text_far _RPSEnemyWonRoundText3Line
+	text_end
+
+.enemyWonScissorsText3Line
+	text_far _RPSEnemyWonScissorsText3Line
+	text_end
+
+.enemyWonPaperText3Line
+	text_far _RPSEnemyWonPaperText3Line
+	text_end
+
+.tieText
+	text_far _RPSTieText
+	text_end
+
+PlayRPSMoveAnimation:
+	; Determine which animation to play based on player/enemy choices
+	; Player choice: 0=Rock, 1=Scissors, 2=Paper
+	; Enemy choice: 0=Rock, 1=Scissors, 2=Paper
+
+	; DEBUG: Save choices to verify they're correct
+	ld a, [wRPSPlayerChoice]
+	ld [wBattleMonLevel], a ; temporary debug storage
+	ld a, [wRPSEnemyChoice]
+	ld [wEnemyMonLevel], a ; temporary debug storage
+
+	ld a, [wRPSCurrentRound]
+	cp 2
+	jr z, .playTieAnimation ; tie
+
+	; Check who won and what they chose
+	and a ; 0 = player won
+	jr nz, .enemyWon
+
+	; Player won - check what player chose
+	ld a, [wRPSPlayerChoice]
+	and a ; Rock?
+	jr z, .playerRockWins
+	cp 1 ; Scissors?
+	jr z, .playerScissorsWins
+	; Paper wins
+	xor a
+	ldh [hWhoseTurn], a ; player's turn
+	ld a, 4 ; BLINKEFF_ANIM for player attacking
+	ld [wAnimationType], a
+	ld a, TRI_ATTACK ; Paper - multi-element attack
+	call PlayMoveAnimation
+	ret
+
+.playerRockWins
+	xor a
+	ldh [hWhoseTurn], a ; player's turn
+	ld a, 4 ; BLINKEFF_ANIM for player attacking
+	ld [wAnimationType], a
+	ld a, ROCK_THROW ; Rock beats Scissors
+	call PlayMoveAnimation
+	ret
+
+.playerScissorsWins
+	xor a
+	ldh [hWhoseTurn], a ; player's turn
+	ld a, 4 ; BLINKEFF_ANIM for player attacking
+	ld [wAnimationType], a
+	ld a, VICEGRIP ; Scissors - pinching/gripping
+	call PlayMoveAnimation
+	ret
+
+.enemyWon
+	; Enemy won - check what enemy chose
+	ld a, [wRPSEnemyChoice]
+	and a ; Rock?
+	jr z, .enemyRockWins
+	cp 1 ; Scissors?
+	jr z, .enemyScissorsWins
+	; Paper wins
+	ld a, 1
+	ldh [hWhoseTurn], a ; enemy's turn
+	ld a, 4 ; BLINKEFF_ANIM for enemy attacking
+	ld [wAnimationType], a
+	ld a, TRI_ATTACK ; Paper - multi-element attack
+	call PlayMoveAnimation
+	ret
+
+.enemyRockWins
+	ld a, 1
+	ldh [hWhoseTurn], a ; enemy's turn
+	ld a, 4 ; BLINKEFF_ANIM for enemy attacking
+	ld [wAnimationType], a
+	ld a, ROCK_THROW ; Rock beats Scissors
+	call PlayMoveAnimation
+	ret
+
+.enemyScissorsWins
+	ld a, 1
+	ldh [hWhoseTurn], a ; enemy's turn
+	ld a, 4 ; BLINKEFF_ANIM for enemy attacking
+	ld [wAnimationType], a
+	ld a, VICEGRIP ; Scissors - pinching/gripping
+	call PlayMoveAnimation
+	ret
+
+.playTieAnimation
+	; Tie - both Pokemon leer at each other
+	xor a
+	ldh [hWhoseTurn], a ; player's turn
+	ld a, 0 ; NORMALEFF_ANIM (no special screen effect)
+	ld [wAnimationType], a
+	ld a, LEER ; Leer animation - eyes glowing menacingly
+	call PlayMoveAnimation
+	ret
+
+GetNameLength:
+	; Input: hl = pointer to name string
+	; Output: a = length of name (excluding terminator)
+	push hl
+	xor a ; length counter
+.loop
+	ld b, a ; save current length
+	ld a, [hl]
+	cp CHARVAL("@") ; string terminator
+	jr z, .done
+	cp $50 ; check for other terminators used in names
+	jr z, .done
+	ld a, b ; restore length
+	inc a ; increment length
+	inc hl
+	jr .loop
+.done
+	ld a, b ; return final length
+	pop hl
+	ret

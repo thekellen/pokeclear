@@ -5,5 +5,5 @@ _CinnabarLabTradeRoomSuperNerdText::
 
 	para "I think it's a"
 	line "rare, prehistoric"
-	cont "#MON!"
+	cont "candy!"
 	done

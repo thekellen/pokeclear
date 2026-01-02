@@ -42,7 +42,8 @@ EndOfBattle:
 .evolution
 	xor a
 	ld [wForceEvolution], a
-	predef EvolutionAfterBattle
+	; POKECLEAR: Skip evolution - we have no Pokemon
+	;predef EvolutionAfterBattle
 .resetVariables
 	xor a
 	ld [wLowHealthAlarm], a ;disable low health alarm

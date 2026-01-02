@@ -1,16 +1,16 @@
 _ViridianCityYoungster1Text::
-	text "Those # BALLs"
+	text "Those candies"
 	line "at your waist!"
-	cont "You have #MON!"
+	cont "You have candy!"
 
 	para "It's great that"
 	line "you can carry and"
-	cont "use #MON any"
+	cont "use candy any"
 	cont "time, anywhere!"
 	done
 
 _ViridianCityGambler1GymAlwaysClosedText::
-	text "This #MON GYM"
+	text "This JANKEN GYM"
 	line "is always closed."
 
 	para "I wonder who the"
@@ -26,7 +26,7 @@ _ViridianCityYoungster2YouWantToKnowAboutText::
 	text "You want to know"
 	line "about the 2 kinds"
 	cont "of caterpillar"
-	cont "#MON?"
+	cont "candy?"
 	done
 
 ViridianCityYoungster2OkThenText::
@@ -34,9 +34,9 @@ ViridianCityYoungster2OkThenText::
 	done
 
 ViridianCityYoungster2CaterpieAndWeedleDescriptionText::
-	text "CATERPIE has no"
+	text "SOURPUNCH has no"
 	line "poison, but"
-	cont "WEEDLE does."
+	cont "SNOCAPS does."
 
 	para "Watch out for its"
 	line "POISON STING!"
@@ -71,7 +71,7 @@ ViridianCityFisherYouCanHaveThisText::
 	cont "off in the sun."
 
 	para "I had this dream"
-	line "about a DROWZEE"
+	line "about a BIGBOLT"
 	cont "eating my dream."
 	cont "What's this?"
 	cont "Where did this TM"
@@ -84,12 +84,12 @@ ViridianCityFisherYouCanHaveThisText::
 
 _ViridianCityFisherReceivedTM42Text::
 	text "<PLAYER> received"
-	line "TM42!@"
+	line "M&M42!@"
 	text_end
 
 _ViridianCityFisherTM42ExplanationText::
-	text "TM42 contains"
-	line "DREAM EATER..."
+	text "M&M42 contains"
+	line "RED 40..."
 	cont "...Snore..."
 	done
 
@@ -112,16 +112,16 @@ _ViridianCityOldManHadMyCoffeeNowText::
 
 _ViridianCityOldManKnowHowToCatchPokemonText::
 	text "I see you're using"
-	line "a #DEX."
+	line "a WINSTREAK."
 
 	para "When you catch a"
-	line "#MON, #DEX"
+	line "candy, WINSTREAK"
 	cont "is automatically"
 	cont "updated."
 
 	para "What? Don't you"
 	line "know how to catch"
-	cont "#MON?"
+	cont "candy?"
 
 	para "I'll show you"
 	line "how to then."
@@ -135,7 +135,7 @@ _ViridianCityOldManTimeIsMoneyText::
 _ViridianCityOldManYouNeedToWeakenTheTargetText::
 	text "First, you need"
 	line "to weaken the"
-	cont "target #MON."
+	cont "target candy."
 	done
 
 _ViridianCitySignText::
@@ -145,34 +145,34 @@ _ViridianCitySignText::
 	done
 
 _ViridianCityTrainerTips1Text::
-	text "TRAINER TIPS"
+	text "PLAYER TIPS"
 
-	para "Catch #MON"
+	para "Buy candy"
 	line "and expand your"
 	cont "collection!"
 
 	para "The more you have,"
 	line "the easier it is"
-	cont "to fight!"
+	cont "to play !"
 	done
 
 _ViridianCityTrainerTips2Text::
-	text "TRAINER TIPS"
+	text "PLAYER TIPS"
 
-	para "The battle moves"
-	line "of #MON are"
+	para "The hand moves"
+	line "in JANKEN are"
 	cont "limited by their"
-	cont "POWER POINTs, PP."
+	cont "number of fingers."
 
-	para "To replenish PP,"
+	para "To ease them,"
 	line "rest your tired"
-	cont "#MON at a"
-	cont "#MON CENTER!"
+	cont "hands at a"
+	cont "REST CENTER!"
 	done
 
 _ViridianCityGymSignText::
 	text "VIRIDIAN CITY"
-	line "#MON GYM"
+	line "JANKEN GYM"
 	done
 
 _ViridianCityGymLockedText::

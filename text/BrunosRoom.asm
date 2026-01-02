@@ -4,18 +4,18 @@ _BrunoBeforeBattleText::
 
 	para "Through rigorous"
 	line "training, people"
-	cont "and #MON can"
-	cont "become stronger!"
+	cont "can become stronger"
+	cont "at JANKEN!"
 
 	para "I've weight"
 	line "trained with"
-	cont "my #MON!"
+	cont "my hands!"
 
 	para "<PLAYER>!"
 
-	para "We will grind you"
-	line "down with our"
-	cont "superior power!"
+	para "I will crush you"
+	line "with my superior"
+	cont "power plays!"
 
 	para "Hoo hah!"
 	done

@@ -5,7 +5,7 @@ _Route2GateOaksAideFlashExplanationText::
 	done
 
 _Route2GateYoungsterText::
-	text "Once a #MON"
+	text "Once a candy"
 	line "learns FLASH, you"
 	cont "can get through"
 	cont "ROCK TUNNEL."

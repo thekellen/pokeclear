@@ -31,7 +31,7 @@ _SaffronCityRocket6Text::
 _SaffronCityRocket7Text::
 	text "With SILPH under"
 	line "control, we can"
-	cont "exploit #MON"
+	cont "exploit candy"
 	cont "around the world!"
 	done
 
@@ -65,7 +65,7 @@ _SaffronCityGentlemanText::
 	done
 
 _SaffronCityPidgeotText::
-	text "PIDGEOT: Bi bibii!@"
+	text "Bi bibii!@"
 	text_end
 
 _SaffronCityRockerText::
@@ -102,15 +102,15 @@ _SaffronCityFightingDojoSignText::
 
 _SaffronCityGymSignText::
 	text "SAFFRON CITY"
-	line "#MON GYM"
+	line "JANKEN GYM"
 	cont "LEADER: SABRINA"
 
 	para "The Master of"
-	line "Psychic #MON!"
+	line "Psychic JANKEN!"
 	done
 
 _SaffronCityTrainerTips1Text::
-	text "TRAINER TIPS"
+	text "PLAYER TIPS"
 
 	para "FULL HEAL cures"
 	line "all ailments like"
@@ -122,15 +122,15 @@ _SaffronCityTrainerTips1Text::
 	done
 
 _SaffronCityTrainerTips2Text::
-	text "TRAINER TIPS"
+	text "PLAYER TIPS"
 
-	para "New GREAT BALL"
+	para "New CHOCOLATE"
 	line "offers improved"
 	cont "capture rates."
 
 	para "Try it on those"
 	line "hard-to-catch"
-	cont "#MON."
+	cont "candy."
 	done
 
 _SaffronCitySilphCoSignText::

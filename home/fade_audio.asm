@@ -1,7 +1,15 @@
 FadeOutAudio::
+	; POKECLEAR/RPS: Completely disable audio fade-out during battles
+	ld a, [wIsInBattle]
+	and a
+	jr nz, .battleActive
 	ld a, [wAudioFadeOutControl]
 	and a ; currently fading out audio?
 	jr nz, .fadingOut
+.battleActive
+	; If in battle, force wAudioFadeOutControl to 0 and skip fade
+	xor a
+	ld [wAudioFadeOutControl], a
 	ld a, [wStatusFlags2]
 	bit BIT_NO_AUDIO_FADE_OUT, a
 	ret nz

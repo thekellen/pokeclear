@@ -2,21 +2,21 @@ _VermilionGymLTSurgePostBattleAdviceText::
 	text "A little word of"
 	line "advice, kid!"
 
-	para "Electricity is"
+	para "Quick plays are"
 	line "sure powerful!"
 
-	para "But, it's useless"
-	line "against ground-"
-	cont "type #MON!"
+	para "But watch for the"
+	line "opponent's read!"
+	cont "Timing is key!"
 	done
 
 _VermilionGymLTSurgeThunderBadgeInfoText::
 	text "The THUNDERBADGE"
-	line "cranks up your"
-	cont "#MON's SPEED!"
+	line "speeds up your"
+	cont "JANKEN throws!"
 
-	para "It also lets your"
-	line "#MON FLY any"
+	para "It also lets you"
+	line "use FLY any"
 	cont "time, kid!"
 
 	para "You're special,"
@@ -33,11 +33,8 @@ _VermilionGymLTSurgeReceivedTM24Text::
 _TM24ExplanationText::
 	text_start
 
-	para "TM24 contains"
-	line "THUNDERBOLT!"
-
-	para "Teach it to an"
-	line "electric #MON!"
+	para "M&M24 contains"
+	line "RED 40."
 	done
 
 _VermilionGymLTSurgeTM24NoRoomText::
@@ -124,12 +121,12 @@ _VermilionGymGymGuideChampInMakingText::
 	cont "American!"
 
 	para "He's an expert on"
-	line "electric #MON!"
+	line "lightning throws!"
 
-	para "Birds and water"
-	line "#MON are at"
-	cont "risk! Beware of"
-	cont "paralysis too!"
+	para "His speed catches"
+	line "opponents off"
+	cont "guard! Beware his"
+	cont "quick plays!"
 
 	para "LT.SURGE is very"
 	line "cautious!"

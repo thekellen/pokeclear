@@ -50,11 +50,11 @@ Route16SnorlaxPostBattleScript:
 	call UpdateSprites
 	ld a, [wBattleResult]
 	cp $2
-	jr z, .caught
+	jr z, .won
 	ld a, TEXT_ROUTE16_SNORLAX_RETURNED_TO_MOUNTAINS
 	ldh [hTextID], a
 	call DisplayTextID
-.caught
+.won
 	SetEvent EVENT_BEAT_ROUTE16_SNORLAX
 	call Delay3
 	ld a, SCRIPT_ROUTE16_DEFAULT

@@ -12,7 +12,7 @@ _LavenderTownLittleGirlHaHaGuessNotText::
 	text "Hahaha, I guess"
 	line "not."
 
-	para "That white hand"
+	para "That white candy"
 	line "on your shoulder,"
 	cont "it's not real."
 	done
@@ -20,21 +20,21 @@ _LavenderTownLittleGirlHaHaGuessNotText::
 _LavenderTownCooltrainerMText::
 	text "This town is known"
 	line "as the grave site"
-	cont "of #MON."
+	cont "of candy."
 
 	para "Memorial services"
 	line "are held in"
-	cont "#MON TOWER."
+	cont "CANDY TOWER."
 	done
 
 _LavenderTownSuperNerdText::
 	text "GHOSTs appeared"
-	line "in #MON TOWER."
+	line "in CANDY TOWER."
 
 	para "I think they're"
 	line "the spirits of"
-	cont "#MON that the"
-	cont "ROCKETs killed."
+	cont "candy that the"
+	cont "ROCKETs ate."
 	done
 
 _LavenderTownSignText::
@@ -54,11 +54,11 @@ _LavenderTownSilphScopeSignText::
 
 _LavenderTownPokemonHouseSignText::
 	text "LAVENDER VOLUNTEER"
-	line "#MON HOUSE"
+	line "CANDY HOUSE"
 	done
 
 _LavenderTownPokemonTowerSignText::
 	text "May the Souls of"
-	line "#MON Rest Easy"
-	cont "#MON TOWER"
+	line "candy Rest Easy"
+	cont "CANDY TOWER"
 	done

@@ -18,9 +18,10 @@ PrintBeginningBattleText:
 .notFishing
 	jr .wildBattle
 .trainerBattle
-	call .playSFX
-	ld c, 20
-	call DelayFrames
+	; POKECLEAR/RPS: DIAGNOSTIC - Skip SFX completely to test if it causes fade
+	;call .playSFX
+	;ld c, 20
+	;call DelayFrames
 	ld hl, TrainerWantsToFightText
 .wildBattle
 	push hl

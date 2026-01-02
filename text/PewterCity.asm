@@ -1,6 +1,6 @@
 _PewterCityCooltrainerFText::
 	text "It's rumored that"
-	line "CLEFAIRYs came"
+	line "SWEETARTs came"
 	cont "from the moon!"
 
 	para "They appeared "
@@ -10,7 +10,7 @@ _PewterCityCooltrainerFText::
 
 _PewterCityCooltrainerMText::
 	text "There aren't many"
-	line "serious #MON"
+	line "serious candy"
 	cont "trainers here!"
 
 	para "They're all like"
@@ -58,7 +58,7 @@ _PewterCitySuperNerd2ThatsRightText::
 
 _PewterCitySuperNerd2ImSprayingRepelText::
 	text "I'm spraying REPEL"
-	line "to keep #MON"
+	line "to keep candy"
 	cont "out of my garden!"
 	done
 
@@ -77,11 +77,11 @@ _PewterCityYoungsterGoTakeOnBrockText::
 	done
 
 _PewterCityTrainerTipsText::
-	text "TRAINER TIPS"
+	text "PLAYER TIPS"
 
-	para "Any #MON that"
+	para "Any candy that"
 	line "takes part in"
-	cont "battle, however"
+	cont "match, however"
 	cont "short, earns EXP!"
 	done
 
@@ -89,7 +89,7 @@ _PewterCityPoliceNoticeSignText::
 	text "NOTICE!"
 
 	para "Thieves have been"
-	line "stealing #MON"
+	line "stealing candy"
 	cont "fossils at MT."
 	cont "MOON! Please call"
 	cont "PEWTER POLICE"
@@ -103,11 +103,11 @@ _PewterCityMuseumSignText::
 
 _PewterCityGymSignText::
 	text "PEWTER CITY"
-	line "#MON GYM"
+	line "JANKEN GYM"
 	cont "LEADER: BROCK"
 
 	para "The Rock Solid"
-	line "#MON Trainer!"
+	line "JANKEN Player!"
 	done
 
 _PewterCitySignText::

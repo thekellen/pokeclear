@@ -19,9 +19,9 @@ _CinnabarLabMetronomeRoomScientist1TM35ExplanationText::
 	cont "of a METRONOME!"
 
 	para "It tweaks your"
-	line "#MON's brain"
-	cont "into using moves"
-	cont "it doesn't know!"
+	line "taste buds"
+	cont "into sensing new"
+	cont "exciting flavors!"
 	done
 
 _CinnabarLabMetronomeRoomScientist1TM35NoRoomText::
@@ -30,9 +30,9 @@ _CinnabarLabMetronomeRoomScientist1TM35NoRoomText::
 	done
 
 _CinnabarLabMetronomeRoomScientist2Text::
-	text "EEVEE can evolve"
-	line "into 1 of 3 kinds"
-	cont "of #MON."
+	text "MIKEANDIKE has"
+	line "3 different rare"
+	cont "candy variants."
 	done
 
 _CinnabarLabMetronomeRoomPCText::
@@ -42,9 +42,9 @@ _CinnabarLabMetronomeRoomPCText::
 	para "..."
 
 	para "The 3 legendary"
-	line "bird #MON are"
-	cont "ARTICUNO, ZAPDOS"
-	cont "and MOLTRES."
+	line "gum candy are"
+	cont "HUBBABUBBA, BAZOOKA"
+	cont "and DOUBLEMINT."
 
 	para "Their whereabouts"
 	line "are unknown."
@@ -53,7 +53,7 @@ _CinnabarLabMetronomeRoomPCText::
 	line "the cavern close"
 	cont "to CERULEAN."
 
-	para "From: #MON"
+	para "From: JANKEN"
 	line "RESEARCH TEAM"
 
 	para "..."

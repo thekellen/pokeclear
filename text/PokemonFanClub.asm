@@ -1,18 +1,18 @@
 _PokemonFanClubPikachuFanNormalText::
 	text "Won't you admire"
-	line "my PIKACHU's"
+	line "my BABYRUTH's"
 	cont "adorable tail?"
 	done
 
 _PokemonFanClubPikachuFanBetterText::
-	text "Humph! My PIKACHU"
+	text "Humph! My BABYRUTH"
 	line "is twice as cute"
 	cont "as that one!"
 	done
 
 _PokemonFanClubSeelFanNormalText::
 	text "I just love my"
-	line "SEEL!"
+	line "CRISPYBAR!"
 
 	para "It squeals when I"
 	line "hug it!"
@@ -21,35 +21,35 @@ _PokemonFanClubSeelFanNormalText::
 _PokemonFanClubSeelFanBetterText::
 	text "Oh dear!"
 
-	para "My SEEL is far"
+	para "My CRISPYBAR is far"
 	line "more attractive!"
 	done
 
 _PokemonFanClubPikachuText::
-	text "PIKACHU: Chu!"
+	text "Chu!"
 	line "Pikachu!"
 	done
 
 _PokemonFanClubSeelText::
-	text "SEEL: Kyuoo!"
+	text "Kyuoo!"
 	done
 
 _PokemonFanClubChairmanIntroText::
 	text "I chair the"
-	line "#MON Fan Club!"
+	line "candy Fan Club!"
 
 	para "I have collected"
-	line "over 100 #MON!"
+	line "over 100 candy!"
 
 	para "I'm very fussy"
 	line "when it comes to"
-	cont "#MON!"
+	cont "candy!"
 
 	para "So..."
 
 	para "Did you come"
 	line "visit to hear"
-	cont "about my #MON?"
+	cont "about my candy?"
 	done
 
 _PokemonFanClubChairmanStoryText::
@@ -57,7 +57,7 @@ _PokemonFanClubChairmanStoryText::
 	line "Then listen up!"
 
 	para "My favorite"
-	line "RAPIDASH..."
+	line "SNICKERS..."
 
 	para "It...cute..."
 	line "lovely...smart..."
@@ -96,7 +96,7 @@ _PokemonFanClubExplainBikeVoucherText::
 	line "a BICYCLE!"
 
 	para "Don't worry, my"
-	line "FEAROW will FLY"
+	line "CRUNCH will FLY"
 	cont "me anywhere!"
 
 	para "So, I don't need a"
@@ -117,7 +117,7 @@ _PokemonFanClubChairFinalText::
 
 	para "Did you come see"
 	line "me about my"
-	cont "#MON again?"
+	cont "candy again?"
 
 	para "No? Too bad!"
 	done
@@ -130,7 +130,7 @@ _PokemonFanClubBagFullText::
 _PokemonFanClubReceptionistText::
 	text "Our Chairman is"
 	line "very vocal about"
-	cont "#MON."
+	cont "candy."
 	done
 
 _PokemonFanClubSign1Text::

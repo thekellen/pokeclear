@@ -1,26 +1,21 @@
 _Route12Gate2FBrunetteGirlYouCanHaveThisText::
-	text "My #MON's"
+	text "My candy's"
 	line "ashes are stored"
-	cont "in #MON TOWER."
+	cont "in CANDY TOWER."
 
 	para "You can have this"
-	line "TM. I don't need"
+	line "M&M. I don't need"
 	cont "it any more..."
 	prompt
 
 _Route12Gate2FBrunetteGirlReceivedTM39Text::
 	text "<PLAYER> received"
-	line "TM39!@"
+	line "M&M39!@"
 	text_end
 
 _Route12Gate2FBrunetteGirlTM39ExplanationText::
-	text "TM39 is a move"
-	line "called SWIFT."
-
-	para "It's very accurate,"
-	line "so use it during"
-	cont "battles you can't"
-	cont "afford to lose."
+	text "M&M39 contains"
+	line "RED 40."
 	done
 
 _Route12Gate2FBrunetteGirlTM39NoRoomText::
@@ -39,5 +34,5 @@ _Route12Gate2FRightBinocularsText::
 	text "Looked into the"
 	line "binoculars."
 
-	para "It's #MON TOWER!"
+	para "It's CANDY TOWER!"
 	done

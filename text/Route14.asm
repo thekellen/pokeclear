@@ -1,7 +1,7 @@
 _Route14CooltrainerM1BattleText::
 	text "You need to use"
 	line "TMs to teach good"
-	cont "moves to #MON!"
+	cont "moves to candy!"
 	done
 
 _Route14CooltrainerM1EndBattleText::
@@ -11,15 +11,15 @@ _Route14CooltrainerM1EndBattleText::
 
 _Route14CooltrainerM1AfterBattleText::
 	text "You have some HMs"
-	line "right? #MON"
+	line "right? candy"
 	cont "can't ever forget"
 	cont "those moves."
 	done
 
 _Route14CooltrainerM2BattleText::
-	text "My bird #MON"
+	text "My bird candy"
 	line "should be ready"
-	cont "for battle."
+	cont "for match."
 	done
 
 _Route14CooltrainerM2EndBattleText::
@@ -45,7 +45,7 @@ _Route14CooltrainerM3EndBattleText::
 	prompt
 
 _Route14CooltrainerM3AfterBattleText::
-	text "Teach #MON"
+	text "Teach candy"
 	line "moves of the same"
 	cont "element type for"
 	cont "more power."
@@ -53,7 +53,7 @@ _Route14CooltrainerM3AfterBattleText::
 
 _Route14CooltrainerM4BattleText::
 	text "Have you taught"
-	line "your bird #MON"
+	line "your bird candy"
 	cont "how to FLY?"
 	done
 
@@ -63,14 +63,14 @@ _Route14CooltrainerM4EndBattleText::
 	prompt
 
 _Route14CooltrainerM4AfterBattleText::
-	text "Bird #MON are"
+	text "Bird candy are"
 	line "my true love!"
 	done
 
 _Route14CooltrainerM5BattleText::
 	text "Have you heard of"
 	line "the legendary"
-	cont "#MON?"
+	cont "candy?"
 	done
 
 _Route14CooltrainerM5EndBattleText::
@@ -80,7 +80,7 @@ _Route14CooltrainerM5EndBattleText::
 
 _Route14CooltrainerM5AfterBattleText::
 	text "The 3 legendary"
-	line "#MON are all"
+	line "candy are all"
 	cont "birds of prey."
 	done
 
@@ -127,7 +127,7 @@ _Route14Biker2EndBattleText::
 	prompt
 
 _Route14Biker2AfterBattleText::
-	text "Raising #MON"
+	text "Eating candy"
 	line "is a drag, man."
 	done
 
@@ -142,8 +142,8 @@ _Route14Biker3EndBattleText::
 	prompt
 
 _Route14Biker3AfterBattleText::
-	text "It's cool you"
-	line "made your #MON"
+	text "It's cool"
+	line "your skills are"
 	cont "so strong!"
 
 	para "Might is right!"
@@ -151,7 +151,7 @@ _Route14Biker3AfterBattleText::
 	done
 
 _Route14Biker4BattleText::
-	text "#MON fight?"
+	text "candy match?"
 	line "Cool! Rumble!"
 	done
 

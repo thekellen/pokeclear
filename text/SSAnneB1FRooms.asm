@@ -6,12 +6,12 @@ _SSAnneB1FRoomsMachokeText::
 _SSAnneB1FRoomsSailor1BattleText::
 	text "You know what they"
 	line "say about sailors"
-	cont "and fighting!"
+	cont "and playing!  "
 	done
 
 _SSAnneB1FRoomsSailor1EndBattleText::
 	text "Right!"
-	line "Good fight, mate!"
+	line "Good match, mate!"
 	prompt
 
 _SSAnneB1FRoomsSailor1AfterBattleText::
@@ -37,7 +37,7 @@ _SSAnneB1FRoomsSailor2AfterBattleText::
 
 _SSAnneB1FRoomsSailor3BattleText::
 	text "Us sailors have"
-	line "#MON too!"
+	line "candy too!  "
 	done
 
 _SSAnneB1FRoomsSailor3EndBattleText::
@@ -46,9 +46,9 @@ _SSAnneB1FRoomsSailor3EndBattleText::
 	prompt
 
 _SSAnneB1FRoomsSailor3AfterBattleText::
-	text "We caught all our"
-	line "#MON while"
-	cont "out at sea!"
+	text "We won all our"
+	line "candy while "
+	cont "out at sea!   "
 	done
 
 _SSAnneB1FRoomsSailor4BattleText::
@@ -62,8 +62,8 @@ _SSAnneB1FRoomsSailor4EndBattleText::
 	prompt
 
 _SSAnneB1FRoomsSailor4AfterBattleText::
-	text "Sea #MON live"
-	line "in deep water."
+	text "Sea candy live"
+	line "in deep water. "
 	cont "You'll need a ROD!"
 	done
 
@@ -88,7 +88,7 @@ _SSAnneB1FRoomsFisherBattleText::
 	text "Hello stranger!"
 	line "Stop and chat!"
 
-	para "All my #MON"
+	para "All my candy"
 	line "are from the sea!"
 	done
 

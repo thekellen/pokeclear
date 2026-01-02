@@ -31,7 +31,7 @@ _RockTunnelB1FHiker1AfterBattleText::
 
 _RockTunnelB1FSuperNerd1BattleText::
 	text "You have a"
-	line "#DEX?"
+	line "WINSTREAK?"
 	cont "I want one too!"
 	done
 
@@ -42,7 +42,7 @@ _RockTunnelB1FSuperNerd1EndBattleText::
 
 _RockTunnelB1FSuperNerd1AfterBattleText::
 	text "When you finish"
-	line "your #DEX, can"
+	line "your WINSTREAK, can"
 	cont "I have it?"
 	done
 
@@ -59,11 +59,11 @@ _RockTunnelB1FSuperNerd2EndBattleText::
 _RockTunnelB1FSuperNerd2AfterBattleText::
 	text "Costume players"
 	line "dress up as"
-	cont "#MON for fun."
+	cont "JANKEN for fun."
 	done
 
 _RockTunnelB1FHiker2BattleText::
-	text "My #MON"
+	text "My JANKEN"
 	line "techniques will"
 	cont "leave you crying!"
 	done
@@ -77,13 +77,13 @@ _RockTunnelB1FHiker2EndBattleText::
 _RockTunnelB1FHiker2AfterBattleText::
 	text "In mountains,"
 	line "you'll often find"
-	cont "rock-type #MON."
+	cont "rock-type candy."
 	done
 
 _RockTunnelB1FCooltrainerF2BattleText::
 	text "I don't often"
 	line "come here, but I"
-	cont "will fight you."
+	cont "will play you."
 	done
 
 _RockTunnelB1FCooltrainerF2EndBattleText::
@@ -93,7 +93,7 @@ _RockTunnelB1FCooltrainerF2EndBattleText::
 
 _RockTunnelB1FCooltrainerF2AfterBattleText::
 	text "I like tiny"
-	line "#MON, big ones"
+	line "candy, big ones"
 	cont "are too scary!"
 	done
 

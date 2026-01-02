@@ -3,7 +3,7 @@ _SafariZoneCenterRestHouseSignText::
 	done
 
 _SafariZoneCenterTrainerTipsSignText::
-	text "TRAINER TIPS"
+	text "PLAYER TIPS"
 
 	para "Press the START"
 	line "Button to check"

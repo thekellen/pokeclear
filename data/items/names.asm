@@ -1,13 +1,13 @@
 ItemNames::
 	list_start ITEM_NAME_LENGTH - 1
-	li "MASTER BALL"
-	li "ULTRA BALL"
-	li "GREAT BALL"
-	li "POKé BALL"
+	li "WONDER BALL"
+	li "FIRE BALL"
+	li "MALT BALL"
+	li "GUM BALL"
 	li "TOWN MAP"
 	li "BICYCLE"
 	li "?????" ; SURFBOARD
-	li "SAFARI BALL"
+	li "COCO BALL"
 	li "POKéDEX"
 	li "MOON STONE"
 	li "ANTIDOTE"
@@ -30,7 +30,7 @@ ItemNames::
 	li "EARTHBADGE"
 	li "ESCAPE ROPE"
 	li "REPEL"
-	li "OLD AMBER"
+	li "NERDSROPE"
 	li "FIRE STONE"
 	li "THUNDERSTONE"
 	li "WATER STONE"

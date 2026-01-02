@@ -16,7 +16,7 @@ _Route11Gate2FLeftBinocularsSnorlaxText::
 	text "Looked into the"
 	line "binoculars."
 
-	para "A big #MON is"
+	para "An old man is"
 	line "asleep on a road!"
 	done
 

@@ -85,29 +85,30 @@ _AddPartyMon::
 	push de
 	predef IndexToPokedex
 	pop de
-	ld a, [wPokedexNum]
-	dec a
-	ld c, a
-	ld b, FLAG_TEST
-	ld hl, wPokedexOwned
-	call FlagAction
-	ld a, c ; whether the mon was already flagged as owned
-	ld [wUnusedAlreadyOwnedFlag], a
-	ld a, [wPokedexNum]
-	dec a
-	ld c, a
-	ld b, FLAG_SET
-	push bc
-	call FlagAction
-	pop bc
-	ld hl, wPokedexSeen
-	call FlagAction
+	; POKECLEAR: Removed Pokemon owned/seen flag logic - no longer needed
+	;ld a, [wPokedexNum]
+	;dec a
+	;ld c, a
+	;ld b, FLAG_TEST
+	;ld hl, wPokedexOwned
+	;call FlagAction
+	;ld a, c ; whether the mon was already flagged as owned
+	;ld [wUnusedAlreadyOwnedFlag], a
+	;ld a, [wPokedexNum]
+	;dec a
+	;ld c, a
+	;ld b, FLAG_SET
+	;push bc
+	;call FlagAction
+	;pop bc
+	;ld hl, wPokedexSeen
+	;call FlagAction
 
 	pop hl
 	push hl
 
 	ld a, [wIsInBattle]
-	and a ; is this a wild mon caught in battle?
+	and a ; is this a wild mon won in battle?
 	jr nz, .copyEnemyMonData
 
 ; Not wild.
@@ -325,16 +326,17 @@ _AddEnemyMonToPlayerParty::
 	ld a, [wCurPartySpecies]
 	ld [wPokedexNum], a
 	predef IndexToPokedex
-	ld a, [wPokedexNum]
-	dec a
-	ld c, a
-	ld b, FLAG_SET
-	ld hl, wPokedexOwned
-	push bc
-	call FlagAction ; add to owned pokemon
-	pop bc
-	ld hl, wPokedexSeen
-	call FlagAction ; add to seen pokemon
+	; POKECLEAR: Removed Pokemon owned/seen flag logic - no longer needed
+	;ld a, [wPokedexNum]
+	;dec a
+	;ld c, a
+	;ld b, FLAG_SET
+	;ld hl, wPokedexOwned
+	;push bc
+	;call FlagAction ; add to owned pokemon
+	;pop bc
+	;ld hl, wPokedexSeen
+	;call FlagAction ; add to seen pokemon
 	and a
 	ret                  ; return success
 

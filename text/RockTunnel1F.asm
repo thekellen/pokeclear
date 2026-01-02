@@ -27,7 +27,7 @@ _RockTunnel1FHiker2EndBattleText::
 
 _RockTunnel1FHiker2AfterBattleText::
 	text "That sleeping"
-	line "#MON on ROUTE"
+	line "candy on ROUTE"
 	cont "12 forced me to"
 	cont "take this detour."
 	done
@@ -48,7 +48,7 @@ _RockTunnel1FHiker3AfterBattleText::
 	done
 
 _RockTunnel1FSuperNerdBattleText::
-	text "#MON fight!"
+	text "JANKEN play!"
 	line "Ready, go!"
 	done
 
@@ -59,7 +59,7 @@ _RockTunnel1FSuperNerdEndBattleText::
 
 _RockTunnel1FSuperNerdAfterBattleText::
 	text "Oh well, I'll get"
-	line "a ZUBAT as I go!"
+	line "a DARKCHOC as I go!"
 	done
 
 _RockTunnel1FCooltrainerF1BattleText::
@@ -80,12 +80,12 @@ _RockTunnel1FCooltrainerF1AfterBattleText::
 
 _RockTunnel1FCooltrainerF2BattleText::
 	text "I came this far"
-	line "for #MON!"
+	line "for candy!"
 	done
 
 _RockTunnel1FCooltrainerF2EndBattleText::
 	text "I'm"
-	line "out of #MON!"
+	line "out of candy!"
 	prompt
 
 _RockTunnel1FCooltrainerF2AfterBattleText::
@@ -94,7 +94,7 @@ _RockTunnel1FCooltrainerF2AfterBattleText::
 	done
 
 _RockTunnel1FCooltrainerF3BattleText::
-	text "You have #MON!"
+	text "You have candy!"
 	line "Let's start!"
 	done
 

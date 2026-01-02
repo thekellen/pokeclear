@@ -6,6 +6,6 @@ _SafariZoneCenterRestHouseGirlText::
 
 _SafariZoneCenterRestHouseScientistText::
 	text "I'm catching"
-	line "#MON to take"
+	line "candy to take"
 	cont "home as gifts!"
 	done

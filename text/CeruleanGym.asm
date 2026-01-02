@@ -5,30 +5,30 @@ _CeruleanGymMistyPreBattleText::
 	para "Trainers who want"
 	line "to turn pro have"
 	cont "to have a policy"
-	cont "about #MON!"
+	cont "about JANKEN!"
 
 	para "What is your"
 	line "approach when you"
-	cont "catch #MON?"
+	cont "play a match?"
 
 	para "My policy is an"
 	line "all-out offensive"
-	cont "with water-type"
-	cont "#MON!"
+	cont "with paper-type"
+	cont "throws!"
 	done
 
 _CeruleanGymMistyTM11ExplanationText::
 	text "TM11 teaches"
 	line "BUBBLEBEAM!"
 
-	para "Use it on an"
-	line "aquatic #MON!"
+	para "Use it with a"
+	line "flowing strategy!"
 	done
 
 _CeruleanGymMistyCascadeBadgeInfoText::
 	text "The CASCADEBADGE"
-	line "makes all #MON"
-	cont "up to L30 obey!"
+	line "unlocks advanced"
+	cont "JANKEN plays!"
 
 	para "That includes"
 	line "even outsiders!"
@@ -113,14 +113,14 @@ _CeruleanGymGymGuideChampInMakingText::
 
 	para "The LEADER, MISTY,"
 	line "is a pro who uses"
-	cont "water #MON!"
+	cont "paper throws!"
 
-	para "You can drain all"
-	line "their water with"
-	cont "plant #MON!"
+	para "You can beat her"
+	line "paper throws with"
+	cont "scissors plays!"
 
-	para "Or, zap them with"
-	line "electricity!"
+	para "Or, crush her with"
+	line "rock strategy!"
 	done
 
 _CeruleanGymGymGuideBeatMistyText::

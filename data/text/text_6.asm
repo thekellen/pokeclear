@@ -2,23 +2,23 @@ _ItemUseBallText00::
 	text "It dodged the"
 	line "thrown BALL!"
 
-	para "This #MON"
-	line "can't be caught!"
+	para "This HAND"
+	line "can't be won!"
 	prompt
 
 _ItemUseBallText01::
 	text "You missed the"
-	line "#MON!"
+	line "HAND!"
 	prompt
 
 _ItemUseBallText02::
-	text "Darn! The #MON"
+	text "Darn! The HAND"
 	line "broke free!"
 	prompt
 
 _ItemUseBallText03::
 	text "Aww! It appeared"
-	line "to be caught! "
+	line "to be won! "
 	prompt
 
 _ItemUseBallText04::
@@ -31,7 +31,7 @@ _ItemUseBallText05::
 	line "@"
 	text_ram wEnemyMonNick
 	text " was"
-	cont "caught!@"
+	cont "won!@"
 	text_end
 
 _ItemUseBallText07::
@@ -49,7 +49,7 @@ _ItemUseBallText08::
 	prompt
 
 _ItemUseBallText06::
-	text "New #DEX data"
+	text "New WINSTREAK data"
 	line "will be added for"
 	cont "@"
 	text_ram wEnemyMonNick
@@ -99,7 +99,7 @@ _PlayedFluteNoEffectText::
 
 _FluteWokeUpText::
 	text "All sleeping"
-	line "#MON woke up."
+	line "HAND woke up."
 	prompt
 
 _PlayedFluteHadEffectText::
@@ -168,7 +168,7 @@ _TeachMachineMoveText::
 	para "Teach @"
 	text_ram wStringBuffer
 	text_start
-	line "to a #MON?"
+	line "to a HAND?"
 	done
 
 _MonCannotLearnMachineMoveText::
@@ -223,7 +223,7 @@ _NoSurfingHereText::
 	prompt
 
 _BoxFullCannotThrowBallText::
-	text "The #MON BOX"
+	text "The HAND BOX"
 	line "is full! Can't"
 	cont "use that item!"
 	prompt

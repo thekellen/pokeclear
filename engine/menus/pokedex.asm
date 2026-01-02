@@ -171,20 +171,16 @@ HandlePokedexListMenu:
 	call DrawPokedexVerticalLine
 	hlcoord 14, 9
 	call DrawPokedexVerticalLine
-	ld hl, wPokedexSeen
-	ld b, wPokedexSeenEnd - wPokedexSeen
-	call CountSetBits
-	ld de, wNumSetBits
+	; POKECLEAR: Print win streak at position 3 next to "WON" (stored in bytes 0-1 of wPokedexOwned)
+	ld de, wPokedexOwned
 	hlcoord 16, 3
-	lb bc, 1, 3
-	call PrintNumber ; print number of seen pokemon
-	ld hl, wPokedexOwned
-	ld b, wPokedexOwnedEnd - wPokedexOwned
-	call CountSetBits
-	ld de, wNumSetBits
+	lb bc, 2, 5
+	call PrintNumber ; print win streak (up to 5 digits)
+	; POKECLEAR: Print battles played at position 6 next to "PLAYED" (stored in bytes 2-3 of wPokedexSeen)
+	ld de, wPokedexSeen + 2
 	hlcoord 16, 6
-	lb bc, 1, 3
-	call PrintNumber ; print number of owned pokemon
+	lb bc, 2, 5
+	call PrintNumber ; print battles played (up to 5 digits)
 	hlcoord 16, 2
 	ld de, PokedexSeenText
 	call PlaceString
@@ -360,10 +356,10 @@ DrawPokedexVerticalLine:
 	ret
 
 PokedexSeenText:
-	db "SEEN@"
+	db "WON@"
 
 PokedexOwnText:
-	db "OWN@"
+	db "PLAYED@"
 
 PokedexContentsText:
 	db "CONTENTS@"

@@ -25,7 +25,7 @@ _SSAnneKitchenCook4Text::
 
 _SSAnneKitchenCook5Text::
 	text "Did you hear about"
-	line "SNORLAX?"
+	line "SESAMEBAR?"
 
 	para "All it does is"
 	line "eat and sleep!"

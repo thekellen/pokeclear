@@ -40,6 +40,6 @@ _PokemonTower4FChanneler3EndBattleText::
 
 _PokemonTower4FChanneler3AfterBattleText::
 	text "May the departed"
-	line "souls of #MON"
+	line "souls of candy"
 	cont "rest in peace..."
 	done

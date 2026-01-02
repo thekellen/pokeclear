@@ -1,6 +1,6 @@
 _Route8SuperNerd1BattleText::
 	text "You look good at"
-	line "#MON, but"
+	line "JANKEN, but"
 	cont "how's your chem?"
 	done
 
@@ -40,13 +40,13 @@ _Route8SuperNerd2EndBattleText::
 	prompt
 
 _Route8SuperNerd2AfterBattleText::
-	text "Go with GRIMER"
+	text "Go with PAYDAY"
 	line "first...and..."
 	cont "...and...then..."
 	done
 
 _Route8CooltrainerF1BattleText::
-	text "I like NIDORAN, so"
+	text "I like SKOR, so"
 	line "I collect them!"
 	done
 
@@ -55,15 +55,15 @@ _Route8CooltrainerF1EndBattleText::
 	prompt
 
 _Route8CooltrainerF1AfterBattleText::
-	text "When #MON grow"
-	line "up they get ugly!"
-	cont "They shouldn't"
-	cont "evolve!"
+	text "When candy melts"
+	line "it gets ugly!"
+	cont "It shouldn't"
+	cont "get stale!"
 	done
 
 _Route8SuperNerd3BattleText::
 	text "School is fun, but"
-	line "so are #MON."
+	line "so is JANKEN."
 	done
 
 _Route8SuperNerd3EndBattleText::
@@ -78,7 +78,7 @@ _Route8SuperNerd3AfterBattleText::
 	done
 
 _Route8CooltrainerF2BattleText::
-	text "MEOWTH is so cute,"
+	text "SWEDISHFSH is so cute,"
 	line "meow, meow, meow!"
 	done
 
@@ -87,8 +87,8 @@ _Route8CooltrainerF2EndBattleText::
 	prompt
 
 _Route8CooltrainerF2AfterBattleText::
-	text "I think PIDGEY"
-	line "and RATTATA"
+	text "I think KRACKEL"
+	line "and GOBSTOPPER"
 	cont "are cute too!"
 	done
 
@@ -122,7 +122,7 @@ _Route8Gambler2EndBattleText::
 
 _Route8Gambler2AfterBattleText::
 	text "Gambling and"
-	line "#MON are like"
+	line "JANKEN are like"
 	cont "eating peanuts!"
 	cont "Just can't stop!"
 	done
@@ -130,21 +130,21 @@ _Route8Gambler2AfterBattleText::
 _Route8CooltrainerF4BattleText::
 	text "What's a cute,"
 	line "round and fluffy"
-	cont "#MON?"
+	cont "candy?"
 	done
 
 _Route8CooltrainerF4EndBattleText::
 	text "Stop!"
 
 	para "Don't be so mean"
-	line "to my CLEFAIRY!"
+	line "to my TWIX!"
 	prompt
 
 _Route8CooltrainerF4AfterBattleText::
 	text "I heard that"
-	line "CLEFAIRY evolves"
-	cont "when it's exposed"
-	cont "to a MOON STONE."
+	line "TWIX gets extra"
+	cont "layers when it's"
+	cont "near MOON STONE."
 	done
 
 _Route8UndergroundSignText::

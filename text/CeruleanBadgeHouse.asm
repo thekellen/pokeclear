@@ -1,5 +1,5 @@
 _CeruleanBadgeHouseMiddleAgedManText::
-	text "#MON BADGEs"
+	text "JANKEN BADGEs"
 	line "are owned only by"
 	cont "skilled trainers."
 
@@ -24,8 +24,8 @@ _CeruleanBadgeHouseMiddleAgedManVisitAnyTimeText::
 	done
 
 _CeruleanBadgeHouseBoulderBadgeText::
-	text "The ATTACK of all"
-	line "#MON increases"
+	text "The flavor of all"
+	line "candy increases"
 	cont "a little bit."
 
 	para "It also lets you"
@@ -34,11 +34,11 @@ _CeruleanBadgeHouseBoulderBadgeText::
 	prompt
 
 _CeruleanBadgeHouseCascadeBadgeText::
-	text "#MON up to L30"
-	line "will obey you."
+	text "People up to 30"
+	line "will dig you."
 
 	para "Any higher, they"
-	line "become unruly!"
+	line "don't care!"
 
 	para "It also lets you"
 	line "use CUT outside"
@@ -46,8 +46,8 @@ _CeruleanBadgeHouseCascadeBadgeText::
 	prompt
 
 _CeruleanBadgeHouseThunderBadgeText::
-	text "The SPEED of all"
-	line "#MON increases"
+	text "The flavor of all"
+	line "candy increases"
 	cont "a little bit."
 
 	para "It also lets you"
@@ -56,11 +56,11 @@ _CeruleanBadgeHouseThunderBadgeText::
 	prompt
 
 _CeruleanBadgeHouseRainbowBadgeText::
-	text "#MON up to L50"
-	line "will obey you."
+	text "People age 50"
+	line "will respect you."
 
 	para "Any higher, they"
-	line "become unruly!"
+	line "could care less!"
 
 	para "It also lets you"
 	line "use STRENGTH out-"
@@ -68,8 +68,8 @@ _CeruleanBadgeHouseRainbowBadgeText::
 	prompt
 
 _CeruleanBadgeHouseSoulBadgeText::
-	text "The DEFENSE of all"
-	line "#MON increases"
+	text "The flavor of all"
+	line "candy changes"
 	cont "a little bit."
 
 	para "It also lets you"
@@ -78,20 +78,20 @@ _CeruleanBadgeHouseSoulBadgeText::
 	prompt
 
 _CeruleanBadgeHouseMarshBadgeText::
-	text "#MON up to L70"
-	line "will obey you."
+	text "People age 70 will"
+	line "talk to you."
 
 	para "Any higher, they"
-	line "become unruly!"
+	line "ignore you entirely!"
 	prompt
 
 _CeruleanBadgeHouseVolcanoBadgeText::
-	text "Your #MON's"
-	line "SPECIAL abilities"
-	cont "increase a bit."
+	text "Your candy's"
+	line "flavor really"
+	cont "increases a bit."
 	prompt
 
 _CeruleanBadgeHouseEarthBadgeText::
-	text "All #MON will"
-	line "obey you!"
+	text "All people will"
+	line "know your name!"
 	prompt

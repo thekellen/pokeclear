@@ -49,12 +49,12 @@ _BoulderText::
 _MartSignText::
 	text "All your item"
 	line "needs fulfilled!"
-	cont "#MON MART"
+	cont "HAND MART"
 	done
 
 _PokeCenterSignText::
-	text "Heal Your #MON!"
-	line "#MON CENTER"
+	text "Heal Your HAND!"
+	line "REST CENTER"
 	done
 
 _FoundItemText::
@@ -74,10 +74,10 @@ _OaksAideHiText::
 	line "I'm PROF.OAK's"
 	cont "AIDE!"
 
-	para "If you caught @"
+	para "If you won @"
 	text_decimal hOaksAideRequirement, 1, 3
 	text_start
-	line "kinds of #MON,"
+	line "kinds of HAND,"
 	cont "I'm supposed to"
 	cont "give you an"
 	cont "@"
@@ -85,20 +85,20 @@ _OaksAideHiText::
 	text "!"
 
 	para "So, <PLAYER>! Have"
-	line "you caught at"
+	line "you won at"
 	cont "least @"
 	text_decimal hOaksAideRequirement, 1, 3
 	text " kinds of"
-	cont "#MON?"
+	cont "HAND?"
 	done
 
 _OaksAideUhOhText::
 	text "Let's see..."
 	line "Uh-oh! You have"
-	cont "caught only @"
+	cont "won only @"
 	text_decimal hOaksAideNumMonsOwned, 1, 3
 	text_start
-	cont "kinds of #MON!"
+	cont "kinds of HAND!"
 
 	para "You need @"
 	text_decimal hOaksAideRequirement, 1, 3
@@ -123,10 +123,10 @@ _OaksAideComeBackText::
 
 _OaksAideHereYouGoText::
 	text "Great! You have"
-	line "caught @"
+	line "won @"
 	text_decimal hOaksAideNumMonsOwned, 1, 3
 	text " kinds "
-	cont "of #MON!"
+	cont "of HAND!"
 	cont "Congratulations!"
 
 	para "Here you go!"

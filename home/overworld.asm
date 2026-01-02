@@ -35,7 +35,11 @@ EnterMap::
 	ld hl, wCurrentMapScriptFlags
 	set BIT_CUR_MAP_LOADED_1, [hl]
 	set BIT_CUR_MAP_LOADED_2, [hl]
+	; POKECLEAR: Restore wOnSGB in case it was corrupted during battle
+	ld a, 1
+	ld [wOnSGB], a
 	xor a
+	ld [wOnCGB], a
 	ld [wJoyIgnore], a
 
 OverworldLoop::
@@ -347,10 +351,11 @@ OverworldLoopLessDelay::
 	ld a, [wCurMap]
 	cp OAKS_LAB
 	jp z, .noFaintCheck ; no blacking out if the player lost to the rival in Oak's lab
-	callfar AnyPartyAlive
-	ld a, d
-	and a
+	; POKECLEAR: Check wBattleResult instead of AnyPartyAlive (we have no Pokemon)
+	ld a, [wBattleResult]
+	cp 1 ; 1 = lost
 	jr z, .allPokemonFainted
+	; Fallthrough to .noFaintCheck for victory (wBattleResult = 0)
 .noFaintCheck
 	ld c, 10
 	call DelayFrames
@@ -752,6 +757,13 @@ ExtraWarpCheck::
 
 MapEntryAfterBattle::
 	farcall IsPlayerStandingOnWarp ; for enabling warp testing after collisions
+	; POKECLEAR: Fix corrupted wOnSGB flag (gets overwritten during battle)
+	ld a, 1
+	ld [wOnSGB], a
+	xor a
+	ld [wOnCGB], a
+	; POKECLEAR: Restore SGB palette after battle
+	call RunDefaultPaletteCommand
 	ld a, [wMapPalOffset]
 	and a
 	jp z, GBFadeInFromWhite
@@ -760,6 +772,14 @@ MapEntryAfterBattle::
 HandleBlackOut::
 ; For when all the player's pokemon faint.
 ; Does not print the "blacked out" message.
+	; POKECLEAR: Fix corrupted wOnSGB flag (gets overwritten during battle)
+	ld a, 1
+	ld [wOnSGB], a
+	xor a
+	ld [wOnCGB], a
+	; POKECLEAR: Restore overworld palette before fade (so we fade from correct colors)
+	ld b, SET_PAL_OVERWORLD
+	call RunPaletteCommand
 	call GBFadeOutToBlack
 	ld a, $08
 	call StopMusic

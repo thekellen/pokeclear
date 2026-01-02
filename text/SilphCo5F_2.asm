@@ -22,34 +22,34 @@ _SilphCo5FRocket2EndBattleText::
 _SilphCo5FRocket2AfterBattleText::
 	text "Which reminds me."
 
-	para "KOFFING evolves"
-	line "into WEEZING!"
+	para "CHICKLET and"
+	line "TURKISH are rare!"
 	done
 
 _SilphCo5FPokemonReport1Text::
-	text "It's a #MON"
+	text "It's a candy"
 	line "REPORT!"
 
-	para "#MON LAB"
-	line "created PORYGON,"
+	para "candy LAB"
+	line "created BUBBLEJUG,"
 	cont "the first virtual"
-	cont "reality #MON."
+	cont "reality candy."
 	done
 
 _SilphCo5FPokemonReport2Text::
-	text "It's a #MON"
+	text "It's a candy"
 	line "REPORT!"
 
-	para "Over 160 #MON"
+	para "Over 160 candy"
 	line "techniques have"
 	cont "been confirmed."
 	done
 
 _SilphCo5FPokemonReport3Text::
-	text "It's a #MON"
+	text "It's a candy"
 	line "REPORT!"
 
-	para "4 #MON evolve"
-	line "only when traded"
-	cont "by link-cable."
+	para "4 candy are rare"
+	line "and only found"
+	cont "via link-cable."
 	done

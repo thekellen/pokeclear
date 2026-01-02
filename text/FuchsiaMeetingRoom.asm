@@ -1,23 +1,23 @@
 _FuchsiaMeetingRoomSafariZoneWorker1::
 	text "We nicknamed the"
-	line "WARDEN SLOWPOKE."
+	line "WARDEN SLOPOKE."
 
-	para "He and SLOWPOKE"
+	para "He and SLOPOKE"
 	line "both look vacant!"
 	done
 
 _FuchsiaMeetingRoomSafariZoneWorker2::
-	text "SLOWPOKE is very"
-	line "knowledgeable"
-	cont "about #MON!"
+	text "SLOPOKE is a very"
+	line "mysterious"
+	cont "kind of candy!"
 
 	para "He even has some"
 	line "fossils of rare,"
-	cont "extinct #MON!"
+	cont "extinct candy!"
 	done
 
 _FuchsiaMeetingRoomSafariZoneWorker3::
-	text "SLOWPOKE came in,"
+	text "SLOPOKE came in,"
 	line "but I couldn't"
 	cont "understand him."
 

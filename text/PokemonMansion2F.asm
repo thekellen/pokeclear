@@ -20,7 +20,7 @@ _PokemonMansion2FDiary1Text::
 	line "Guyana,"
 	cont "South America"
 
-	para "A new #MON was"
+	para "A new candy was"
 	line "discovered deep"
 	cont "in the jungle."
 	done
@@ -29,7 +29,7 @@ _PokemonMansion2FDiary2Text::
 	text "Diary: July 10"
 	line "We christened the"
 	cont "newly discovered"
-	cont "#MON, MEW."
+	cont "candy, TRUFFLE."
 	done
 
 _PokemonMansion2FSwitchText::

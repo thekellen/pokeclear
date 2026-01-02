@@ -369,7 +369,7 @@ DisplayContinueGameInfo:
 	call PlaceString
 	hlcoord 17, 11
 	call PrintNumBadges
-	hlcoord 16, 13
+	hlcoord 14, 13 ; Badges: 2 digits at pos 17, rightmost at 18. Win: 5 digits, start at 14 so rightmost at 18
 	call PrintNumOwnedMons
 	hlcoord 13, 15
 	call PrintPlayTime
@@ -395,7 +395,7 @@ PrintSaveScreenText:
 	call PlaceString
 	hlcoord 17, 4
 	call PrintNumBadges
-	hlcoord 16, 6
+	hlcoord 14, 6 ; Right-align 5-digit win streak with badges
 	call PrintNumOwnedMons
 	hlcoord 13, 8
 	call PrintPlayTime
@@ -415,13 +415,10 @@ PrintNumBadges:
 	jp PrintNumber
 
 PrintNumOwnedMons:
-	push hl
-	ld hl, wPokedexOwned
-	ld b, wPokedexOwnedEnd - wPokedexOwned
-	call CountSetBits
-	pop hl
-	ld de, wNumSetBits
-	lb bc, 1, 3
+	; POKECLEAR: Print win streak instead of Pokedex count
+	; Using first 2 bytes of wPokedexOwned as 16-bit win streak counter
+	ld de, wPokedexOwned
+	lb bc, 2, 5 ; 2 bytes, 5 digits max
 	jp PrintNumber
 
 PrintPlayTime:
@@ -437,7 +434,7 @@ PrintPlayTime:
 SaveScreenInfoText:
 	db   "PLAYER"
 	next "BADGES    "
-	next "#DEX    "
+	next "WINSTREAK    "
 	next "TIME@"
 
 DisplayOptionMenu:

@@ -66,12 +66,12 @@ JapaneseMainMenuText:
 	next "さいしょから@"
 
 BattleMenuText:
-	db   "FIGHT <PK><MN>"
-	next "ITEM  RUN@"
+	db   "ROCK PAPER"
+	next "SCISS ORS@"
 
 SafariZoneBattleMenuText:
-	db   "BALL×       BAIT"
-	next "THROW ROCK  RUN@"
+	db   "ROCK        PAPER"
+	next "SCISSORS@"
 
 SwitchStatsCancelText:
 	db   "SWITCH"

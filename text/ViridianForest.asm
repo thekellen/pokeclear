@@ -3,18 +3,18 @@ _ViridianForestYoungster1Text::
 	line "some friends!"
 
 	para "They're out for"
-	line "#MON fights!"
+	line "JANKEN matches!"
 	done
 
 _ViridianForestYoungster2BattleText::
 	text "Hey! You have"
-	line "#MON! Come on!"
-	cont "Let's battle'em!"
+	line "hands! Come on!"
+	cont "Let's use'em!"
 	done
 
 _ViridianForestYoungster2EndBattleText::
 	text "No!"
-	line "CATERPIE can't"
+	line "GREENAPPLE can't"
 	cont "cut it!"
 	prompt
 
@@ -26,13 +26,13 @@ _ViridianForestYoungster2AfterBattleText::
 _ViridianForestYoungster3BattleText::
 	text "Yo! You can't jam"
 	line "out if you're a"
-	cont "#MON trainer!"
+	cont "JANKEN player!"
 	done
 
 _ViridianForestYoungster3EndBattleText::
 	text "Huh?"
 	line "I ran out of"
-	cont "#MON!"
+	cont "candy!"
 	prompt
 
 _ViridianForestYoungster3AfterBattleText::
@@ -63,19 +63,19 @@ _ViridianForestYoungster4AfterBattleText::
 	done
 
 _ViridianForestYoungster5Text::
-	text "I ran out of #"
-	line "BALLs to catch"
-	cont "#MON with!"
+	text "I ran out of"
+	line "bags to store"
+	cont "candy in!"
 
 	para "You should carry"
 	line "extras!"
 	done
 
 _ViridianForestTrainerTips1Text::
-	text "TRAINER TIPS"
+	text "PLAYER TIPS"
 
 	para "If you want to"
-	line "avoid battles,"
+	line "avoid matches,"
 	cont "stay away from"
 	cont "grassy areas!"
 	done
@@ -83,37 +83,37 @@ _ViridianForestTrainerTips1Text::
 _ViridianForestUseAntidoteSignText::
 	text "For poison, use"
 	line "ANTIDOTE! Get it"
-	cont "at #MON MARTs!"
+	cont "at candy MARTs!"
 	done
 
 _ViridianForestTrainerTips2Text::
-	text "TRAINER TIPS"
+	text "PLAYER TIPS"
 
 	para "Contact PROF.OAK"
 	line "via PC to get"
-	cont "your #DEX"
+	cont "your WINSTREAK"
 	cont "evaluated!"
 	done
 
 _ViridianForestTrainerTips3Text::
-	text "TRAINER TIPS"
+	text "PLAYER TIPS"
 
 	para "No stealing of"
-	line "#MON from"
-	cont "other trainers!"
-	cont "Catch only wild"
-	cont "#MON!"
+	line "candy from"
+	cont "other players!"
+	cont "Eat only your"
+	cont "candy!"
 	done
 
 _ViridianForestTrainerTips4Text::
-	text "TRAINER TIPS"
+	text "PLAYER TIPS"
 
-	para "Weaken #MON"
+	para "Chew candy"
 	line "before attempting"
-	cont "capture!"
+	cont "swallow!"
 
-	para "When healthy,"
-	line "they may escape!"
+	para "When whole,"
+	line "it may get stuck!"
 	done
 
 _ViridianForestLeavingSignText::

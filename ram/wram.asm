@@ -506,7 +506,15 @@ wLowHealthAlarmDisabled:: db
 
 wPlayerMonMinimized:: db
 
-	ds 13
+; Rock-Paper-Scissors game state
+wRPSPlayerChoice:: db ; 0=ROCK, 1=SCISSORS, 2=PAPER
+wRPSEnemyChoice:: db
+wRPSPlayerRoundWins:: db
+wRPSEnemyRoundWins:: db
+wRPSCurrentRound:: db
+wRPSAIType:: db ; 0-3 for different AI patterns
+
+	ds 7
 
 UNION
 ; the amount of damage accumulated by the enemy while biding

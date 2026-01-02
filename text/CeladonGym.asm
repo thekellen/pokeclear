@@ -13,8 +13,8 @@ _CeladonGymErikaPreBattleText::
 
 	para "I teach the art of"
 	line "flower arranging."
-	cont "My #MON are of"
-	cont "the grass-type."
+	cont "My plays use the"
+	cont "scissors throw."
 
 	para "Oh, I'm sorry, I"
 	line "had no idea that"
@@ -37,25 +37,25 @@ _CeladonGymErikaReceivedRainbowBadgeText::
 	prompt
 
 _CeladonGymErikaPostBattleAdviceText::
-	text "You are cataloging"
-	line "#MON? I must"
+	text "You are building a"
+	line "WINSTREAK? I must"
 	cont "say I'm impressed."
 
 	para "I would never"
-	line "collect #MON"
+	line "collect candy"
 	cont "if they were"
 	cont "unattractive."
 	done
 
 _CeladonGymRainbowBadgeInfoText::
 	text "The RAINBOWBADGE"
-	line "will make #MON"
-	cont "up to L50 obey."
+	line "grants mastery of"
+	cont "advanced JANKEN."
 
 	para "It also allows"
-	line "#MON to use"
+	line "you to use"
 	cont "STRENGTH in and"
-	cont "out of battle."
+	cont "out of matches."
 
 	para "Please also take"
 	line "this with you."
@@ -71,13 +71,8 @@ _CeladonGymReceivedTM21Text::
 _TM21ExplanationText::
 	text_start
 
-	para "TM21 contains"
-	line "MEGA DRAIN."
-
-	para "Half the damage"
-	line "it inflicts is"
-	cont "drained to heal"
-	cont "your #MON!"
+	para "M&M21 contains"
+	line "RED 40."
 	done
 
 _CeladonGymTM21NoRoomText::
@@ -114,13 +109,13 @@ _CeladonGymEndBattleText3::
 	prompt
 
 _CeladonGymAfterBattleText3::
-	text "Grass-type #MON"
-	line "are tough against"
-	cont "the water-type!"
+	text "Scissors-style"
+	line "is tough against"
+	cont "Paper-style!"
 
-	para "They also have an"
-	line "edge on rock and"
-	cont "ground #MON!"
+	para "It also has an"
+	line "edge on certain"
+	cont "soft throws!"
 	done
 
 _CeladonGymBattleText4::
@@ -140,11 +135,11 @@ _CeladonGymAfterBattleText4::
 	done
 
 _CeladonGymBattleText5::
-	text "Look at my grass"
-	line "#MON!"
+	text "Look at my crisp"
+	line "plays!"
 
-	para "They're so easy"
-	line "to raise!"
+	para "They're so quick"
+	line "and decisive!"
 	done
 
 _CeladonGymEndBattleText5::
@@ -152,19 +147,19 @@ _CeladonGymEndBattleText5::
 	prompt
 
 _CeladonGymAfterBattleText5::
-	text "We only use grass-"
-	line "type #MON at"
+	text "We only use quick"
+	line "Scissors-style at"
 	cont "our GYM!"
 
-	para "We also use them"
-	line "for making flower"
+	para "We practice while"
+	line "making flower"
 	cont "arrangements!"
 	done
 
 _CeladonGymBattleText6::
 	text "Don't bring any"
-	line "bugs or fire"
-	cont "#MON in here!"
+	line "sloppy throws or"
+	cont "wild plays here!"
 	done
 
 _CeladonGymEndBattleText6::
@@ -182,7 +177,7 @@ _CeladonGymAfterBattleText6::
 _CeladonGymBattleText7::
 	text "Pleased to meet"
 	line "you. My hobby is"
-	cont "#MON training."
+	cont "JANKEN training."
 	done
 
 _CeladonGymEndBattleText7::
@@ -213,7 +208,7 @@ _CeladonGymEndBattleText8::
 
 _CeladonGymAfterBattleText8::
 	text "I didn't bring my"
-	line "best #MON!"
+	line "best candy!"
 
 	para "Wait 'til next"
 	line "time!"

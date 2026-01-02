@@ -9,19 +9,19 @@ _ChampionsRoomRivalIntroText::
 	line "be strong to keep"
 	cont "me sharp!"
 
-	para "While working on"
-	line "#DEX, I looked"
+	para "While building my"
+	line "WINSTREAK, I looked"
 	cont "all over for"
-	cont "powerful #MON!"
+	cont "rare candy!"
 
 	para "Not only that, I"
-	line "assembled teams"
+	line "mastered plays"
 	cont "that would beat"
-	cont "any #MON type!"
+	cont "any JANKEN style!"
 
 	para "And now!"
 
-	para "I'm the #MON"
+	para "I'm the JANKEN"
 	line "LEAGUE champion!"
 
 	para "<PLAYER>! Do you"
@@ -31,7 +31,7 @@ _ChampionsRoomRivalIntroText::
 	para "I'll tell you!"
 
 	para "I am the most"
-	line "powerful trainer"
+	line "skilled player"
 	cont "in the world!"
 	done
 
@@ -59,7 +59,7 @@ _RivalVictoryText::
 	para "You did well to"
 	line "even reach me,"
 	cont "<RIVAL>, the"
-	cont "#MON genius!"
+	cont "JANKEN genius!"
 
 	para "Nice try, loser!"
 	line "Hahaha!"
@@ -70,11 +70,11 @@ _ChampionsRoomRivalAfterBattleText::
 	line "Why did I lose?"
 
 	para "I never made any"
-	line "mistakes raising"
-	cont "my #MON..."
+	line "mistakes in my"
+	cont "training..."
 
 	para "Darn it! You're"
-	line "the new #MON"
+	line "the new JANKEN"
 	cont "LEAGUE champion!"
 
 	para "Although I don't"
@@ -89,7 +89,7 @@ _ChampionsRoomOakCongratulatesPlayerText::
 	text "OAK: So, you won!"
 	line "Congratulations!"
 	cont "You're the new"
-	cont "#MON LEAGUE"
+	cont "JANKEN LEAGUE"
 	cont "champion!"
 
 	para "You've grown up so"
@@ -120,9 +120,9 @@ _ChampionsRoomOakDisappointedWithRivalText::
 	cont "you lost?"
 
 	para "You have forgotten"
-	line "to treat your"
-	cont "#MON with"
-	cont "trust and love!"
+	line "to play with"
+	cont "respect and"
+	cont "humility!"
 
 	para "Without them, you"
 	line "will never become"
@@ -137,9 +137,10 @@ _ChampionsRoomOakComeWithMeText::
 	cont "was not just your"
 	cont "own doing!"
 
-	para "The bond you share"
-	line "with your #MON"
-	cont "is marvelous!"
+	para "Your skill and"
+	line "dedication to"
+	cont "JANKEN is"
+	cont "marvelous!"
 
 	para "<PLAYER>!"
 	line "Come with me!"

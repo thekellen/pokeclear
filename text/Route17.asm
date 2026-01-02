@@ -59,7 +59,7 @@ _Route17Biker4AfterBattleText::
 	done
 
 _Route17Biker5BattleText::
-	text "Let VOLTORB"
+	text "Let STARBURST"
 	line "electrify you!"
 	done
 
@@ -69,14 +69,14 @@ _Route17Biker5EndBattleText::
 	prompt
 
 _Route17Biker5AfterBattleText::
-	text "I got my VOLTORB"
+	text "I got my STARBURST"
 	line "at the abandoned"
 	cont "POWER PLANT."
 	done
 
 _Route17Biker6BattleText::
-	text "My #MON won't"
-	line "evolve! Why?"
+	text "My candy won't"
+	line "melt! Why?"
 	done
 
 _Route17Biker6EndBattleText::
@@ -85,9 +85,9 @@ _Route17Biker6EndBattleText::
 	prompt
 
 _Route17Biker6AfterBattleText::
-	text "Maybe some #MON"
+	text "Maybe some candy"
 	line "need element"
-	cont "STONEs to evolve."
+	cont "STONEs to soften."
 	done
 
 _Route17Biker7BattleText::
@@ -114,7 +114,7 @@ _Route17Biker8EndBattleText::
 	prompt
 
 _Route17Biker8AfterBattleText::
-	text "Be ready to fight"
+	text "Be ready to match"
 	line "for your beliefs!"
 	done
 
@@ -155,19 +155,19 @@ _Route17NoticeSign1Text::
 	done
 
 _Route17TrainerTips1Text::
-	text "TRAINER TIPS"
+	text "PLAYER TIPS"
 
-	para "All #MON are"
+	para "All candy are"
 	line "unique."
 
-	para "Even #MON of"
+	para "Even candy of"
 	line "the same type and"
 	cont "level grow at"
 	cont "different rates."
 	done
 
 _Route17TrainerTips2Text::
-	text "TRAINER TIPS"
+	text "PLAYER TIPS"
 
 	para "Press the A or B"
 	line "Button to stay in"

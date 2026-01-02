@@ -19,9 +19,9 @@ _SSAnne2FRivalText::
 	line "really invited?"
 
 	para "So how's your"
-	line "#DEX coming?"
+	line "WINSTREAK coming?"
 
-	para "I already caught"
+	para "I already won"
 	line "40 kinds, pal!"
 
 	para "Different kinds"
@@ -35,8 +35,8 @@ _SSAnne2FRivalDefeatedText::
 	text "Humph!"
 
 	para "At least you're"
-	line "raising your"
-	cont "#MON!"
+	line "eating your"
+	cont "candy!"
 	prompt
 
 _SSAnne2FRivalVictoryText::

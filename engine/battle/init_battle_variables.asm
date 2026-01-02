@@ -16,6 +16,12 @@ InitBattleVariables:
 	ld [wPlayerMonNumber], a
 	ld [wEscapedFromBattle], a
 	ld [wMapPalOffset], a
+	; POKECLEAR/RPS: Initialize RPS game variables
+	ld [wRPSPlayerChoice], a
+	ld [wRPSEnemyChoice], a
+	ld [wRPSPlayerRoundWins], a
+	ld [wRPSEnemyRoundWins], a
+	ld [wRPSCurrentRound], a
 	ld hl, wPlayerHPBarColor
 	ld [hli], a ; wPlayerHPBarColor
 	ld [hl], a ; wEnemyHPBarColor

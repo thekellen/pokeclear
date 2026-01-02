@@ -182,9 +182,9 @@ ItemUseBall:
 	call PrintText
 
 ; If the player is fighting an unidentified ghost, set the value that indicates
-; the Pokémon can't be caught and skip the capture calculations.
+; the Pokémon can't be won and skip the capture calculations.
 	callfar IsGhostBattle
-	ld b, $10 ; can't be caught value
+	ld b, $10 ; can't be won value
 	jp z, .setAnimData
 
 	ld a, [wBattleType]
@@ -200,13 +200,13 @@ ItemUseBall:
 
 .notOldManBattle
 ; If the player is fighting the ghost Marowak, set the value that indicates the
-; Pokémon can't be caught and skip the capture calculations.
+; Pokémon can't be won and skip the capture calculations.
 	ld a, [wCurMap]
 	cp POKEMON_TOWER_6F
 	jr nz, .loop
 	ld a, [wEnemyMonSpecies2]
 	cp RESTLESS_SOUL
-	ld b, $10 ; can't be caught value
+	ld b, $10 ; can't be won value
 	jp z, .setAnimData
 
 ; Get the first random number. Let it be called Rand1.
@@ -249,14 +249,14 @@ ItemUseBall:
 	jr c, .loop
 
 .checkForAilments
-; Pokémon can be caught more easily with a status ailment.
+; Pokémon can be won more easily with a status ailment.
 ; Depending on the status ailment, a certain value will be subtracted from
 ; Rand1. Let this value be called Status.
-; The larger Status is, the more easily the Pokémon can be caught.
+; The larger Status is, the more easily the Pokémon can be won.
 ; no status ailment:     Status = 0
 ; Burn/Paralysis/Poison: Status = 12
 ; Freeze/Sleep:          Status = 25
-; If Status is greater than Rand1, the Pokémon will be caught for sure.
+; If Status is greater than Rand1, the Pokémon will be won for sure.
 	ld a, [wEnemyMonStatus]
 	and a
 	jr z, .skipAilmentValueSubtraction ; no ailments
@@ -548,12 +548,12 @@ ItemUseBall:
 	ld [wPokedexNum], a
 	ld a, [wBattleType]
 	dec a ; is this the old man battle?
-	jr z, .oldManCaughtMon ; if so, don't give the player the caught Pokémon
+	jr z, .oldManCaughtMon ; if so, don't give the player the won Pokémon
 
 	ld hl, ItemUseBallText05
 	call PrintText
 
-; Add the caught Pokémon to the Pokédex.
+; Add the won Pokémon to the Pokédex.
 	predef IndexToPokedex
 	ld a, [wPokedexNum]
 	dec a
@@ -621,7 +621,7 @@ ItemUseBall:
 
 ItemUseBallText00:
 ;"It dodged the thrown ball!"
-;"This pokemon can't be caught"
+;"This pokemon can't be won"
 	text_far _ItemUseBallText00
 	text_end
 ItemUseBallText01:
@@ -633,7 +633,7 @@ ItemUseBallText02:
 	text_far _ItemUseBallText02
 	text_end
 ItemUseBallText03:
-;"Aww! It appeared to be caught!"
+;"Aww! It appeared to be won!"
 	text_far _ItemUseBallText03
 	text_end
 ItemUseBallText04:
@@ -641,7 +641,7 @@ ItemUseBallText04:
 	text_far _ItemUseBallText04
 	text_end
 ItemUseBallText05:
-;"All right! {MonName} was caught!"
+;"All right! {MonName} was won!"
 ;play sound
 	text_far _ItemUseBallText05
 	sound_caught_mon
@@ -865,7 +865,7 @@ ItemUseMedicine:
 	jp PrintText
 .emptyPartyText
 	text "You don't have"
-	line "any #MON!"
+	line "any JANKEN!"
 	prompt
 .notUsingSoftboiled
 	call DisplayPartyMenu

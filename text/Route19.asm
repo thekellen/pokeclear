@@ -25,7 +25,7 @@ _Route19CooltrainerM2EndBattleText::
 
 _Route19CooltrainerM2AfterBattleText::
 	text "Watch out for"
-	line "TENTACOOL!"
+	line "PEZ!"
 	done
 
 _Route19Swimmer1BattleText::
@@ -39,7 +39,7 @@ _Route19Swimmer1EndBattleText::
 	prompt
 
 _Route19Swimmer1AfterBattleText::
-	text "I can beat #MON"
+	text "I can beat candy"
 	line "at swimming!"
 	done
 
@@ -59,7 +59,7 @@ _Route19Swimmer2AfterBattleText::
 
 _Route19Swimmer3BattleText::
 	text "I tried diving"
-	line "for #MON, but"
+	line "for candy, but"
 	cont "it was a no go!"
 	done
 
@@ -69,7 +69,7 @@ _Route19Swimmer3EndBattleText::
 
 _Route19Swimmer3AfterBattleText::
 	text "You have to fish"
-	line "for sea #MON!"
+	line "for sea candy!"
 	done
 
 _Route19Swimmer4BattleText::
@@ -145,7 +145,7 @@ _Route19Swimmer8EndBattleText::
 	prompt
 
 _Route19Swimmer8AfterBattleText::
-	text "LAPRAS is so big,"
+	text "ALMONDJOY is so big,"
 	line "it must keep you"
 	cont "dry on water."
 	done
